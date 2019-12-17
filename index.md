@@ -9,7 +9,7 @@
   - [OSSを探そう](./chapters/how-to-find-oss.md)
   - [何をフィードバックしたらいいのか分からない](./chapters/what-should-i-feedback.md)：[原作](https://www.clear-code.com/blog/2019/7/8.html)
   - [フォーラムとイシュートラッカーのどちらに報告するべきか分からない](./chapters/forum-or-issue-tracker.md)：[原作](https://www.clear-code.com/blog/2019/6/18.html)
-  - [何をどう報告すればいいのか、どのプロジェクトに報告すればいいのか分からない](./chapters/which-project-should-i-feedback-to.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
+  - [どう報告すればいいのか、どのプロジェクトに報告すればいいのか分からない](./chapters/which-project-should-i-feedback-to.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
     - 再現条件を特定しよう
     - 「Regression Range」を特定しよう
   - [どこまで書けばいいか分からない](./chapters/how-detailed-should-i-report.md)
