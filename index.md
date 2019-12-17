@@ -21,5 +21,7 @@
   - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/how-to-feedback-on-my-business.md)
   - [バグ報告やパッチ提供以外のコントリビュート](./chapters/how-to-feedback-without-code.md)
   - [ライセンスについてより正確に知る](./chapters/learn-about-licenses.md)
+* 参考事例
+  - OSS活動歴の長い人の個人的な事例をいくつか寄稿してもらう？
 * おわりに
   - OSS Gateの取り組みに参加を呼びかける
