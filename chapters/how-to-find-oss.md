@@ -100,11 +100,7 @@ LinuxやBSDなどのOSディストリビューションのパッケージ管理�
 
 信頼できる情報ソースという意味では、各ソフトウェアの開発プロジェクトの公式サイトを参照するのも良い方法に思えます……が、実はこれは筆者としてはあまりお進めできません。何故かというと、*調べるのが大変なわりに不正確な情報である場合があるから*です。
 
-公式サイト上にライセンス情報が記載されている場合は、「About（プロジェクトについて）」配下にある場合が多いようです。例えば、[PostgreSQLの公式サイト](https://www.postgresql.org/)では「About」配下にライセンス情報のページがあり、「PostgreSQL is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.（PostgreSQLはBSDまたはMITライセンスに似た自由なオープンソースライセンスである、PostgreSQLライセンスの元でリリースされています。）」と記載されています。PostgreSQLライセンスは前述のOSIが認めているオープンソースライセンスの一覧にあるため、PostgreSQLはOSSだと確かに言えます。
-
-また、トップページにそのままライセンス情報が記載されている場合もあります。[Vue.jsの公式サイト](https://jp.vuejs.org/index.html)では、ページの末尾に「Released under the MIT License（MITライセンスでリリースされています）」と記載されています。このようにトップページに直接記載されている事例は、小規模なプロジェクトやライブラリなどに多いようです。
-
-しかし、公式サイト上だけでは明快な情報に辿り着きにくい場合もあります。例えば[MariaDBの公式サイト](https://mariadb.org/)では「About」配下にライセンスの情報があり「MariaDB Server is open source software and free to use as stated in the General Public License.（MariaDBサーバーはオープンソースソフトウェアで、GPLの条件下で無償/自由に利用できます。）」と書かれていますが、GPLのバージョンがいくつであるか記載されていません。GPLはバージョンによって条件が異なるため、バージョンを誤認して使うとトラブルの元になり得ます。
+例えば[MariaDBの公式サイト](https://mariadb.org/)では「About」配下にライセンスの情報があり「MariaDB Server is open source software and free to use as stated in the General Public License.（MariaDBサーバーはオープンソースソフトウェアで、GPLの条件下で無償/自由に利用できます。）」と書かれていますが、GPLのバージョンがいくつであるか記載されていません。GPLはバージョンによって条件が異なるため、バージョンを誤認して使うとトラブルの元になり得ます。
 
 別の例として、[Apache HTTP Serverの公式サイト](https://httpd.apache.org/)は左側のメニューに「License」という項目があり、ここからライセンスの情報を確認できそうに見えますが、実際にはこのリンク先はApacheライセンスというオープンソースライセンスそのものの説明になっています。ここからは、Apache HTTP Serverというソフトウェア自体がApacheライセンスのバージョンいくつに該当するかは読み取れません。
 
