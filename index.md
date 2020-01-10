@@ -8,8 +8,6 @@
   - [どこにフィードバックしたらいいか分からない](./chapters/where.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/6/18.html)
 * 実践編
   - [どう報告すればいいのか分からない](./chapters/how.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
-    - 再現条件を特定しよう
-    - 「Regression Range」を特定しよう
   - [どこまで書けばいいか分からない](./chapters/density.md)
   - [英語での報告の仕方が分からない](./chapters/english.md)：[原作](https://www.clear-code.com/blog/2019/7/12.html)
   - [キツイ表現は控えて、穏やかに話そう](./chapters/soft.md)
