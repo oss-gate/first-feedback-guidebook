@@ -6,21 +6,21 @@
   - コントリビューションすると何が嬉しいの？
   - 「つよいエンジニア」になるために本当に必要なもの
 * 実践編
-  - [OSSを探そう](./chapters/how-to-find-oss.md)
-  - [何をフィードバックしたらいいのか分からない](./chapters/what-should-i-feedback.md)：[原作](https://www.clear-code.com/blog/2019/7/8.html)
-  - [フォーラムとイシュートラッカーのどちらに報告するべきか分からない](./chapters/forum-or-issue-tracker.md)：[原作](https://www.clear-code.com/blog/2019/6/18.html)
-  - [どう報告すればいいのか、どのプロジェクトに報告すればいいのか分からない](./chapters/which-project-should-i-feedback-to.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
+  - [OSSを探そう](./chapters/oss.md)
+  - [何をフィードバックしたらいいのか分からない](./chapters/what.md)：[原作](https://www.clear-code.com/blog/2019/7/8.html)
+  - [どこにフィードバックしたらいいか分からない](./chapters/where.md)：[原作](https://www.clear-code.com/blog/2019/6/18.html)
+  - [どう報告すればいいのか分からない](./chapters/how.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
     - 再現条件を特定しよう
     - 「Regression Range」を特定しよう
-  - [どこまで書けばいいか分からない](./chapters/how-detailed-should-i-report.md)
-  - [英語での報告の仕方が分からない](./chapters/how-to-write-english-report.md)：[原作](https://www.clear-code.com/blog/2019/7/12.html)
-  - [キツイ表現は控えて、穏やかに話そう](./chapters/soft-feedback.md)
-  - [実例で見る良いフィードバック・悪いフィードバック](./chapters/good-and-bad-examples.md)
+  - [どこまで書けばいいか分からない](./chapters/density.md)
+  - [英語での報告の仕方が分からない](./chapters/english.md)：[原作](https://www.clear-code.com/blog/2019/7/12.html)
+  - [キツイ表現は控えて、穏やかに話そう](./chapters/soft.md)
+  - [実例で見る良いフィードバック・悪いフィードバック](./chapters/examples.md)
 * 発展編
-  - [プルリクエストをなかなかマージしてもらえない！](./chapters/how-to-make-pull-request-better.md)
-  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/how-to-feedback-on-my-business.md)
-  - [バグ報告やパッチ提供以外のコントリビュート](./chapters/how-to-feedback-without-code.md)
-  - [ライセンスについてより正確に知る](./chapters/learn-about-licenses.md)
+  - [プルリクエストをなかなかマージしてもらえない！](./chapters/pullrequest.md)
+  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)
+  - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)
+  - [ライセンスについてより正確に知る](./chapters/licenses.md)
 * 参考事例
   - OSS活動歴の長い人の個人的な事例をいくつか寄稿してもらう？
 * おわりに
