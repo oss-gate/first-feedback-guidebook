@@ -2,9 +2,6 @@
 
 * [はじめに](./chapters/first.md)：執筆済み
 * [動機編](./chapters/motivation.md)：執筆済み
-  - 本当に「誰でもできる」の？
-  - コントリビューションすると何が嬉しいの？
-  - 「つよいエンジニア」になるために本当に必要なもの
 * 実践編
   - [OSSを探そう](./chapters/oss.md)：執筆済み
   - [何をフィードバックしたらいいのか分からない](./chapters/what.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/7/8.html)
