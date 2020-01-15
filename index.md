@@ -8,7 +8,7 @@
   - [どこにフィードバックしたらいいか分からない](./chapters/where.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/6/18.html)
 * 実践編
   - [どう報告すればいいのか分からない](./chapters/how.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
-  - [どこまで書けばいいか分からない](./chapters/density.md)
+  - [それでもためらってしまうあなたへ](./chapters/hesitation.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
   - [英語での報告の仕方が分からない](./chapters/english.md)：[原作](https://www.clear-code.com/blog/2019/7/12.html)
   - [キツイ表現は控えて、穏やかに話そう](./chapters/soft.md)
   - [実例で見る良いフィードバック・悪いフィードバック](./chapters/examples.md)
