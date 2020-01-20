@@ -9,7 +9,7 @@
 * 実践編
   - [どう報告すればいいのか分からない](./chapters/how.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/6/19.html)
   - [英語での報告の仕方が分からない](./chapters/english.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/7/12.html)
-  - [それでもためらってしまうあなたへ](./chapters/hesitation.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
+  - [それでもためらってしまうあなたへ](./chapters/hesitation.md)：執筆済み：[原作](https://www.clear-code.com/blog/2019/6/19.html)
   - [キツイ表現は控えて、穏やかに話そう](./chapters/soft.md)：[原作](https://www.clear-code.com/blog/2019/6/19.html)
   - [実例で見る良いフィードバック・悪いフィードバック](./chapters/examples.md)
 * 発展編
