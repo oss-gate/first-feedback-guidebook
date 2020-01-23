@@ -199,9 +199,79 @@ https://github.com/collectd/collectd/issues/3293
 このフィードバックの面白いところは、ソフトウェアそのものの不具合というよりも、プロジェクトのリリースマネジメントへのフィードバックとなっているという点です。プロジェクトにおいて作業を複数人で分担している場合に、そのときの作業者の属人的な知識に依存したまま体制が組まれてしまっていると、他の人に作業が引き継がれた後にこのような形でトラブルが起こる場合があります。このフィードバックがなされていなければ、新しい担当者は次のリリースで同様の問題に遭遇し、原因の究明に奔走する羽目になっていたかもしれません。
 
 
+## チャットツールの日本語圏固有の問題の報告
+
+4つ目は、筆者がチャットツールのZulipに対して行ったフィードバックです。筆者の所属会社では社内のチャットとしてSlackではなく独自にサーバーを立てたZulipを使っており、社内での運用中につまずいたことをフィードバックしました。
+
+https://github.com/zulip/zulip/issues/9396
+
+```
+タイトル:
+  typeahead: "keydown" events for Enter and Arrow keys should be ignored while "composition"
+  ≪インクリメンタル検索: Enterキーと矢印キーのkeydownイベントは「コンポジション」の最中は無視されるべき≫
+
+説明:
+  First, I describe what is the "composition".
+  ≪最初に、「コンポジション」とは何かを説明します。≫
+  
+  In CJK language regions, people use some software named "IM" (input method) to input heir local language text. For example, when I search a Japanese term "日本語" (means "Japanese language") in a Zulip instance with Firefox, I need to do:
+  ≪CJK（中国語・日本語・韓国語）の言語の地域では、人々は彼らの地域言語のテキストを入力するために「IM（インプットメソッド）」と呼ばれるソフトウェアを使っています。例えば、私が日本語の単語「日本語」をFirefoxで表示したZulipで検索するとき、私は以下のような操作をする必要があります：≫
+
+ 1. Click the search field.
+    ≪検索欄をクリック。≫
+ 2. Activate the IM. The "composition" session starts.
+    ≪IMを有効化する。「コンポジション」のセッションが始まる。≫
+ 3. Type keys: `n`, `i`, `h`, `o`, and `n`. (in a composition session)
+    ≪（コンポジションのセッションの中で）n, i, h, o, nとキーを入力する。≫
+ 4. Hit the Space key to convert the text to Japanese term. "日本" is suggested. (in a composition session)
+    ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「日本」が提案される。≫
+ 5. Hit the Enter key to determine the text "日本". (in a composition session)
+    ≪（コンポジションのセッションの中で）「日本語」というテキストを確定するために、Enterキーを押す。≫
+ 6. Type keys: `g`, and `o`. (in a composition session)
+    ≪（コンポジションのセッションの中で）g, oとキーを入力する。≫
+ 7. Hit the Space key to convert the text to Japanese term. "語" is suggested. (in a composition session)
+    ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「語」が提案される。≫
+ 8. Hit the Enter key to determine the text "語". (in a composition session)
+    ≪（コンポジションのセッションの中で）「語」というテキストを確定するために、Enterキーを押す。≫
+ 9. Deactivate the IM. The "composition" session ends.
+    ≪IMを無効化する。「コンポジション」のセッションが終了する。≫
+ 10. Hit the Enter key again to search "日本語" on Zulip.
+     ≪「日本語」をZulipで検索するために、Enterキーをもう1度押す。≫
+
+  While the composition session, "keydown" events for special keys (Enter and Arrow) are handled by the IM to choose a term from variations or determine the choice. Thus I hit the Enter key three times in this case. The first time and the second are notified only to IM, so Zulip receives only the third time.
+  ≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするために使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
+  
+  And, there is one problem on lately development build of Firefox.
+  ≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
+
+ * [1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta](https://bugzilla.mozilla.org/show_bug.cgi?id=1446401)
+   ≪Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
+ * [Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group](https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion)
+   ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
+  
+  Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
+  ≪この変更のため、Firefoxの開発版ビルド（別名Nightly）は「コンポジション」セッション中の物も含めすべてのキーボード操作に対し、keydownイベントをWebページに通知します。その結果、検索欄は私がアルファベットのキーを入力している最中に候補を表示します。これは良い改善ですが、しかし新たに1つの問題が発生しています:選択を確定するために私がEnterキーを押したとき、それがZulip荷物うちされます。そのため、私が「日本語」という複合語の一部として「日本」を確定しようとしたときにまで、Zulipは意図せずそのEnterキーの操作を「日本」という単語を検索するための物として取り扱い、続く「語」という単語を私は入力することができません。≫
+  
+  To fix this problem, Zulip need to ignore keydown events for Enter and Arrow keys while the composition session. While a composition session, all keydown events have the [`isComposing`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing)  property with `true` value, so you just need to return when the property is `true`. Could you apply this change to Zulip?
+  ≪この問題を直すためには、ZulipはEnterと矢印キーのkey戸円イベントをコンポジションのセッション中は無視する必要があります。コンポジションのセッション中は、すべてのkeydownイベントがisComposingというプロパティをtrueという値を伴って持っています。そのため、そのプロパティの値がtrueであるときはすぐに処理をリターンする必要のみあります。この変更をZulipni反映してもらえませんか？
+    
+  Environment:
+  ≪環境≫
+  
+  * Zulip 1.8.0
+  * Mozilla Firefox Nightly 62.0a1
+  * Ubuntu 16.04LTS + IIIMF ATOK X3
+```
+
+### フィードバックの経緯
+
+### 注目したい点
+
+
+
 ## meta-clangの「MULTILIBS」への対応の要求
 
-4つ目は、筆者の同僚の畑ケさんがmeta-clangというプロジェクトに対して行ったフィードバックです。フィードバックの内容自体に分量があるので、軽く読み流してから、後の説明と見比べてみてください。
+5つ目は、筆者の同僚の畑ケさんがmeta-clangというプロジェクトに対して行ったフィードバックです。フィードバックの内容自体に分量があるので、軽く読み流してから、後の説明と見比べてみてください。
 
 https://github.com/kraj/meta-clang/issues/247
 
@@ -306,7 +376,7 @@ https://github.com/kraj/meta-clang/issues/247
 
 ## Mouse DictionaryのFirefox対応の改善と、コードの文法チェック体制への提案
 
-5つ目は、ここまでの「模範的な例」とは少し趣向の違う「上級編の例」です。先に登場したMouse Dictionaryに対して筆者が行った連続した一連のフィードバックですが、ここまでに解説した報告の形式から外れた流れとなっています。皆さんもいずれこういうことができるようになる、という参考事例として見て頂けると幸いです。
+6つ目は、ここまでの「模範的な例」とは少し趣向の違う「上級編の例」です。先に登場したMouse Dictionaryに対して筆者が行った連続した一連のフィードバックですが、ここまでに解説した報告の形式から外れた流れとなっています。皆さんもいずれこういうことができるようになる、という参考事例として見て頂けると幸いです。
 
 https://github.com/wtetsu/mouse-dictionary/issues/32
 
