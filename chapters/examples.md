@@ -201,7 +201,7 @@ https://github.com/collectd/collectd/issues/3293
 
 ## チャットツールの日本語圏固有の問題の報告
 
-4つ目は、筆者がチャットツールのZulipに対して行ったフィードバックです。筆者の所属会社では社内のチャットとしてSlackではなく独自にサーバーを立てたZulipを使っており、社内での運用中につまずいたことをフィードバックしました。
+4つ目は、筆者がチャットツールのZulipに対して行ったフィードバックです。
 
 https://github.com/zulip/zulip/issues/9396
 
@@ -244,10 +244,10 @@ https://github.com/zulip/zulip/issues/9396
   And, there is one problem on lately development build of Firefox.
   ≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
 
- * [1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta](https://bugzilla.mozilla.org/show_bug.cgi?id=1446401)
-   ≪Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
- * [Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group](https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion)
-   ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
+  * [1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta](https://bugzilla.mozilla.org/show_bug.cgi?id=1446401)
+    ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
+  * [Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group](https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion)
+    ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
   
   Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
   ≪この変更のため、Firefoxの開発版ビルド（別名Nightly）は「コンポジション」セッション中の物も含めすべてのキーボード操作に対し、keydownイベントをWebページに通知します。その結果、検索欄は私がアルファベットのキーを入力している最中に候補を表示します。これは良い改善ですが、しかし新たに1つの問題が発生しています:選択を確定するために私がEnterキーを押したとき、それがZulip荷物うちされます。そのため、私が「日本語」という複合語の一部として「日本」を確定しようとしたときにまで、Zulipは意図せずそのEnterキーの操作を「日本」という単語を検索するための物として取り扱い、続く「語」という単語を私は入力することができません。≫
@@ -265,8 +265,27 @@ https://github.com/zulip/zulip/issues/9396
 
 ### フィードバックの経緯
 
+筆者の所属会社では、社内のチャットとしてSlackではなく独自にサーバーを立てたZulipを使っています。その運用中に、Firefoxの開発版で問題になる箇所があることに気付いたため、開発元にフィードバックしたという事例です。
+
+日本語のようにキーボードのキーの数よりも入力したい文字の種類が圧倒的に多い言語では、文字入力専用のソフトウェアを介して文字を入力するのが一般的です。また、日本語の文章では単語間にスペースが入らないのが一般的です。このような言語には他に中国語と韓国語もあり、テキストデータやその入力、文字コードの取り扱いの文脈ではこれらの言語がよく話題に挙がるため、3つをひっくるめて「*CJK*」と呼ぶことがあります。
+
+CJKを想定していない機能とCJKの言語はあまり相性が良くない傾向にあり、「インクリメンタル検索」もその一例です。英語のようにキーと入力したい文字とがほぼ1対1で対応している言語では、文字を入力したそばから検索が進行するインクリメンタル検索が好まれますが、CJKの言語では「入力中の文字が最終的に入力したい文字とは異なっている（未確定である）」という状態があり、この状態を考慮していない実装でインクリメンタル検索が発動すると、日本人にとっては文字入力がそもそもできないという困った事態になります。
+
+この報告を行った前後の時期には、Firefoxの仕様変更でこの種の問題が起こりやすくなっていたため、Mozillaからもソフトウェア開発者やWeb制作関係者向けに公に注意が呼びかけられていました（報告の中で紹介している記事がそれです）。
+
 ### 注目したい点
 
+CJKを母語としない開発者にはこういった事情がなかなか分からないらしく、*「そもそもどういう前提があるのか」ということから詳しく説明しないと、問題に対処してもらえない*ということも珍しくありません。そのためこの報告では、CJKの言語ではどうやって文字を入力するのか、その中でこの問題がどういう影響を及ぼすのか、ということを詳しく述べました。その後のコメントで実装の改修案を併せて示したこともあってか、開発者の方には問題をスムーズに認識してもらうことができ、迅速に解決してもらえました。
+
+言語のように自分の生活と密接に結び付いた領域の話は、報告者にとってもあまりに当たり前のことすぎて、明確に言葉で説明するのが逆に難しいものです。報告者が「なんでこれが問題だと分かってくれないんだ！？」とフラストレーションを感じる一方で、その報告内容は報告を受けた側から見ると要領を得ない言葉足らずのものとなっていることも多く、何が問題なのかを理解できないために、うっかり適切でない判断をしてしまうことがあります。そのような悲しいすれ違いを避けるためにも、報告者は*自分の状態を客観視して、どこが相手からは見えていない部分なのかを常に意識し、自分から情報を積極的に開示する*姿勢を保つことが望ましいです。
+
+なお、同様のことがアラビア語などの書字方向がRTL（右から左に文字が流れる）の言語にも言えるようです。LTR（左から右）の言語だけを想定したソフトウェアは（特にGUIが）、RTLの言語で使うと悲惨なことになりがちなようです。皆さんがOSSを公開したら、もしかするとそういった言語圏の方から逆にフィードバックを受けることになるかもしれませんので、そのときはぜひ耳を傾けてください。
+
+ところで、以下の文のおかしいところに皆さんは気が付かれましたか？
+
+> In CJK language regions, people use some software named "IM" (input method) to input heir local language text.
+
+実はこの文の「heir」は誤記で、「their」が正しいです。熟練者でもこのようなミスタイプが残ったまま報告してしまうことがあると思うと、皆さんも、英語の間違いを過度に恐れる必要はないのだなと勇気づけられるのではないでしょうか。
 
 
 ## meta-clangの「MULTILIBS」への対応の要求
@@ -365,11 +384,11 @@ https://github.com/kraj/meta-clang/issues/247
 
 文中に登場している「glitch」という単語は、辞書では「故障」「誤動作」「異常」といった意味と出ますが、語源は「slip（滑る）」や「slide（ずらす）」と同じで、ニュアンスとしては「本来の正常な状態からずれてしまっている」状態を表すそうです。インデントのずれや画像の位置ずれなどにも使える表現ということで、覚えておくとよいでしょう。
 
-ところで、以下の文のおかしいところに皆さんは気が付かれましたか？
+ところで、この例も報告文の中にミスタイプがあります。
 
 > We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX.
 
-実はこの文の「it」は誤記で、「in」が正しいです。熟練者でもこのようなミスタイプが残ったまま報告してしまうことがあると思うと、皆さんも、英語の間違いを過度に恐れる必要はないのだなと勇気づけられるのではないでしょうか[^victim]。
+この文の「it」は誤記で、「in」が正しいです。先の筆者の例と併せて見ると、誤記はありふれたものだということをなんとなく感じて頂けるのではないでしょうか[^victim]。
 
 [^victim]: 畑ケさん本人にこの事を知らせると「やっちまったぁぁ」と恥ずかしがっておられましたが、本書でフィードバック初心者の方に勇気を持ってもらうための礎になっていただきました。合掌。
 
