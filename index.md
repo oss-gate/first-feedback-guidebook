@@ -10,9 +10,9 @@
   - [どう報告すればいいのか分からない](./chapters/how.md)：執筆済み
   - [英語での報告の仕方が分からない](./chapters/english.md)：執筆済み
   - [それでもためらってしまうあなたへ](./chapters/hesitation.md)：執筆済み
-  - [実例で見る良いフィードバック・悪いフィードバック](./chapters/examples.md)
+  - [他の人のフィードバックから学ぼう](./chapters/examples.md)
 * 3章 フィードバックした後のこと
-  - [キツイ表現は控えて、穏やかに話そう](./chapters/soft.md)
+  - [要望が通らない！](./chapters/do-not-intimidate.md)
   - [プルリクエストをなかなかマージしてもらえない！](./chapters/pullrequest.md)
   - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)
   - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)
