@@ -65,7 +65,7 @@ Cause of the issue≪問題の原因≫:
 
 ## よいフィードバック：Mouse DictionaryのFirefox対応の改善と、コードの文法チェック体制への提案
 
-2つ目は、本書の中でOSS Gateワークショップでのフィードバック事例の一つとしても紹介したMouse DictionaryというGoogle Chrome/Firefox用の拡張機能に対して、筆者が行ったいくつかのフィードバックです。これは「模範的」という意味での「よいフィードバック」ではなく、気負わずカジュアルに行うフィードバックの例として見てください。
+2つ目は、Webページ上でマウスカーソル（ポインタ）をかざした位置の語句を辞書で引いて結果をポップアップ表示するというGoogle Chrome/Firefox用の拡張機能「Mouse Dictionary」に対して、筆者が行った連続したフィードバックです。これは「模範的」という意味での「よいフィードバック」ではなく、気負わずカジュアルに行うフィードバックの例として見てください。
 
 https://github.com/wtetsu/mouse-dictionary/issues/32
 
