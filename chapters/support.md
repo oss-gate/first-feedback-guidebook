@@ -9,3 +9,7 @@ OSSへのコントリビュートというと、障害報告・パッチ提供�
 
 という話。
 
+
+
+Wikiの修正。MDNはGitHubアカウントでログインできるので勝手に直して良い。
+https://twitter.com/makoto_kato/status/1220319474575765507
