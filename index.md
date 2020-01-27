@@ -1,6 +1,6 @@
 目次案
 
-* [はじめに](./chapters/first.md)：執筆済み
+* [はじめに](./chapters/introduction.md)：執筆済み
 * 1章 フィードバックするための準備
   - [本当に「誰でもできる」の？](./chapters/motivation.md)：執筆済み
   - [OSSを探そう](./chapters/oss.md)：執筆済み
