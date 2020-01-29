@@ -54,4 +54,15 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ## ライセンス
 
-未設定（適切なライセンスを検討中）
+全体のライセンスは、Wikipediaと同様とします。
+
+* [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
+* [GFDL](https://www.gnu.org/licenses/fdl-1.3.html)
+
+著作者のクレジットは以下のいずれかとします。
+
+* 結城洋志（YUKI "Piro" Hiroshi）
+* YUKI Hiroshi
+* Piro
+
+ただし、寄稿頂いた部分などは別のライセンスが設定される場合があります。
