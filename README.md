@@ -54,7 +54,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ## ライセンス
 
-全体のライセンスは、Wikipediaと同様とします。
+全体のライセンスは、[Wikipediaと同様](https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B)とします。
 
 * [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
 * [GFDL](https://www.gnu.org/licenses/fdl-1.3.html)
