@@ -189,29 +189,7 @@ results = items.collect {|item| ... }
 
 # モジュールの設計上の分類でまとめるのか？
 
-```
-+ models
-|  + login.rb
-|  + user.rb
-+ controllers
-|  + login_controller.rb
-|  + user_controller.rb
-+ views
-   + login
-   + user
-```
-
 # アプリケーションとしての機能単位でまとめるのか？
-
-```
-+ model
-+ login
-|  + controller
-|  + view
-+ user
-   + controller
-   + view
-```
 
 
 
@@ -233,21 +211,6 @@ results = items.collect {|item| ... }
 
 # テストの例
 
-```ruby
-# test/unit/issue_test.rb
-
-class IssueTest < ActiveSupport::TestCase
-...
-  def test_create_minimal
-    issue = Issue.new(:project_id => 1, :tracker_id => 1,
-:author_id => 3, :subject => 'test_create')
-    assert issue.save
-    assert_equal issue.tracker.default_status, issue.status
-    assert issue.description.nil?
-    assert_nil issue.estimated_hours
-  end
-```
-
 # テストから読み取れる設計方針
 
  * モジュールの分け方
@@ -255,19 +218,6 @@ class IssueTest < ActiveSupport::TestCase
 
 
 同じプロダクトの中でも、Modelの中とControllerの中など文脈によっても視点が変わってくる
-
-# モジュールの粒度（責任範囲）
-
-入力した文章を機械学習のために整形する例
-
-```ruby
-# トークナイズだけを担うモジュールがある
-words = Tokenizer::Whitespace.call(
-          "this is a list of cool words!")
-...
-# トークンのフィルタリングだけを担うモジュールがある
-words = TokenFilter::Stopword.call(words)
-```
 
 # モジュール同士の連携の様子の見方
 
@@ -288,166 +238,6 @@ words = TokenFilter::Stopword.call(words)
  * 「欲しい物は、一般的な傾向に従って探せば見つかる」という状態を維持する事が大切
 
 
-
-# 背景事情を読み取る
-
- * ドキュメント
- * コメント
- * コミットログ
-
-# ドキュメント
-
-（省略）
-
-# コメント
-
-「なぜそうしているのか」が書かれていることがある
-
-# コミットログ
-
- * `git log app/models/issue.rb`
- * `git log -p app/models/issue.rb`
-
-などの方法で見られるが、
-漫然と読むのは現実的でない
-
-# テーマで辿る1
-
-例：Railsのバージョンアップにあたってどういう作業をしたのか？
-
-`git log | grep -i 'rails' -B 4`
-
-```
-commit 9947003a1145d66fb5457075908d1b1493763528
-Author: Go MAEDA <maeda@farend.jp>
-Date:   Wed Aug 8 13:29:11 2018 +0000
-
-    Update Rails to 5.2.1.
---
-commit ce1c65225037622c10568b3e6955cecce7e80fd9
-Author: Jean-Philippe Lang <jp_lang@yahoo.fr>
-Date:   Sat Jun 23 05:13:29 2018 +0000
-
-    Upgrade to Rails 5.2.0 (#23630).
-```
-
-# テーマで辿る2
-
-`$ git show ce1c65225037622c10568b3e6955cecce7e80fd9`
-
-```diff
-commit ce1c65225037622c10568b3e6955cecce7e80fd9
-Author: Jean-Philippe Lang <jp_lang@yahoo.fr>
-Date:   Sat Jun 23 05:13:29 2018 +0000
-
-    Upgrade to Rails 5.2.0 (#23630).
-    
-    git-svn-id: http://svn.redmine.org/redmine/trunk@17410 e93f8b46-1217-0410-a6f0-8f06a7374b81
-
-diff --git a/Gemfile b/Gemfile
-index 64598a5..98f27f6 100644
---- a/Gemfile
-+++ b/Gemfile
-@@ -4,7 +4,7 @@ if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('1.5.0')
-   abort "Redmine requires Bundler 1.5.0 or higher (you're using #{Bundler::VERSION}).\nPlease update with 'ge
- end
- 
--gem "rails", "5.1.6"
-+gem "rails", "5.2.0"
- gem "coderay", "~> 1.1.1"
- gem "request_store", "1.0.5"
- gem "mime-types", "~> 3.0"
-diff --git a/app/models/issue.rb b/app/models/issue.rb
-index 91f53c1..114d962 100644
---- a/app/models/issue.rb
-+++ b/app/models/issue.rb
-@@ -1016,8 +1016,7 @@ class Issue < ActiveRecord::Base
-   # Returns the previous assignee whenever we're before the save
-```
-
-
-# 行ごとの変更履歴から辿る1
-
-`git blame app/models/user.rb`
-
-```
-027bf938 app/models/user.rb         (Jean-Philippe Lang  2007-03-12 17:59:02 +0000  17) 
-027bf938 app/models/user.rb         (Jean-Philippe Lang  2007-03-12 17:59:02 +0000  18) require "digest/sha1"
-027bf938 app/models/user.rb         (Jean-Philippe Lang  2007-03-12 17:59:02 +0000  19) 
-77074571 app/models/user.rb         (Jean-Philippe Lang  2009-09-12 08:36:46 +0000  20) class User < Principal
-a4d7a99c app/models/user.rb         (Jean-Philippe Lang  2010-12-12 13:19:07 +0000  21)   include Redmine::SafeAttributes
-e86f9711 app/models/user.rb         (Toshi MARUYAMA      2011-08-21 01:57:25 +0000  22) 
-5a1fcf82 app/models/user.rb         (Jean-Philippe Lang  2011-11-26 17:37:20 +0000  23)   # Different ways of displaying/sortin
-79f92a67 app/models/user.rb         (Jean-Philippe Lang  2008-01-25 10:31:06 +0000  24)   USER_FORMATS = {
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  25)     :firstname_lastname => {
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  26)         :string => '#{firstname} #{last
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  27)         :order => %w(firstname lastname
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  28)         :setting_order => 1
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  29)       },
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  30)     :firstname_lastinitial => {
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  31)         :string => '#{firstname} #{last
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  32)         :order => %w(firstname lastname
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  33)         :setting_order => 2
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  34)       },
-6e6c6fac app/models/user.rb         (Jean-Philippe Lang  2014-01-24 09:23:11 +0000  35)     :firstinitial_lastname => {
-6e6c6fac app/models/user.rb         (Jean-Philippe Lang  2014-01-24 09:23:11 +0000  36)         :string => '#{firstname.to_s.gs
-6e6c6fac app/models/user.rb         (Jean-Philippe Lang  2014-01-24 09:23:11 +0000  37)         :order => %w(firstname lastname
-6e6c6fac app/models/user.rb         (Jean-Philippe Lang  2014-01-24 09:23:11 +0000  38)         :setting_order => 2
-6e6c6fac app/models/user.rb         (Jean-Philippe Lang  2014-01-24 09:23:11 +0000  39)       },
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  40)     :firstname => {
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  41)         :string => '#{firstname}',
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  42)         :order => %w(firstname id),
-399223da app/models/user.rb         (Jean-Philippe Lang  2012-10-30 08:40:12 +0000  43)         :setting_order => 3
-de0e0f09 app/models/user.rb         (Toshi MARUYAMA      2012-10-01 07:07:49 +0000  44)       },
-```
-
-
-# 行ごとの変更履歴から辿る2
-
-`git show de0e0f09`
-
-```diff
-commit de0e0f09a33b20170468d9fdc67c4b5b7ac085d2
-Author: Toshi MARUYAMA <marutosijp2@yahoo.co.jp>
-Date:   Mon Oct 1 07:07:49 2012 +0000
-
-    pin user format order at setting panel (#10937)
-    
-    git-svn-id: svn+ssh://rubyforge.org/var/svn/redmine/trunk@10542 e93f8b46-1217-0410-a6f0-8f06a7374b81
-
-diff --git a/app/controllers/settings_controller.rb b/app/controllers/settings_controller.rb
-index 3d2f9c1..e3387e4 100644
---- a/app/controllers/settings_controller.rb
-+++ b/app/controllers/settings_controller.rb
-@@ -39,7 +39,8 @@ class SettingsController < ApplicationController
-       redirect_to :action => 'edit', :tab => params[:tab]
-     else
-       @options = {}
--      @options[:user_format] = User::USER_FORMATS.keys.collect {|f| [User.current.name(f), f.to_s] }
-+      user_format = User::USER_FORMATS.collect{|key, value| [key, value[:setting_order]]}.sort{|a, b| a[1] <=
-+      @options[:user_format] = user_format.collect{|v| v[0]}.collect{|f| [User.current.name(f), f.to_s]}
-       @deliveries = ActionMailer::Base.perform_deliveries
- 
-       @guessed_host_and_path = request.host_with_port.dup
-```
-
-
-# コミットログを活用するためには
-
-コミットメッセージに*有用な情報*を含めておかないといけない
-
- * 「ユーザーがグループに所属していない時にログインに失敗する問題を修正」
- * 「チケットの作成時に空のフィールドを許容しないように変更」
-
-5W1Hのうちの「Why」
-
-# いいかげんなコミットメッセージはログの有用性を損なう
-
- * 「バグ修正」
- * 「テスト」
- * 「腹減った」
-
-コミットログの書き方も揃える。
 
 
 
@@ -481,6 +271,17 @@ itemsCound
 APIのデザインを合わせる。
 引数の流儀を合わせる。
 
+
+
+コミットログの書き方を揃える。
+コミットメッセージに*有用な情報*を含めておかないといけない
+ * 「ユーザーがグループに所属していない時にログインに失敗する問題を修正」
+ * 「チケットの作成時に空のフィールドを許容しないように変更」
+5W1Hのうちの「Why」
+# いいかげんなコミットメッセージはログの有用性を損なう
+ * 「バグ修正」
+ * 「テスト」
+ * 「腹減った」
 
 
 
