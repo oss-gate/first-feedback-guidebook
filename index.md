@@ -19,6 +19,4 @@
   - [ライセンスについてより正確に知る](./chapters/licenses.md)
 * 参考事例
   - OSS活動歴の長い人の個人的な事例をいくつか寄稿してもらう？（ベテラン、かけだし、成功、しくじり、いろいろあると良さそう）
-* おわりに
-  - OSS Gateの取り組みに参加を呼びかける
-  - OSSだけで終わらないで自由にも関心を持ってもらえるように。参考：[なぜ、オープンソースは自由ソフトウェアの的を外すのか](https://www.gnu.org/philosophy/open-source-misses-the-point.ja.html)
+* [おわりに](./chapters/conclusion.md)
