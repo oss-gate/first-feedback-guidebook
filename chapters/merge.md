@@ -289,6 +289,24 @@ APIのデザインを合わせる。
 
 
 
+OSS初心者がつまづきながらOSSマナーを学んでいく話 - Speaker Deck
+https://speakerdeck.com/fuqda/osschu-xin-zhe-gatumadukinagaraossmanawoxue-ndeikuhua-4edf8e12-a019-4fa6-bc93-5be40a788e86
+
+OSSで結果を出す方法 - Speaker Deck
+https://speakerdeck.com/knu/ossdejie-guo-wochu-sufang-fa?slide=3
+
+このあたりで語られているような内容。
+
+
+
+
+
+
+
+
+
+
+
 
 
 

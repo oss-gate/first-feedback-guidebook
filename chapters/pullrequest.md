@@ -188,22 +188,3 @@ function getLinkURLs() {
 [^test-fail-from-updated-environment]: 例えば、「実験的に導入されていた演算子をテストで使っていたが、実行環境が更新されてその演算子が廃止された」「テストで使っていた組み込みのクラスが、その言語の新しいバージョンでは廃止された」などのような場合。
 
 自動テストはそのOSSの「期待される動作」「詳細な使い方」を説明するものでもあります。テストを熟読しながら、なぜテストが失敗しているのか原因を調べて、すべて成功する状態に修正する、という作業をすると、確実にそのOSSへの理解が深まります。OSSでテストの失敗に遭遇したら、是非挑戦してみて下さい。
-
-
-
-
-
-OSS初心者がつまづきながらOSSマナーを学んでいく話 - Speaker Deck
-https://speakerdeck.com/fuqda/osschu-xin-zhe-gatumadukinagaraossmanawoxue-ndeikuhua-4edf8e12-a019-4fa6-bc93-5be40a788e86
-
-OSSで結果を出す方法 - Speaker Deck
-https://speakerdeck.com/knu/ossdejie-guo-wochu-sufang-fa?slide=3
-
-このあたりで語られているような内容。
-
-
-
-
-
-
-
