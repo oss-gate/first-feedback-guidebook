@@ -15,7 +15,7 @@
 * 3章 フィードバックした後のこと
   - [要望が通らない！](./chapters/do-not-intimidate.md)：執筆済み
   - [プルリクエストをマージしてもらえない！](./chapters/merge.md)：執筆済み
-  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)
+  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)：執筆済み
   - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)
   - [ライセンスについてより正確に知る](./chapters/licenses.md)
 * 参考事例
