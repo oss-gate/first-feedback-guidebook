@@ -449,7 +449,6 @@ https://github.com/wtetsu/mouse-dictionary/pull/37
 > 
 > 変更内容:
 > package.jsonの文法チェック用の指定に変更を加え、コーディングスタイルをチェックするようにした。
-```
 
 ### 注目したい点
 
