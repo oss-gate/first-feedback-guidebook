@@ -360,7 +360,6 @@ https://github.com/kraj/meta-clang/issues/247
 >  ≪追加の情報≫
 >    (Updated) I'd encountered this issue during meta-browser's firefox recipe building.
 >    ≪（追記）私はこの問題に、meta-browserのFirefoxのレシピを使ってのビルド作業中に遭遇しました。≫
-```
 
 ### フィードバックの経緯
 
