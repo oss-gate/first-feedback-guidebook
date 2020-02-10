@@ -17,7 +17,7 @@
   - [プルリクエストをマージしてもらえない！](./chapters/merge.md)：執筆済み
   - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)：執筆済み
   - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)：執筆済み
-  - [ライセンスについてより正確に知る](./chapters/licenses.md)
+  - [ライセンスについてより正確に知る](./chapters/licenses.md)：執筆済み
 * 参考事例
   - OSS活動歴の長い人の個人的な事例をいくつか寄稿してもらう？（ベテラン、かけだし、成功、しくじり、いろいろあると良さそう）
-* [おわりに](./chapters/conclusion.md)
+* [おわりに](./chapters/outroduction.md)
