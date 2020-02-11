@@ -38,5 +38,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 * 結城洋志（YUKI "Piro" Hiroshi）
 * YUKI Hiroshi
 * Piro
+* Piro / YUKI Hiroshi
+* YUKI Hiroshi / Piro
 
 ただし、寄稿頂いた部分などは別のライセンスが設定される場合があります。
