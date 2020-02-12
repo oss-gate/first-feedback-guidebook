@@ -122,19 +122,19 @@ ITエンジニア向けに「こういう英語表現を覚えよう」という
 
 * 「設定の値が`false`である状態」を擬人化して主語にする：
   
-  > `SearchSuggestEnabled`=`false` does not hide search suggestions on the search bar.  
-  > （`SearchSuggestEnabled`=`false`という状態が、検索バーの検索候補を隠してくれない）
+  `SearchSuggestEnabled`=`false` does not hide search suggestions on the search bar.  
+  （`SearchSuggestEnabled`=`false`という状態が、検索バーの検索候補を隠してくれない）
 * 「検索候補」を擬人化して主語にする：
   
-  > Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`false`.  
-  > （`SearchSuggestEnabled`=`false`という設定の時に、検索バーで検索候補が見える）
+  Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`false`.  
+  （`SearchSuggestEnabled`=`false`という設定の時に、検索バーで検索候補が見える）
 
 どうでしょう。このくらいの英文なら、自分にも書けるような気がしてきませんか？　これに
 
-* > There is an enterprise policy `SearchSuggestEnabled`.  
-  > （～という法人向けポリシー設定があります。）
-* > The location bar shows search suggestions. The web search bar also.  
-  > （ロケーションバーは検索候補を表示します。Web検索バーも同様。）
+* There is an enterprise policy `SearchSuggestEnabled`.  
+  （～という法人向けポリシー設定があります。）
+* The location bar shows search suggestions. The web search bar also.  
+  （ロケーションバーは検索候補を表示します。Web検索バーも同様。）
 
 などの文を添えれば、上述の例で報告したかった内容は言い表せたと言っていいでしょう。
 
