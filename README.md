@@ -24,6 +24,14 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 `echo "scale=2; $(cat chapters/*.md | wc -m) / 1400" | bc`
 
+### ビルド手順
+
+```bash
+$ sudo gem install review
+$ sudo npm install -g easybooks
+$ cd chapters
+$ easybooks first-feedback-guidebook.json
+```
 
 
 ## ライセンス
