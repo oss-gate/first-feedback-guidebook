@@ -10,7 +10,7 @@ build_pdf() {
   rm -rf $DIR
   cp -r chapters $DIR
   cp first-feedback-guidebook.json $DIR/
-  find $DIR -name '*.md' | xargs sed -i -r -e "s/^\[([^\(]+)\]\(([^\)]+)\)$/$blankline\n\n**\1**\n\n\2\n\n$blankline/g" -e "s;^　$;$blankline;g"
+  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
 
   cd $DIR
   easybooks first-feedback-guidebook.json
