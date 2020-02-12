@@ -129,29 +129,39 @@ GPLバージョン3もOSIのオープンソースライセンス一覧に記載�
 
 RubyGems、npmなどのパッケージ管理システムのリポジトリのWebサイトでは、パッケージの詳細情報を見るとライセンスの情報が標示されている場合があります。代表的な各言語のパッケージ管理システムで、ライセンスを実際に確認できる例をいくつかご紹介しましょう。
 
-* Node.jsのnpmでは、パッケージの詳細ページ<!-- https://www.npmjs.com/package/mocha -->の右側にライセンスが標示されます。
+* Node.jsのnpmでは、パッケージの詳細ページの右側にライセンスが標示されます。
   ![Mochaの場合](images/oss-npm.png) 
-* PythonのPyPIでは、パッケージの詳細ページ<!-- https://pypi.org/project/XlsxWriter/ -->の左側にライセンスが標示されます。
+  <!-- https://www.npmjs.com/package/mocha -->
+* PythonのPyPIでは、パッケージの詳細ページの左側にライセンスが標示されます。
   ![XlsxWriterの場合](images/oss-pypi.png)
-* RubyのRubyGemsでは、パッケージの詳細ページ<!-- https://rubygems.org/gems/rails -->の右側にライセンスが標示されます。
+  <!-- https://pypi.org/project/XlsxWriter/ -->
+* RubyのRubyGemsでは、パッケージの詳細ページの右側にライセンスが標示されます。
   ![Railsの場合](images/oss-gem.png)
-* PHPのPackagistでは、パッケージの詳細ページ<!-- https://packagist.org/packages/composer/composer -->の下の方にライセンスが標示されます。
+  <!-- https://rubygems.org/gems/rails -->
+* PHPのPackagistでは、パッケージの詳細ページの下の方にライセンスが標示されます。
   ![Composerの場合](images/oss-packagist.png)
-* Rustのcrates.ioでは、パッケージの詳細ページ<!-- https://crates.io/crates/libc -->の右側にライセンスが標示されます。
+  <!-- https://packagist.org/packages/composer/composer -->
+* Rustのcrates.ioでは、パッケージの詳細ページの右側にライセンスが標示されます。
   ![libcの場合](images/oss-cratesio.png)
-* PerlのCPANでは、パッケージの詳細ページ<!-- https://metacpan.org/pod/MongoDB -->の左側にライセンスが標示されます。
+  <!-- https://crates.io/crates/libc -->
+* PerlのCPANでは、パッケージの詳細ページの左側にライセンスが標示されます。
   ![MongoDBの場合](images/oss-cpan.png)
+  <!-- https://metacpan.org/pod/MongoDB -->
 
 これらのライセンス情報は、作者によってパッケージ自体に記載されたメタ情報に基づいて標示されています。ライセンス情報はメタ情報としては必須項目になっていない場合があるため、パッケージによってはライセンスが標示されていない事もあります。
 
 LinuxやBSDなどのOSディストリビューションのパッケージ管理システムにおいても、同様に各ソフトウェアのライセンス情報が標示されています。例えば、以下の要領です。
 
-* Debianのパッケージ詳細ページ<!-- https://packages.debian.org/ja/sid/rsync -->やUbuntuのパッケージ詳細ページ<!-- https://packages.ubuntu.com/eoan/rsync -->では、右側にある「著作権ファイル」というリンクの遷移先でライセンスを確認できます。
+* Debianのパッケージ詳細ページやUbuntuのパッケージ詳細ページでは、右側にある「著作権ファイル」というリンクの遷移先でライセンスを確認できます。
   ![Debianのrsyncパッケージの場合](images/oss-debian.png)
-* Portsのパッケージ検索結界一覧<!-- https://www.freshports.org/search.php?query=rsync&search=go&num=10&stype=name&method=match&deleted=excludedeleted&start=1&casesensitivity=caseinsensitive -->では、検索結果の情報の中にライセンスが標示されています。
+  <!-- https://packages.debian.org/ja/sid/rsync -->
+  <!-- https://packages.ubuntu.com/eoan/rsync -->
+* Portsのパッケージ検索結界一覧では、検索結果の情報の中にライセンスが標示されています。
   ![Portsのrsyncパッケージの場合](images/oss-ports.png)
-* MacPortsのパッケージ検索結果一覧<!-- https://www.macports.org/ports.php?by=name&substr=rsync -->でも、検索結果の情報の中にライセンスが標示されています。
+  <!-- https://www.freshports.org/search.php?query=rsync&search=go&num=10&stype=name&method=match&deleted=excludedeleted&start=1&casesensitivity=caseinsensitive -->
+* MacPortsのパッケージ検索結果一覧でも、検索結果の情報の中にライセンスが標示されています。
   ![MacPortsのrsyncパッケージの場合](images/oss-macports.png)
+  <!-- https://www.macports.org/ports.php?by=name&substr=rsync -->
 
 各OSディストリビューションのパッケージリポジトリでは、パッケージは各ソフトウェアの作者ではなくパッケージメンテナーという専任者が登録作業を行っています。ライセンスが不明瞭なままリポジトリに格納されることはあり得ないため[^package-license]、これらの情報の信頼性は高いと言えます。
 
