@@ -10,55 +10,60 @@
 [^oss-gate-workshop-in-akatsuki]: https://www.clear-code.com/blog/2019/5/29.html
 [^mouse-dictionary-extension]: https://mouse-dictionary.netlify.com/en/
 
+　
+
 https://github.com/wtetsu/mouse-dictionary/issues/19
 
-タイトル:
+```plain
+■タイトル
 
-> White screen shown in the first boot
+White screen shown in the first boot
 
-説明:
 
-> Steps to Reproduce
-> 
-> 1. Install Chrome (ver. 72.0.3626.109 Official Build 64bit) into MacOSX 10.14.3 .
-> 2. Install Mouse Dictionary (ver. 1.1.9) from Chrome Web Store.
-> 3. Click extension icon of Mouse Dictionary, and open the popup window.
-> 4. Point any English term.
-> 
-> Expected Result
-> 
-> * Shown translated sentence of English term in the popup window.
-> 
-> Actual Result
-> 
-> * White screen shown in the popup window.
-> 
-> Suggestion
-> 
-> * Add how to installation (ex. "Open option menu on the first boot.") in the store page.
-> * Or, add description (ex. "Not initialized. Please open option menu.") in the not initialized popup window.
-> 
-> ----
-> 
-> 再現手順
-> 
-> 1. MacOSX 10.14.3 に、Chromeのバージョン：72.0.3626.109（Official Build）（64 ビット）をインストールする
-> 2. chromeウェブストアから Mouse Dictionary （バージョン：1.1.9） を拡張機能としてインストールする
-> 3. 拡張機能一覧から Mouse Dictionary のアイコンをクリックして、ポップアップウィンドウを立ち上げる
-> 4. ポップアップウィンドウが立ち上がった状態でウェブページ内の任意の英単語にマウスカーソルを合わせる
-> 
-> 期待する結果
-> 
-> * Mouse Dictionary のポップアップウィンドウに、翻訳結果が表示される
-> 
-> 実際の結果
-> 
-> * ポップアップウィンドウ内は白紙のまま、何も表示されない
-> 
-> 提案
-> 
-> * 最初にオプションメニューを開くことが必須ということを、ストアページの説明文に記載してはどうでしょうか
-> * もしくは、辞書情報が登録されていないのでオプションメニューを開かなければならない旨を、ポップアップウィンドウに表示してはどうでしょうか
+■説明
+
+Steps to Reproduce
+
+1. Install Chrome (ver. 72.0.3626.109 Official Build 64bit) into MacOSX 10.14.3 .
+2. Install Mouse Dictionary (ver. 1.1.9) from Chrome Web Store.
+3. Click extension icon of Mouse Dictionary, and open the popup window.
+4. Point any English term.
+
+Expected Result
+
+* Shown translated sentence of English term in the popup window.
+
+Actual Result
+
+* White screen shown in the popup window.
+
+Suggestion
+
+* Add how to installation (ex. "Open option menu on the first boot.") in the store page.
+* Or, add description (ex. "Not initialized. Please open option menu.") in the not initialized popup window.
+
+----
+
+再現手順
+
+1. MacOSX 10.14.3 に、Chromeのバージョン：72.0.3626.109（Official Build）（64 ビット）をインストールする
+2. chromeウェブストアから Mouse Dictionary （バージョン：1.1.9） を拡張機能としてインストールする
+3. 拡張機能一覧から Mouse Dictionary のアイコンをクリックして、ポップアップウィンドウを立ち上げる
+4. ポップアップウィンドウが立ち上がった状態でウェブページ内の任意の英単語にマウスカーソルを合わせる
+
+期待する結果
+
+* Mouse Dictionary のポップアップウィンドウに、翻訳結果が表示される
+
+実際の結果
+
+* ポップアップウィンドウ内は白紙のまま、何も表示されない
+
+提案
+
+* 最初にオプションメニューを開くことが必須ということを、ストアページの説明文に記載してはどうでしょうか
+* もしくは、辞書情報が登録されていないのでオプションメニューを開かなければならない旨を、ポップアップウィンドウに表示してはどうでしょうか
+```
 
 ### 注目したい点
 
@@ -81,49 +86,54 @@ OSS Gateワークショップの中で行ったフィードバックなので、
 
 2つ目は、筆者が開発・公開しているFirefox用のアドオン「Tree Style Tab」に寄せられたフィードバックです。このアドオンはFirefoxに「縦長のツリー表示のタブバーとして動作するサイドバー」を提供するというものです。
 
+　
+
 https://github.com/piroor/treestyletab/issues/1539
 
-タイトル:
+```plain
+■タイトル
 
-> Close button too small on some tabs and not of the same size in some tabs
-> ≪いくつかのタブのクローズボタンが小さすぎ、他のタブでのものとサイズが異なる≫
+Close button too small on some tabs and not of the same size in some tabs
+≪いくつかのタブのクローズボタンが小さすぎ、他のタブでのものとサイズが異なる≫
 
-説明:
 
-> Short description
-> ≪短い説明≫
-> Close button too small on some tabs and not of the same size in some tabs
-> ≪いくつかのタブのクローズボタンが小さすぎ、他のタブでのものとサイズが異なる≫
-> 
-> Steps to reproduce
-> ≪再現手順≫
-> 1. Start Firefox with clean profile.
->    ≪Firefoxを新しいプロファイルで起動する≫
-> 2．Install TST.
->    ≪Tree Style Tabをインストールする≫
-> 3. Resize the TST bar to the minimum width possible
->    ≪TSTのタブバーを、可能な限り最小の幅にリサイズする≫
-> 4. Open multiple tabs under multiple trees
->    ≪複数のツリーの配下に複数のタブを開く≫
-> 
-> Expected result
-> ≪期待される結果≫
-> Close button is of the same shape and size in all the opened tabs
-> ≪すべての開かれたタブにおいてクローズボタンが同じサイズ・同じ形で表示される≫
-> 
-> Actual result
-> ≪実際の結果≫
-> Screenshots 1 and 4 seem to have normal shaped and sized close buttons but screenshots 2, 3 have small button with different shapes.
-> ≪スクリーンショットの1番と4番は通常の形とサイズでクローズボタンが表示されているようですが、スクリーンショットの2番と3晩ではボタンが異なる形になっています。≫
-> 
-> Environment
-> ≪環境≫
-> * Platform (OS): Arch Linux
->   ≪プラットフォーム（OS）：Arch Linux≫
-> * Version of Firefox: 57.0
->   ≪Firefoxのバージョン：57.0≫
-> * Version (or revision) of Tree Style Tab: 2.2.7
->   ≪Tree Style Tabのバージョン：2.2.7≫
+■説明
+
+Short description
+≪短い説明≫
+Close button too small on some tabs and not of the same size in some tabs
+≪いくつかのタブのクローズボタンが小さすぎ、他のタブでのものとサイズが異なる≫
+
+Steps to reproduce
+≪再現手順≫
+1. Start Firefox with clean profile.
+   ≪Firefoxを新しいプロファイルで起動する≫
+2．Install TST.
+   ≪Tree Style Tabをインストールする≫
+3. Resize the TST bar to the minimum width possible
+   ≪TSTのタブバーを、可能な限り最小の幅にリサイズする≫
+4. Open multiple tabs under multiple trees
+   ≪複数のツリーの配下に複数のタブを開く≫
+
+Expected result
+≪期待される結果≫
+Close button is of the same shape and size in all the opened tabs
+≪すべての開かれたタブにおいてクローズボタンが同じサイズ・同じ形で表示される≫
+
+Actual result
+≪実際の結果≫
+Screenshots 1 and 4 seem to have normal shaped and sized close buttons but screenshots 2, 3 have small button with different shapes.
+≪スクリーンショットの1番と4番は通常の形とサイズでクローズボタンが表示されているようですが、スクリーンショットの2番と3晩ではボタンが異なる形になっています。≫
+
+Environment
+≪環境≫
+* Platform (OS): Arch Linux
+  ≪プラットフォーム（OS）：Arch Linux≫
+* Version of Firefox: 57.0
+  ≪Firefoxのバージョン：57.0≫
+* Version (or revision) of Tree Style Tab: 2.2.7
+  ≪Tree Style Tabのバージョン：2.2.7≫
+```
 
 ![添付されていたスクリーンショット](images/examples-screenshots.png)
 
@@ -145,35 +155,40 @@ GUIを提供するソフトウェアでは、画面上の表示に関する問�
 
 3つ目は、筆者の同僚の足永さんがcollectdというソフトウェアに対して行った、リリースマネジメントに関するフィードバックです。
 
+　
+
 https://github.com/collectd/collectd/issues/3293
 
-タイトル:
+```plain
+■タイトル
 
-> The source packages of collectd-5.9.2 aren't generated by the formal procedure
-> ≪タイトル：colelctd-5.9.2のソースパッケージが通常の手順で生成されない≫
+The source packages of collectd-5.9.2 aren't generated by the formal procedure
+≪タイトル：colelctd-5.9.2のソースパッケージが通常の手順で生成されない≫
 
-説明:
 
-> Version of collectd: collectd-5.9.2 on git
-> ≪collectdのバージョン：git上のcollectd-5.9.2≫
-> 
-> Expected behavior≪期待される結果≫:
->   version-gen.sh script should generate "5.9.2" on collectd-5.9.2 tag.
->   ≪version-gen.shスクリプトがcolelctd-5.9.2タグに基づいて「5.9.2」を生成する。≫
-> 
-> Actual behavior≪実際の結果≫:
->   version-gen.sh script generates "5.9.1.7.gdfb9dd0 on collectd-5.9.2 tag.
->   ≪version-gen.shスクリプトがcolelctd-5.9.2タグに基づいて「5.9.1.7.gdfb9dd0」を生成する。≫
-> 
-> Steps to reproduce≪再現手順≫:
->   $ git clone https://github.com/collectd/collectd.git
->   $ cd collectd
->   $ git checkout collectd-5.9.2
->   $ ./version-gen.sh
-> 
-> Cause of the issue≪問題の原因≫:
->   collectd-5.9.2 tag isn't annotated.
->   ≪collectd-5.9.2タグに注記が付いていない。≫
+■説明
+
+Version of collectd: collectd-5.9.2 on git
+≪collectdのバージョン：git上のcollectd-5.9.2≫
+
+Expected behavior≪期待される結果≫:
+  version-gen.sh script should generate "5.9.2" on collectd-5.9.2 tag.
+  ≪version-gen.shスクリプトがcolelctd-5.9.2タグに基づいて「5.9.2」を生成する。≫
+
+Actual behavior≪実際の結果≫:
+  version-gen.sh script generates "5.9.1.7.gdfb9dd0 on collectd-5.9.2 tag.
+  ≪version-gen.shスクリプトがcolelctd-5.9.2タグに基づいて「5.9.1.7.gdfb9dd0」を生成する。≫
+
+Steps to reproduce≪再現手順≫:
+  $ git clone https://github.com/collectd/collectd.git
+  $ cd collectd
+  $ git checkout collectd-5.9.2
+  $ ./version-gen.sh
+
+Cause of the issue≪問題の原因≫:
+  collectd-5.9.2 tag isn't annotated.
+  ≪collectd-5.9.2タグに注記が付いていない。≫
+```
 
 ### フィードバックの経緯
 
@@ -196,7 +211,9 @@ https://github.com/collectd/collectd/issues/3293
 
 「期待される結果」「実際の結果」の説明文の英語の表現にも着目してください。
 
-> version-gen.sh script should generate "5.9.2" on collectd-5.9.2 tag.
+```plain
+version-gen.sh script should generate "5.9.2" on collectd-5.9.2 tag.
+```
 
 「パッケージ作成手順に従って作業したら5.9.2というバージョンが付くべき」ということを言い表すのに、リポジトリに含まれているパッケージ作成用のスクリプトを主語にして「このスクリプトはこのような事をするべき」という書き方をしています。日本語で言いたいことを余すこととなくすべて英語で言い表そうとしなくても、動作の主体を明記することで簡潔に表現できるという好例でしょう。
 
@@ -207,67 +224,72 @@ https://github.com/collectd/collectd/issues/3293
 
 4つ目は、筆者がチャットツールのZulipに対して行ったフィードバックです。
 
+　
+
 https://github.com/zulip/zulip/issues/9396
 
-タイトル:
+```plain
+■タイトル
 
-> typeahead: "keydown" events for Enter and Arrow keys should be ignored while "composition"
-> ≪インクリメンタル検索: Enterキーと矢印キーのkeydownイベントは「コンポジション」の最中は無視されるべき≫
+typeahead: "keydown" events for Enter and Arrow keys should be ignored while "composition"
+≪インクリメンタル検索: Enterキーと矢印キーのkeydownイベントは「コンポジション」の最中は無視されるべき≫
 
-説明:
 
-> First, I describe what is the "composition".
-> ≪最初に、「コンポジション」とは何かを説明します。≫
-> 
-> In CJK language regions, people use some software named "IM" (input method) to input heir local language text. For example, when I search a Japanese term "日本語" (means "Japanese language") in a Zulip instance with Firefox, I need to do:
-> ≪CJK（中国語・日本語・韓国語）の言語の地域では、人々は彼らの地域言語のテキストを入力するために「IM（インプットメソッド）」と呼ばれるソフトウェアを使っています。例えば、私が日本語の単語「日本語」をFirefoxで表示したZulipで検索するとき、私は以下のような操作をする必要があります：≫
-> 
-> 1. Click the search field.
->    ≪検索欄をクリック。≫
-> 2. Activate the IM. The "composition" session starts.
->    ≪IMを有効化する。「コンポジション」のセッションが始まる。≫
-> 3. Type keys: `n`, `i`, `h`, `o`, and `n`. (in a composition session)
->    ≪（コンポジションのセッションの中で）n, i, h, o, nとキーを入力する。≫
-> 4. Hit the Space key to convert the text to Japanese term. "日本" is suggested. (in a composition session)
->    ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「日本」が提案される。≫
-> 5. Hit the Enter key to determine the text "日本". (in a composition session)
->    ≪（コンポジションのセッションの中で）「日本語」というテキストを確定するために、Enterキーを押す。≫
-> 6. Type keys: `g`, and `o`. (in a composition session)
->    ≪（コンポジションのセッションの中で）g, oとキーを入力する。≫
-> 7. Hit the Space key to convert the text to Japanese term. "語" is suggested. (in a composition session)
->    ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「語」が提案される。≫
-> 8. Hit the Enter key to determine the text "語". (in a composition session)
->    ≪（コンポジションのセッションの中で）「語」というテキストを確定するために、Enterキーを押す。≫
-> 9. Deactivate the IM. The "composition" session ends.
->    ≪IMを無効化する。「コンポジション」のセッションが終了する。≫
-> 10. Hit the Enter key again to search "日本語" on Zulip.
->     ≪「日本語」をZulipで検索するために、Enterキーをもう1度押す。≫
-> 
-> While the composition session, "keydown" events for special keys (Enter and Arrow) are handled by the IM to choose a term from variations >or determine the choice. Thus I hit the Enter key three times in this case. The first time and the second are notified only to IM, so Zulip receives only the third time.
-> ≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするために使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
-> 
-> And, there is one problem on lately development build of Firefox.
-> ≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
-> 
-> * 1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta  
->   https://bugzilla.mozilla.org/show_bug.cgi?id=1446401
->   ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
-> * Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group  
->   https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion
->   ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
-> 
-> Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
-> ≪この変更のため、Firefoxの開発版ビルド（別名Nightly）は「コンポジション」セッション中の物も含めすべてのキーボード操作に対し、keydownイベントをWebページに通知します。その結果、検索欄は私がアルファベットのキーを入力している最中に候補を表示します。これは良い改善ですが、しかし新たに1つの問題が発生しています:選択を確定するために私がEnterキーを押したとき、それがZulipにも通知されます。そのため、私が「日本語」という複合語の一部として「日本」を確定しようとしたときにまで、Zulipは意図せずそのEnterキーの操作を「日本」という単語を検索するための物として取り扱い、続く「語」という単語を私は入力することができません。≫
-  
-> To fix this problem, Zulip need to ignore keydown events for Enter and Arrow keys while the composition session. While a composition session, all keydown events have the `isComposing` (https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing) property with `true` value, so you just need to return when the property is `true`. Could you apply this change to Zulip?
-> ≪この問題を直すためには、ZulipはEnterと矢印キーのkeyダウンイベントをコンポジションのセッション中は無視する必要があります。コンポジションのセッション中は、すべてのkeydownイベントがisComposingというプロパティをtrueという値を伴って持っています。そのため、そのプロパティの値がtrueであるときはすぐに処理をリターンする必要のみあります。この変更をZulipに反映してもらえませんか？
->   
-> Environment:
-> ≪環境≫
-> 
-> * Zulip 1.8.0
-> * Mozilla Firefox Nightly 62.0a1
-> * Ubuntu 16.04LTS + IIIMF ATOK X3
+■説明
+
+First, I describe what is the "composition".
+≪最初に、「コンポジション」とは何かを説明します。≫
+
+In CJK language regions, people use some software named "IM" (input method) to input heir local language text. For example, when I search a Japanese term "日本語" (means "Japanese language") in a Zulip instance with Firefox, I need to do:
+≪CJK（中国語・日本語・韓国語）の言語の地域では、人々は彼らの地域言語のテキストを入力するために「IM（インプットメソッド）」と呼ばれるソフトウェアを使っています。例えば、私が日本語の単語「日本語」をFirefoxで表示したZulipで検索するとき、私は以下のような操作をする必要があります：≫
+
+1. Click the search field.
+   ≪検索欄をクリック。≫
+2. Activate the IM. The "composition" session starts.
+   ≪IMを有効化する。「コンポジション」のセッションが始まる。≫
+3. Type keys: `n`, `i`, `h`, `o`, and `n`. (in a composition session)
+   ≪（コンポジションのセッションの中で）n, i, h, o, nとキーを入力する。≫
+4. Hit the Space key to convert the text to Japanese term. "日本" is suggested. (in a composition session)
+   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「日本」が提案される。≫
+5. Hit the Enter key to determine the text "日本". (in a composition session)
+   ≪（コンポジションのセッションの中で）「日本語」というテキストを確定するために、Enterキーを押す。≫
+6. Type keys: `g`, and `o`. (in a composition session)
+   ≪（コンポジションのセッションの中で）g, oとキーを入力する。≫
+7. Hit the Space key to convert the text to Japanese term. "語" is suggested. (in a composition session)
+   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「語」が提案される。≫
+8. Hit the Enter key to determine the text "語". (in a composition session)
+   ≪（コンポジションのセッションの中で）「語」というテキストを確定するために、Enterキーを押す。≫
+9. Deactivate the IM. The "composition" session ends.
+   ≪IMを無効化する。「コンポジション」のセッションが終了する。≫
+10. Hit the Enter key again to search "日本語" on Zulip.
+    ≪「日本語」をZulipで検索するために、Enterキーをもう1度押す。≫
+
+While the composition session, "keydown" events for special keys (Enter and Arrow) are handled by the IM to choose a term from variations >or determine the choice. Thus I hit the Enter key three times in this case. The first time and the second are notified only to IM, so Zulip receives only the third time.
+≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするために使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
+
+And, there is one problem on lately development build of Firefox.
+≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
+
+* 1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta  
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1446401
+  ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
+* Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group  
+  https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion
+  ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
+
+Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
+≪この変更のため、Firefoxの開発版ビルド（別名Nightly）は「コンポジション」セッション中の物も含めすべてのキーボード操作に対し、keydownイベントをWebページに通知します。その結果、検索欄は私がアルファベットのキーを入力している最中に候補を表示します。これは良い改善ですが、しかし新たに1つの問題が発生しています:選択を確定するために私がEnterキーを押したとき、それがZulipにも通知されます。そのため、私が「日本語」という複合語の一部として「日本」を確定しようとしたときにまで、Zulipは意図せずそのEnterキーの操作を「日本」という単語を検索するための物として取り扱い、続く「語」という単語を私は入力することができません。≫
+
+To fix this problem, Zulip need to ignore keydown events for Enter and Arrow keys while the composition session. While a composition session, all keydown events have the `isComposing` (https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing) property with `true` value, so you just need to return when the property is `true`. Could you apply this change to Zulip?
+≪この問題を直すためには、ZulipはEnterと矢印キーのkeyダウンイベントをコンポジションのセッション中は無視する必要があります。コンポジションのセッション中は、すべてのkeydownイベントがisComposingというプロパティをtrueという値を伴って持っています。そのため、そのプロパティの値がtrueであるときはすぐに処理をリターンする必要のみあります。この変更をZulipに反映してもらえませんか？
+
+Environment:
+≪環境≫
+
+* Zulip 1.8.0
+* Mozilla Firefox Nightly 62.0a1
+* Ubuntu 16.04LTS + IIIMF ATOK X3
+```
 
 ### フィードバックの経緯
 
@@ -289,7 +311,7 @@ CJKを母語としない開発者にはこういった事情がなかなか分�
 
 ところで、以下の文のおかしいところに皆さんは気が付かれましたか？
 
-> In CJK language regions, people use some software named "IM" (input method) to input heir local language text.
+  In CJK language regions, people use some software named "IM" (input method) to input heir local language text.
 
 実はこの文の「heir」は誤記で、「their」が正しいです。熟練者でもこのようなミスタイプが残ったまま報告してしまうことがあると思うと、皆さんも、英語の間違いを過度に恐れる必要はないのだなと勇気づけられるのではないでしょうか。
 
@@ -298,74 +320,87 @@ CJKを母語としない開発者にはこういった事情がなかなか分�
 
 5つ目は、筆者の同僚の畑ケさんがmeta-clangというプロジェクトに対して行ったフィードバックです。フィードバックの内容自体に分量があるので、軽く読み流してから、後の説明と見比べてみてください。
 
+　
+
 https://github.com/kraj/meta-clang/issues/247
 
-タイトル:
+```plain
+■タイトル
 
-> meta-clang's llvm-config is not compatible with MULTILIBS
-> ≪meta-clangのllvm-configが、MULTILIBSと互換性がない≫
+meta-clang's llvm-config is not compatible with MULTILIBS
+≪meta-clangのllvm-configが、MULTILIBSと互換性がない≫
 
-説明:
 
-> ≪不具合の説明≫
->   One of the our target boards(RZ/G2E)'s Yocto default conf/local.conf specifies MULTILIBS = "multilib:lib32" and   DEFAULTTUNE_virtclass  -multilib-lib32 = "armv7vethf-neon" to be able to run 32bit ARMv7 binaries.
->   ≪私達が開発している対象のボード（RZ/G2E）の一つのYoctoレシピの既定のconf/local.confには、32bit ARMv7バイナリを動かすために、  「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」という設定が含まれています。≫
->   So, built binaries will be installed in /usr/lib64/ instead of /usr/lib.
->   ≪そのため、ビルドされたバイナリは/usr/libではなく/usr/lib64/の中にインストールされます。≫
->   
->   Because our SDK environment does not assume /usr/lib for library installation directory.
->   ≪なぜなら、私達のSDKの環境は/usr/libをライブラリのインストール先ディレクトリーとして想定していません。≫
->   Instead, /usr/lib64 is used for 64bit libraries and shared object. And /usr/lib32 is used for 32bit objects.
->   ≪その代わりに、/usr/lib64は64bitライブラリと共有オブジェクトに使われます。また、/usr/lib32は32bit版オブジェクトに使われます。≫
->   
->   ref: https://llvm.org/docs/CMake.html#frequently-used-cmake-variables
-> 
-> To Reproduce
-> ≪再現するには≫
->   Steps to reproduce the behavior:
->   ≪この動作を再現するための手順：≫
->   
->   1. Specify MULTILIBS = "multilib:lib32" and DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon" in local.conf
->      ≪「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」をlocal.confの中で設定する≫
->   2. Add meta-clang layer
->      ≪meta-clangレイヤを追加する≫
->   3. bitbake clang-cross-aarch64
->      ≪bitbake clang-cross-aarch64を実行する≫
->   4. add meta-browser and meta-rust layer
->      ≪meta-browserとmeta-rustのレイヤを追加する≫
->   4. bitbake firefox
->      ≪bitbake firefoxを実行する≫
->   6. See error
->      ≪エラーが表示される≫
->   
-> Error
-> ≪エラー≫
->   ≪以下、実際に出力されたエラーの全文が貼り付けられているが、ここでは省略。≫
->  
->  Expected behavior
->  ≪期待される挙動≫
->    meta-clang's llvm-config can work with DEFAULTTUNE_virtclass-multilib-lib32 specified environment.
->    ≪meta-clangのllvm-configが、「DEFAULTTUNE_virtclass-multilib-lib32」が指定された環境で動作すること。≫
->    
->    llvm-config points to \${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/ but actual libclang libraries are put in   \${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/
->    ≪llvm-configは「\${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/」を指定しますが、実際のlibclangライブラリは「\${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/」に置かれます。≫
->    
->    LLVM insists that using LLVM_LIBDIR_SUFFIX to control installation directory suffix such as lib64 or lib32.
->    ≪LLVMでは、インストール先ディレクトリーの末尾をlib64やlib32のように変えたい場合、LLVM_LIBDIR_SUFFIXを使う必要があります。≫
->    
->    We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX.
->    ≪私達はLLVM_LIBDIR_SUFFIXを伴ったllvm-configのライブラリーの配置先ディレクトリーのずれに対処するべきでしょう。≫
->    
->  Desktop (please complete the following information):
->  ≪ビルド環境のデスクトップ機（以下の情報を埋めてください）≫
->    
->    * OS: Ubuntu
->    * Version 16.04.6 LTS
->  
->  Additional context
->  ≪追加の情報≫
->    (Updated) I'd encountered this issue during meta-browser's firefox recipe building.
->    ≪（追記）私はこの問題に、meta-browserのFirefoxのレシピを使ってのビルド作業中に遭遇しました。≫
+■説明
+
+≪不具合の説明≫
+One of the our target boards(RZ/G2E)'s Yocto default conf/local.conf specifies MULTILIBS = "multilib:lib32" and   DEFAULTTUNE_virtclass  -multilib-lib32 = "armv7vethf-neon" to be able to run 32bit ARMv7 binaries.
+≪私達が開発している対象のボード（RZ/G2E）の一つのYoctoレシピの既定のconf/local.confには、32bit ARMv7バイナリを動かすために、  「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」という設定が含まれています。≫
+So, built binaries will be installed in /usr/lib64/ instead of /usr/lib.
+≪そのため、ビルドされたバイナリは/usr/libではなく/usr/lib64/の中にインストールされます。≫
+
+Because our SDK environment does not assume /usr/lib for library installation directory.
+≪なぜなら、私達のSDKの環境は/usr/libをライブラリのインストール先ディレクトリーとして想定していません。≫
+Instead, /usr/lib64 is used for 64bit libraries and shared object. And /usr/lib32 is used for 32bit objects.
+≪その代わりに、/usr/lib64は64bitライブラリと共有オブジェクトに使われます。また、/usr/lib32は32bit版オブジェクトに使われます。≫
+
+ref: https://llvm.org/docs/CMake.html#frequently-used-cmake-variables
+
+
+To Reproduce
+≪再現するには≫
+
+Steps to reproduce the behavior:
+≪この動作を再現するための手順：≫
+
+1. Specify MULTILIBS = "multilib:lib32" and DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon" in local.conf
+   ≪「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」をlocal.confの中で設定する≫
+2. Add meta-clang layer
+   ≪meta-clangレイヤを追加する≫
+3. bitbake clang-cross-aarch64
+   ≪bitbake clang-cross-aarch64を実行する≫
+4. add meta-browser and meta-rust layer
+   ≪meta-browserとmeta-rustのレイヤを追加する≫
+4. bitbake firefox
+   ≪bitbake firefoxを実行する≫
+6. See error
+   ≪エラーが表示される≫
+
+
+Error
+≪エラー≫
+
+≪実際に出力されたエラーの全文が貼り付けられているが、ここでは省略。≫
+
+
+Expected behavior
+≪期待される挙動≫
+
+   meta-clang's llvm-config can work with DEFAULTTUNE_virtclass-multilib-lib32 specified environment.
+≪meta-clangのllvm-configが、「DEFAULTTUNE_virtclass-multilib-lib32」が指定された環境で動作すること。≫
+
+llvm-config points to \${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/ but actual libclang libraries are put in   \${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/
+≪llvm-configは「\${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/」を指定しますが、実際のlibclangライブラリは「\${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/」に置かれます。≫
+
+LLVM insists that using LLVM_LIBDIR_SUFFIX to control installation directory suffix such as lib64 or lib32.
+≪LLVMでは、インストール先ディレクトリーの末尾をlib64やlib32のように変えたい場合、LLVM_LIBDIR_SUFFIXを使う必要があります。≫
+
+We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX.
+≪私達はLLVM_LIBDIR_SUFFIXを伴ったllvm-configのライブラリーの配置先ディレクトリーのずれに対処するべきでしょう。≫
+
+Desktop (please complete the following information):
+≪ビルド環境のデスクトップ機（以下の情報を埋めてください）≫
+
+* OS: Ubuntu
+* Version 16.04.6 LTS
+
+
+Additional context
+≪追加の情報≫
+
+(Updated) I'd encountered this issue during meta-browser's firefox recipe building.
+≪（追記）私はこの問題に、meta-browserのFirefoxのレシピを使ってのビルド作業中に遭遇しました。≫
+```
 
 ### フィードバックの経緯
 
@@ -391,7 +426,9 @@ https://github.com/kraj/meta-clang/issues/247
 
 ところで、この例も報告文の中にミスタイプがあります。
 
-> We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX.
+```plain
+We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX.
+```
 
 この文の「it」は誤記で、「in」が正しいです。先の筆者の例と併せて見ると、誤記はありふれたものだということをなんとなく感じて頂けるのではないでしょうか[^victim]。
 
@@ -402,61 +439,77 @@ https://github.com/kraj/meta-clang/issues/247
 
 6つ目は、ここまでの「模範的な例」とは少し趣向の違う「上級編の例」です。先に登場したMouse Dictionaryに対して筆者が行った連続した一連のフィードバックですが、ここまでに解説した報告の形式から外れた流れとなっています。皆さんもいずれこういうことができるようになる、という参考事例として見て頂けると幸いです。
 
+　
+
 https://github.com/wtetsu/mouse-dictionary/issues/32
 
-タイトル:
+```plain
+■タイトル
 
-> 初回使用時の案内がFirefoxでの状況にマッチしていない
+初回使用時の案内がFirefoxでの状況にマッチしていない
 
-説明:
 
-> 初回使用時に辞書が未設定だと、ページ内に開いたポップアップの中に「初めに辞書データをロードしてください(拡張のアイコンを右クリック→「オプション」)」という案内のメッセージが表示されます。
-> しかしながら、Firefoxにはこのメニュー項目がありません。実際には、
->
-> * アイコンを右クリック→「拡張機能を管理」を選択→「...」をクリック→「オプション」を選択
->
-> とする必要があります。
->
-> 初回使用時に戸惑ったため、メッセージを各実行環境向けに変えることが望ましいと思われます。
+■説明
+
+初回使用時に辞書が未設定だと、ページ内に開いたポップアップの中に「初めに辞書データをロードしてください(拡張のアイコンを右クリック→「オプション」)」という案内のメッセージが表示されます。
+しかしながら、Firefoxにはこのメニュー項目がありません。実際には、
+
+* アイコンを右クリック→「拡張機能を管理」を選択→「...」をクリック→「オプション」を選択
+
+とする必要があります。
+
+初回使用時に戸惑ったため、メッセージを各実行環境向けに変えることが望ましいと思われます。
+```
 
 前述のフィードバックで表示されるようになった初期設定の案内文の内容が、Firefoxでの実際のUIに整合しない状態だったために行ったフィードバックです。
 
 このイシューに対応するプルリクエストとして作成した物が、こちらです。
 
+　
+
 https://github.com/wtetsu/mouse-dictionary/pull/33
 
-タイトル:
+```plain
+■タイトル
 
-> Show initial setup guide for Firefox 
-> ≪Firefox用の初期設定案内を表示する≫
+Show initial setup guide for Firefox 
+≪Firefox用の初期設定案内を表示する≫
 
-説明:
 
-> #32 に対する実装の提案となります。
-> こんな感じでいかがでしょうか？
+■説明
 
-変更内容:
+#32 に対する実装の提案となります。
+こんな感じでいかがでしょうか？
 
-> メッセージの定義部にFirefox用のメッセージを追加し、実行環境によってメッセージを切り替えるようにした。
+
+■変更内容
+
+メッセージの定義部にFirefox用のメッセージを追加し、実行環境によってメッセージを切り替えるようにした。
+```
 
 そのレビューの中で「コーディングスタイルをprettier[^prettier]準拠に揃えて欲しい」という指摘を受けたのですが、それをきっかけに作成した別のプルリクエストが、次の物です。
 
 [^prettier]: https://prettier.io/
 
+　
+
 https://github.com/wtetsu/mouse-dictionary/pull/37
 
-タイトル:
+```plain
+■タイトル
 
-> Add prettier
-> ≪prettierを追加する≫
+Add prettier
+≪prettierを追加する≫
 
-説明:
 
-> #33 でコーディングスタイルのご指摘をいただきましたが、コーディングスタイルもlintの一環とすることでコーディングスタイルの揃え忘れを減らせるのではないかと思いました。
-> いかがでしょうか？
-> 
-> 変更内容:
-> package.jsonの文法チェック用の指定に変更を加え、コーディングスタイルをチェックするようにした。
+■説明
+
+#33 でコーディングスタイルのご指摘をいただきましたが、コーディングスタイルもlintの一環とすることでコーディングスタイルの揃え忘れを減らせるのではないかと思いました。
+いかがでしょうか？
+
+変更内容:
+package.jsonの文法チェック用の指定に変更を加え、コーディングスタイルをチェックするようにした。
+```
 
 ### 注目したい点
 

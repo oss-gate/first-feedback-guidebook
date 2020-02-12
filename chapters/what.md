@@ -51,7 +51,7 @@ OSS Gateワークショップにビギナーとして参加される方は、「
 
 当初、OCamlのWindowsでのインストール手順は、必要なコマンドを以下の順で実行するよう書かれていました。
 
-```
+```sh
 opam init
 eval `opam env`
 opam switch create 4.06.1
@@ -66,27 +66,27 @@ ocaml --version
 
 堀本さんはこれを受けて、誤記を訂正するプルリクエストとして以下のようなフィードバックを行いました。
 
+　
+
 https://github.com/ocaml/ocaml.org/pull/1065
 
-> install: fix a typo 
-> 
-> ≪インストール：誤記の修正≫
-> 
-> 　
-> 
-> Dear developers.
-> 
-> ≪開発者の皆さん、こんにちは。≫
-> 
-> 　
-> 
-> In my environment, --version is unknown option.
-> 
-> ≪私の環境では、--versionは未知のオプションと表示されます。≫
-> 
-> Probably, -version is valid option for ocaml command.
-> 
-> ≪おそらく、-versionがocamlコマンドの正しいオプションです。≫
+```plain
+タイトル：
+
+install: fix a typo 
+≪インストール：誤記の修正≫
+
+
+本文
+
+Dear developers.
+≪開発者の皆さん、こんにちは。≫
+
+In my environment, --version is unknown option.
+≪私の環境では、--versionは未知のオプションと表示されます。≫
+Probably, -version is valid option for ocaml command.
+≪おそらく、-versionがocamlコマンドの正しいオプションです。≫
+```
 
 ほとんどの人は気にしないで使っていたのだと思われますが、*いきなりエラーに見舞われると、初学者ほど戸惑うもの*です。
 
