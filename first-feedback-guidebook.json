@@ -1,0 +1,56 @@
+{
+  "bookname": "first-feedback-guidebook",
+  "booktitle": "できる！ 初めてのOSSフィードバックガイド ～ #駆け出しエンジニアと繋がりたい と言ってた私が野生のつよいエンジニアとつながるのに必要だったこと～",
+  "aut": ["Piro / 結城洋志"],
+  "language": "ja",
+  "toc": true,
+  "rights": "©2020 OSS Gate有志/YUKI \"Piro\" Hiroshi",
+  "colophon": true,
+  "history": [["2020-02-29"]],
+  "prt": "印刷所未定",
+  "pbl": "OSS Gate有志",
+  "edt": "OSS Gate有志",
+  "secnolevel": 3,
+  "titlepage": true,
+  "review_version": 4.0,
+  "texstyle": ["reviewmacro"],
+  "texdocumentclass": [
+    "review-jsbook",
+    "media=ebook,paper=b5,serial_pagination=true,openany,fontsize=10pt,baselineskip=15.4pt,line_length=40zw,number_of_lines=35,head_space=30mm,headsep=10mm,headheight=5mm,footskip=10mm"
+  ],
+  "sty_templates": {
+    "url": "https://github.com/TechBooster/ReVIEW-Template/archive/2cde584d33e8a6f5e6cf647e62fb6b3123ce4dfa.zip",
+    "dir": "ReVIEW-Template-2cde584d33e8a6f5e6cf647e62fb6b3123ce4dfa/articles/sty/"
+  },
+  "templates": ["images"],
+  "catalog": {
+    "PREDEF": [
+      "introduction.md"
+    ],
+    "CHAPS": [
+      {"フィードバックするための準備": [
+         "motivation.md",
+         "oss.md",
+         "what.md",
+         "where.md"
+       ]},
+      {"最初のフィードバック": [
+         "how.md",
+         "english.md",
+         "hesitation.md",
+         "pullrequest.md",
+         "examples.md"
+       ]},
+      {"フィードバックした後のこと": [
+         "do-not-intimidate.md",
+         "merge.md",
+         "business.md",
+         "support.md",
+         "licenses.md"
+       ]}
+    ],
+    "POSTDEF": [
+      "outroduction.md"
+    ]
+  }
+}

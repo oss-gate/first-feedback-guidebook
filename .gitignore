@@ -1,0 +1,8 @@
+*.pdf
+*.epub
+chapters-pdf
+chapters-epub
+
+node_modules
+package.json
+package-lock.json
