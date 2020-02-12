@@ -42,7 +42,7 @@ OSSプロジェクトでは、技術仕様をWiki形式で公開している場�
 
 [^mdn-web-docs]: 「MDN」は「Mozilla Developer Network」の略で、元々はFirefoxやThunderbirdなどMozillaプロジェクトのソフトウェアに関するさまざまな技術情報を集積する場所でした。現在は役割が拡張され、Microsoft、Googleなどの複数社が公式にメンテナンスに参加する、Web技術情報のリファレンスサイトとなっています。
 
-![MDN](images/raw-screenshots/support-mdn.png)
+![MDN](images/support-mdn.png)
 
 
 日本では「Wiki形式の百科辞典（Encyclopedia）」であるWikipediaを通じて知られるようになったことから、「Wikiとは百科辞典のことである」という認識のされ方をしている場合が多いようですが、*「Wiki」とは元々、不特定多数の人が自由に編集できるWeb上の文書システムを指す言葉です*。基本的にはアカウントさえ作れば誰でも編集に参加できる気軽なシステムで、いわゆる集合知によって情報が適切な状態に保たれていく、というコンセプトとなっています。
