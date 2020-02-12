@@ -27,7 +27,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 ### ビルド手順
 
 ```bash
-$ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended
+$ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
 $ sudo gem install review
 $ sudo npm install -g easybooks
 $ cd chapters
