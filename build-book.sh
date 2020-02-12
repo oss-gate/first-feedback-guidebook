@@ -1,5 +1,7 @@
 #!/bin/bash
 
+blankline='<div class="flushright">　</div>'
+
 build_pdf() {
   echo "Building PDF..."
 
@@ -8,7 +10,7 @@ build_pdf() {
   rm -rf $DIR
   cp -r chapters $DIR
   cp first-feedback-guidebook.json $DIR/
-  find $DIR -name '*.md' | xargs sed -i -r -e 's/^\[([^\(]+)\]\(([^\)]+)\)$/　\n\n**\1**\n  \n\2\n\n　/g' -e 's;^　$;<div class="flushright">　</div>;g'
+  find $DIR -name '*.md' | xargs sed -i -r -e "s/^\[([^\(]+)\]\(([^\)]+)\)$/$blankline\n\n**\1**\n\n\2\n\n$blankline/g" -e "s;^　$;$blankline;g"
 
   cd $DIR
   easybooks first-feedback-guidebook.json
@@ -25,6 +27,7 @@ build_epub() {
   rm -rf $DIR
   cp -r chapters $DIR
   cp first-feedback-guidebook.json $DIR/
+  find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
 
   cd $DIR
   easybooks first-feedback-guidebook.json
