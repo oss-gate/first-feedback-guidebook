@@ -112,7 +112,7 @@ https://github.com/piroor/treestyletab/issues/1539
 > ≪実際の結果≫
 > Screenshots 1 and 4 seem to have normal shaped and sized close buttons but screenshots 2, 3 have small button with different shapes.
 > ≪スクリーンショットの1番と4番は通常の形とサイズでクローズボタンが表示されているようですが、スクリーンショットの2番と3晩ではボタンが異なる形になっています。≫
-> ≪4つのスクリーンショット≫
+> ![](images/examples-screenshots.png)
 > 
 > Environment
 > ≪環境≫
