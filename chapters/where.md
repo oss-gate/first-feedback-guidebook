@@ -11,11 +11,11 @@
 
 例えば、筆者も開発に関わっている全文検索エンジンの[Groonga](https://groonga.org/ja/)では、公式サイト上の「開発者向け情報」というリンクを辿った先に[バグレポートの送り方の説明ページ](https://groonga.org/ja/docs/contribution/report.html)があり、GitHubのイシュートラッカーかメーリングリストで報告する旨の案内が書かれています。
 
-![](images/where-groonga.png)
+![GroongaのWebサイトでは「開発者向け情報」から辿れる](images/where-groonga.png)
 
 また、テキストエディターの[Emacs](https://www.gnu.org/software/emacs/)では、公式サイト上の「Documents & Support」というリンクを辿ると[「Reporting bugs（バグの報告）」という見出しの下に説明があり](https://www.gnu.org/software/emacs/documentation.html)、メーリングリストで報告するように案内されています。
 
-![](images/where-emacs.png)
+![EmacsのWebサイトではサポート情報の一環として扱われている](images/where-emacs.png)
 
 このように、OSSにフィードバックする窓口としてはイシュートラッカーやメーリングリストが使われる場合が多いようです。他にも以下のような選択肢があります。
 

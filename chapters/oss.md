@@ -94,9 +94,9 @@ CLIがあるか？→はい→「--version」オプションや「--help」オ�
 GUIを持つソフトウェアだと、「ファイル」や「ヘルプ」メニュー配下の「（ソフトウェア名）について」「ライセンス」のような項目からライセンスを情報を確認できる場合が多いです。いくつか例を示しましょう。
 
 * テキストエディターのMicrosoft Visual Studio Codeでは、[「Help」→「View License」で開かれるページ](https://code.visualstudio.com/license)の冒頭に「Source Code for Visual Studio Code is available at [https://github.com/Microsoft/vscode](https://github.com/Microsoft/vscode) under the MIT license agreement at [https://github.com/Microsoft/vscode/blob/master/LICENSE.txt](https://github.com/Microsoft/vscode/blob/master/LICENSE.txt).（VSCodeのソースコードはMITライセンスの元で入手可能です）」と書かれています。MITライセンスは前述したOSIのオープンソースライセンス一覧に記載されているので、VSCodeはOSSだと言えます。
-  ![](images/oss-vscode.png)
+  ![VSCodeのライセンスを確認する様子](images/oss-vscode.png)
 * WebブラウザのMozilla Firefoxでは、「ヘルプ」→「Firefoxについて」を選択して開かれるバージョン情報のダイアログに含まれている「ライセンス情報」というリンクをクリックすると、`about:license` というFirefoxに内蔵されたページが開かれます。この冒頭には「Binaries of this product have been made available to you by the Mozilla Project under the Mozilla Public License 2.0 (MPL).（この製品のバイナリはMozillaプロジェクトによってMozilla Public License 2.0で利用可能とされています）」と書かれています。MPL2.0もOSIのオープンソースライセンス一覧に記載されているので、FirefoxもOSSだと言えます。
-  ![](images/oss-firefox.png)
+  ![Firefoxのライセンスを確認する様子](images/oss-firefox.png)
 
 CLI（コマンドラインインターフェース）のソフトウェアだと、必要な引数を何も指定しなかったり、`--version` オプションを指定したり、あるいは `--help` オプションを指定して起動したりすると、バージョン情報の一環としてライセンスに関する記述が出力される場合があります。例えばUbuntu 18.04LTSの端末上で`bash --version`を実行すると、以下のように出力されます。
 
@@ -118,29 +118,29 @@ GPLバージョン3もOSIのオープンソースライセンス一覧に記載�
 
 RubyGems、npmなどのパッケージ管理システムのリポジトリのWebサイトでは、パッケージの詳細情報を見るとライセンスの情報が標示されている場合があります。代表的な各言語のパッケージ管理システムで、ライセンスを実際に確認できる例をいくつかご紹介しましょう。
 
-* Mocha（Node.jsのnpm）：[パッケージの詳細ページ](https://www.npmjs.com/package/mocha)の右側に、ライセンスはMITであると標示されています。
-  ![](images/oss-npm.png)
-* XlsxWriter（PythonのPyPI）：[パッケージの詳細ページ](https://pypi.org/project/XlsxWriter/)の左側に、ライセンスはBSDであると標示されています。
-  ![](images/oss-pypi.png)
-* Rails（RubyのRubyGems）：[パッケージの詳細ページ](https://rubygems.org/gems/rails)の右側に、ライセンスはMITであると標示されています。
-  ![](images/oss-gem.png)
-* Composer（PHPのPackagist）：[パッケージの詳細ページ](https://packagist.org/packages/composer/composer)の下の方に、ライセンスはMITであると標示されています。
-  ![](images/oss-packagist.png)
-* libc（Rustのcrates.io）：[パッケージの詳細ページ](https://crates.io/crates/libc)には、ライセンスはMITまたはApacheライセンス2.0であると標示されています。
-  ![](images/oss-cratesio.png)
-* MongoDB（PerlのCPAN）：[パッケージの詳細ページ](https://metacpan.org/pod/MongoDB)の左側に、ライセンスはApacheライセンス2.0であると標示されています。
-  ![](images/oss-cpan.png)
+* Node.jsのnpmパッケージ：[パッケージの詳細ページ](https://www.npmjs.com/package/mocha)の右側に、ライセンスはMITであると標示されています。
+  ![Mochaの場合](images/oss-npm.png)
+* PythonのPyPI：[パッケージの詳細ページ](https://pypi.org/project/XlsxWriter/)の左側に、ライセンスはBSDであると標示されています。
+  ![XlsxWriterの場合](images/oss-pypi.png)
+* RubyのRubyGems：[パッケージの詳細ページ](https://rubygems.org/gems/rails)の右側に、ライセンスはMITであると標示されています。
+  ![Railsの場合](images/oss-gem.png)
+* PHPのPackagist：[パッケージの詳細ページ](https://packagist.org/packages/composer/composer)の下の方に、ライセンスはMITであると標示されています。
+  ![Composerの場合](images/oss-packagist.png)
+* Rustのcrates.io：[パッケージの詳細ページ](https://crates.io/crates/libc)には、ライセンスはMITまたはApacheライセンス2.0であると標示されています。
+  ![libcの場合](images/oss-cratesio.png)
+* PerlのCPAN：[パッケージの詳細ページ](https://metacpan.org/pod/MongoDB)の左側に、ライセンスはApacheライセンス2.0であると標示されています。
+  ![MongoDBの場合](images/oss-cpan.png)
 
 これらのライセンス情報は、作者によってパッケージ自体に記載されたメタ情報に基づいて標示されています。ライセンス情報はメタ情報としては必須項目になっていない場合があるため、パッケージによってはライセンスが標示されていない事もあります。
 
 LinuxやBSDなどのOSディストリビューションのパッケージ管理システムにおいても、同様に各ソフトウェアのライセンス情報が標示されています。例えばファイルを同期するユーティリティのrsyncであれば、以下の要領です。
 
 * [Debianのパッケージ詳細ページ](https://packages.debian.org/ja/sid/rsync)や[Ubuntuのパッケージ詳細ページ](https://packages.ubuntu.com/eoan/rsync)では、右側にある「著作権ファイル」というリンクの遷移先に、ライセンスはGPLバージョン3である旨が標示されています。
-  ![](images/oss-debian.png)
+  ![Debianのrsyncパッケージの場合](images/oss-debian.png)
 * [Portsのパッケージ検索結界地欄](https://www.freshports.org/search.php?query=rsync&search=go&num=10&stype=name&method=match&deleted=excludedeleted&start=1&casesensitivity=caseinsensitive)では、検索結果の情報の中に「Licenses: GPLv3」と標示されています。
-  ![](images/oss-ports.png)
+  ![Portsのrsyncパッケージの場合](images/oss-ports.png)
 * [MacPortsのパッケージ検索結果一覧](https://www.macports.org/ports.php?by=name&substr=rsync)では、検索結果の情報の中に「Licenses: GPL-3+」と標示されています。
-  ![](images/oss-macports.png)
+  ![MacPortsのrsyncパッケージの場合](images/oss-macports.png)
 
 各OSディストリビューションのパッケージリポジトリでは、パッケージは各ソフトウェアの作者ではなくパッケージメンテナーという専任者が登録作業を行っています。ライセンスが不明瞭なままリポジトリに格納されることはあり得ないため[^package-license]、これらの情報の信頼性は高いと言えます。
 
@@ -152,11 +152,11 @@ LinuxやBSDなどのOSディストリビューションのパッケージ管理�
 
 例えば[MariaDBの公式サイト](https://mariadb.org/)では「About」配下にライセンスの情報があり「MariaDB Server is open source software and free to use as stated in the General Public License.（MariaDBサーバーはオープンソースソフトウェアで、GPLの条件下で無償/自由に利用できます。）」と書かれていますが、GPLのバージョンがいくつであるか記載されていません。GPLはバージョンによって条件が異なるため、バージョンを誤認して使うとトラブルの元になり得ます。
 
-![](images/oss-mariadb.png)
+![MariaDBのWebサイトにあるライセンス情報](images/oss-mariadb.png)
 
 別の例として、[Apache HTTP Serverの公式サイト](https://httpd.apache.org/)は左側のメニューに「License」という項目があり、ここからライセンスの情報を確認できそうに見えますが、実際にはこのリンク先はApacheライセンスというオープンソースライセンスそのものの説明になっています。ここからは、Apache HTTP Serverというソフトウェア自体がApacheライセンスのバージョンいくつに該当するかは読み取れません。
 
-![](images/oss-apache.png)
+![Apache HTTP ServerのWebサイトにあるライセンス情報](images/oss-apache.png)
 
 このように、公式サイトから正確なライセンス情報を確認するのは意外と大変で、しかも場合によっては不正確な情報に辿り着いてしまって内容を鵜呑みにできないとなると、労多くして実り無しという事になってしまいます。こういう事が起こってしまうのは、公式Webサイトが外部ドキュメントの一種として、ソフトウェア本体とは別に管理されている場合が多いためです。ソフトウェアだけ更新されてドキュメントが更新されていないというのは、残念ですがOSSに限らずよくあることですよね。
 

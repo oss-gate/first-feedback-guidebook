@@ -142,11 +142,11 @@ function getLinkURLs() {
 
 1. `git add -p`（`git add --patch`）または `git commit -p`（`git commit --patch`）を実行する。
 2. 変更箇所が一部だけ表示されるので、`y`（yes：その部分をコミットする）か`n`（no：その部分かでその部分をコミットに含めるかどうかを指定する。
-   ![](images/pullrequest-git-add-patch.png)
+   ![変更箇所単位で確認を行っている様子](images/pullrequest-git-add-patch.png)
 3. 趣旨の異なる変更箇所が隣接していて一緒に出てきてしまった場合は、`s`（split：変更を分割する）でさらに細かい単位に変更を分ける。
-   ![](images/pullrequest-git-add-patch-split.png)
+   ![変更箇所を分割した様子](images/pullrequest-git-add-patch-split.png)
 4. `s`でも思い通りに分割されない場合は、`e`（edit：エディタで編集）で差分を直接編集する。
-   ![](images/pullrequest-git-add-patch-edit.png)
+   ![変更箇所を編集している様子](images/pullrequest-git-add-patch-edit.png)
 5. すべての変更箇所について、2～4を繰り返す。
 
 筆者は誤った状態のままコミットしてしまうことを防ぎたいという目的もあって、コミットはほぼ毎回 `git commit -p` を使うようにしています。
