@@ -341,8 +341,8 @@ https://github.com/kraj/meta-clang/issues/247
 >    meta-clang's llvm-config can work with DEFAULTTUNE_virtclass-multilib-lib32 specified environment.
 >    ≪meta-clangのllvm-configが、「DEFAULTTUNE_virtclass-multilib-lib32」が指定された環境で動作すること。≫
 >    
->    llvm-config points to ${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/ but actual libclang libraries are put in   ${RECIPE_SYSROOT}/usr  /lib64/clang/8.0.1/lib/linux/
->    ≪llvm-configは「${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/」を指定しますが、実際のlibclangライブラリは「${RECIPE_SYSROOT}/usr/  lib64/clang/8.0.1/lib/linux/」に置かれます。≫
+>    llvm-config points to \${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/ but actual libclang libraries are put in   \${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/
+>    ≪llvm-configは「\${RECIPE_SYSROOT}/usr/lib/clang/8.0.1/lib/linux/」を指定しますが、実際のlibclangライブラリは「\${RECIPE_SYSROOT}/usr/lib64/clang/8.0.1/lib/linux/」に置かれます。≫
 >    
 >    LLVM insists that using LLVM_LIBDIR_SUFFIX to control installation directory suffix such as lib64 or lib32.
 >    ≪LLVMでは、インストール先ディレクトリーの末尾をlib64やlib32のように変えたい場合、LLVM_LIBDIR_SUFFIXを使う必要があります。≫
