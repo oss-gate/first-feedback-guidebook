@@ -30,8 +30,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 $ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
 $ sudo gem install review
 $ sudo npm install -g easybooks
-$ cd chapters
-$ easybooks first-feedback-guidebook.json
+$ make
 ```
 
 
