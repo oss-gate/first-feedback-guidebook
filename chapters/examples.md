@@ -5,7 +5,10 @@
 
 ## 初回使用時のつまずきを減らす提案
 
-1つ目は、[株式会社アカツキさんの社内で実施したOSS Gateワークショップ](https://www.clear-code.com/blog/2019/5/29.html)の中で実際に行われた、Webページ上でマウスカーソル（ポインタ）をかざした位置の語句を辞書で引いて結果をポップアップ表示する[「Mouse Dictionary」というGoogle Chrome/Firefox用の拡張機能](https://mouse-dictionary.netlify.com/en/)での、「初回使用時にポップアップが真っ白になってしまう」という現象に対するフィードバックです。
+1つ目は、株式会社アカツキさんの社内で実施したOSS Gateワークショップ[^oss-gate-workshop-in-akatsuki]の中で実際に行われた、Webページ上でマウスカーソル（ポインタ）をかざした位置の語句を辞書で引いて結果をポップアップ表示する「Mouse Dictionary」[^mouse-dictionary-extension]というGoogle Chrome/Firefox用の拡張機能での、「初回使用時にポップアップが真っ白になってしまう」という現象に対するフィードバックです。
+
+[^oss-gate-workshop-in-akatsuki]: https://www.clear-code.com/blog/2019/5/29.html
+[^mouse-dictionary-extension]: https://mouse-dictionary.netlify.com/en/
 
 https://github.com/wtetsu/mouse-dictionary/issues/19
 
@@ -246,9 +249,11 @@ https://github.com/zulip/zulip/issues/9396
 > And, there is one problem on lately development build of Firefox.
 > ≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
 > 
-> * [1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta](https://bugzilla.mozilla.org/show_bug.cgi?id=1446401)
+> * 1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta  
+>   https://bugzilla.mozilla.org/show_bug.cgi?id=1446401
 >   ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
-> * [Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group](https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion)
+> * Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group  
+>   https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion
 >   ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
 > 
 > Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
@@ -434,7 +439,9 @@ https://github.com/wtetsu/mouse-dictionary/pull/33
 
 > メッセージの定義部にFirefox用のメッセージを追加し、実行環境によってメッセージを切り替えるようにした。
 
-そのレビューの中で「コーディングスタイルを[prettier](https://prettier.io/)準拠に揃えて欲しい」という指摘を受けたのですが、それをきっかけに作成した別のプルリクエストが、次の物です。
+そのレビューの中で「コーディングスタイルをprettier[^prettier]準拠に揃えて欲しい」という指摘を受けたのですが、それをきっかけに作成した別のプルリクエストが、次の物です。
+
+[^prettier]: https://prettier.io/
 
 https://github.com/wtetsu/mouse-dictionary/pull/37
 

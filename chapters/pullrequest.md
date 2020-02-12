@@ -193,7 +193,8 @@ function getLinkURLs() {
 
 ### パッチ提出までの経緯
 
-* [61846 - Undockable My Sidebar - in a new window](https://bugzilla.mozilla.org/show_bug.cgi?id=61846)
+* 61846 - Undockable My Sidebar - in a new window  
+  https://bugzilla.mozilla.org/show_bug.cgi?id=61846
 
 Firefoxの前身となったMozilla Application Suite（以下、コードネームの「Seamonkey」で表記します）には、Firefoxと同様に、ブックマークや履歴などを表示する「サイドバー」機能がありました。しかし、当時の競合製品であったMicrosoft Internet ExplorerをはじめとしたWindowsアプリケーションでは、「サイドバーをウィンドウから分離して別ウィンドウにできる」という挙動が広く採用されていました。Seamonkeyのサイドバーではそういうことができなかったため、この点は競合に対する見劣りする点、もしくは、一般的なWindowsアプリケーションの挙動に慣れた人がSeamonkey使用時に違和感を覚える点となっていました。
 
