@@ -241,7 +241,7 @@ First, I describe what is the "composition".
 ≪最初に、「コンポジション」とは何かを説明します。≫
 
 In CJK language regions, people use some software named "IM" (input method) to input heir local language text. For example, when I search a Japanese term "日本語" (means "Japanese language") in a Zulip instance with Firefox, I need to do:
-≪CJK（中国語・日本語・韓国語）の言語の地域では、人々は彼らの地域言語のテキストを入力するために「IM（インプットメソッド）」と呼ばれるソフトウェアを使っています。例えば、私が日本語の単語「日本語」をFirefoxで表示したZulipで検索するとき、私は以下のような操作をする必要があります：≫
+≪CJK（中国語・日本語・韓国語）の言語の地域では、人々は彼らの地域言語のテキストを入力するために「IM（インプットメソッド）」と呼ばれるソフトウェアを使っています。たとえば、私が日本語の単語「日本語」をFirefoxで表示したZulipで検索するとき、私は以下のような操作をする必要があります：≫
 
 1. Click the search field.
    ≪検索欄をクリック。≫
