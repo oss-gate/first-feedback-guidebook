@@ -13,6 +13,9 @@ build_pdf() {
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
   find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
 
+  mkdir -p $DIR/.review
+  cp review-ext.rb $DIR/.review/
+
   cd $DIR
   easybooks first-feedback-guidebook.json
   cp -f .review/*.pdf ../
@@ -30,6 +33,9 @@ build_epub() {
   cp first-feedback-guidebook.json $DIR/
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
   find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
+
+  mkdir -p $DIR/.review
+  cp review-ext.rb $DIR/.review/
 
   cd $DIR
   easybooks first-feedback-guidebook.json
