@@ -111,7 +111,7 @@ GUIを持つソフトウェアだと、「ファイル」や「ヘルプ」メ�
 
 CLI（コマンドラインインターフェース）のソフトウェアだと、必要な引数を何も指定しなかったり、`--version` オプションを指定したり、あるいは `--help` オプションを指定して起動したりすると、バージョン情報の一環としてライセンスに関する記述が出力される場合があります。例えばUbuntu 18.04LTSの端末上で`bash --version`を実行すると、以下のように出力されます。
 
-```bash
+```sh
 $ bash --version
 GNU bash, バージョン 4.4.20(1)-release (x86_64-pc-linux-gnu)
 Copyright (C) 2016 Free Software Foundation, Inc.
