@@ -71,13 +71,13 @@ ocaml --version
 https://github.com/ocaml/ocaml.org/pull/1065
 
 ```plain
-タイトル：
+■タイトル
 
 install: fix a typo 
 ≪インストール：誤記の修正≫
 
 
-本文
+■本文
 
 Dear developers.
 ≪開発者の皆さん、こんにちは。≫
