@@ -195,27 +195,12 @@
 6. `sudo apt install git`を実行する。（必要なツールのインストール）
 7. `git clone https://github.com/piroor/tweet.sh.git`を実行する。（リポジトリのローカルへの複製）
 8. `cd tweet.sh`を実行する。（作業ディレクトリーの変更）
-9. `vim ~/.tweet.client.key`を実行する。（設定ファイルの作成）
-10. 先ほど発行したAPIキーを使って、以下の内容でファイルを上書き保存する。
-    
-    ```plain
-    MY_SCREEN_NAME=（アカウント名）
-    MY_LANGUAGE=ja
-    CONSUMER_KEY=（発行したコンシューマーキー）
-    CONSUMER_SECRET=（発行したコンシューマーシークレット）
-    ACCESS_TOKEN=(発行したアクセストークン）
-    ACCESS_TOKEN_SECRET=（発行したアクセストークンシークレット）
-    ```
-11. `vim file.txt`を実行する。（データファイルの作成）
-12. 以下の内容でファイルを上書き保存する。
-    
-    ```plain
-    line 1
-    line 2
-    ```
-13. `./tweet.sh post $(cat file.txt)`を実行する。（投稿の操作）
-14. `{"errors":[{"code":32,"message":"Could not authenticate you."}]}`と表示される。
-15. Webブラウザで確認用に`https://twitter.com/（アカウント名）`を開くと、先ほどの内容は投稿されていない。
+9. `~/.tweet.client.key`をテキストエディターで開き、先ほど発行したAPIキーを使って設定を埋める。
+10. `vim file.txt`を実行する。（データファイルの作成）
+11. `echo -e 'line1\nline2' > file.txt` で複数行を含むデータを作る。
+12. `./tweet.sh post $(cat file.txt)`を実行する。（投稿の操作）
+13. `{"errors":[{"code":32,"message":"Could not authenticate you."}]}`と表示される。
+14. Webブラウザで確認用に`https://twitter.com/（アカウント名）`を開くと、先ほどの内容は投稿されていない。
 
 CLIの場合、*実際に実行したコマンド列と、その結果出力された内容をありのままに記録する*ことがポイントとなります。
 
