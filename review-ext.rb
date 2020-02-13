@@ -1,3 +1,5 @@
+# Support "child" format
+# https://review-knowledge-ja.readthedocs.io/ja/latest/reviewext/nest.html
 module ReVIEW
   module BuilderOverride
     Compiler.defsingle :child, 1
@@ -148,5 +150,23 @@ module ReVIEW
 
   class PLAINTEXTBuilder
     prepend PLAINTEXTBuilderOverride
+  end
+end
+
+
+# Convert link to footnote
+# https://gist.github.com/kauplan/973d5037e2cc0f8edb474bd0960c2dcc
+ReVIEW::LATEXBuilder.class_eval do
+  def compile_href(url, label)
+    if /\A[a-z]+:/ =~ url
+      if label and url != label
+        #macro('href', escape_url(url), escape(label)) # original
+        escape(label) + macro('footnote', macro('url', escape_url(url)))
+      else
+        macro('url', escape_url(url))
+      end
+    else
+      macro('ref', url)
+    end
   end
 end
