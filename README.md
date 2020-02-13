@@ -26,10 +26,49 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ### ビルド手順
 
+Re:VIEWの依存パッケージをインストールする。
+
 ```bash
 $ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
+```
+
+Re:VIEWをインストールする。リリース版（4.0.0）ではビルドに失敗したため、masterを使う。
+
+<!--
+```bash
 $ sudo gem install review
+```
+-->
+
+```bash
+$ git clone https://github.com/kmuto/review.git
+$ cd review
+$ bundle install --path vendor/bundle
+$ rake build
+$ sudo gem install pkg/review-*.gem
+$ cd ..
+```
+
+easybooksをインストールする。リリース版ではビルドに失敗し、且つ、要件を満たさないため、改造版を使う。
+
+<!--
+```bash
 $ sudo npm install -g easybooks
+```
+-->
+
+```bash
+$ git clone https://github.com/piroor/easybooks.git
+$ cd easybooks
+$ npm install
+$ npm run build
+$ npm install -g .
+$ cd ..
+```
+
+以上で準備完了。makeするとPDFとEPUBの両方が作られる。
+
+```bash
 $ make
 ```
 
