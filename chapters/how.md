@@ -141,7 +141,7 @@
 
 現代の多くのソフトウェアは、ユーザー設定はソフトウェアのインストール先とは別の位置に保存されています。以下はその保存先としてよく使われるフォルダー（ディレクトリー）の位置です。
 
-* `C:\Users\（アカウント名）\AppData\Roaming\（ソフトウェア名またはベンダー名）\`（Windows Vista以降のWindows）
+* `C:\Users\（アカウント名）\AppData\Roaming\（ソフトウェア名またはベンダー名）`（Windows Vista以降のWindows）
 * `/Users/（アカウント名）/Library/Application Support/（ソフトウェア名またはベンダー名）/`（macOS）
 * `/home/（アカウント名）/.（ソフトウェア名またはベンダー名）/`（Linux、BSDなどのUnix系）
 
