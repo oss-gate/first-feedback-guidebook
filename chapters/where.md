@@ -18,7 +18,7 @@
 
 ![GroongaのWebサイトでは「開発者向け情報」から辿れる](images/where-groonga.png)
 
-また、テキストエディターのEmacs[^emacs]では、公式サイト上の「Documents & Support」というリンクを辿ると「Reporting bugs（バグの報告）」という見出しの下に説明があり[^emacs-support-info]、メーリングリストで報告するように案内されています。
+また、テキストエディターのEmacs[^emacs]では、公式サイト上の「Documents & Support」というリンクをたどると「Reporting bugs（バグの報告）」という見出しの下に説明があり[^emacs-support-info]、メーリングリストで報告するように案内されています。
 
 [^emacs]: https://www.gnu.org/software/emacs/
 [^emacs-support-info]: https://www.gnu.org/software/emacs/documentation.html
