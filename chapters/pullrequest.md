@@ -226,12 +226,11 @@ Gitを端末上で使っている場合であれば、以下の要領です。
 
 ## ダーティなハックをそのまま提案するのはやめよう
 
-ここまでに述べたことにまるっきり反することをしてしまったアンチパターンの例として、筆者が過去に行った（関わった）フィードバックの事例を紹介します。
+ここまでに述べたことにまるっきり反することをしてしまったアンチパターンの例として、筆者が過去に行った（関わった）フィードバックの事例[^bug61846]を紹介します。
+
+[^bug61846]: Bug 61846 - Undockable My Sidebar - in a new window https://bugzilla.mozilla.org/show_bug.cgi?id=61846
 
 ### パッチ提出までの経緯
-
-* 61846 - Undockable My Sidebar - in a new window  
-  https://bugzilla.mozilla.org/show_bug.cgi?id=61846
 
 Firefoxの前身となったMozilla Application Suite（以下、コードネームの「Seamonkey」で表記します）には、Firefoxと同様に、ブックマークや履歴などを表示する「サイドバー」機能がありました。しかし、当時の競合製品であったMicrosoft Internet ExplorerをはじめとしたWindowsアプリケーションでは、「サイドバーをウィンドウから分離して別ウィンドウにできる」という挙動が広く採用されていました。Seamonkeyのサイドバーではそういうことができなかったため、この点は競合に対する見劣りする点、もしくは、一般的なWindowsアプリケーションの挙動に慣れた人がSeamonkey使用時に違和感を覚える点となっていました。
 
