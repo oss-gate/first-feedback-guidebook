@@ -163,9 +163,7 @@ Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`fa
 ```plain
 There is an enterprise policy `SearchSuggestEnabled`.
 ≪～という法人向けポリシー設定があります。≫
-```
 
-```plain
 The location bar shows search suggestions. The web search bar also.
 ≪ロケーションバーは検索候補を表示します。Web検索バーも同様。≫
 ```
