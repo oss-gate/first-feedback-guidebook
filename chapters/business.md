@@ -114,7 +114,7 @@ GitHubのようなWebサービス企業だけでなく、サーバー向け製�
 この事例では、日本政府を代表する立場と思しきユーザー[^anonymous-apca]が、Mozillaの求めるセキュリティ水準を満たさない状態であるにも関わらず、その状態を解消するための行動はしないで、ただ「日本政府」の権威のもとに要求だけを繰り返す、ということが行われていました。それに対するMozillaの対応は、「ルールに従ってくれない以上、証明書は入れない」というものでした。一国の政府だからといって、OSSの世界では特別扱いはされない、ということがこの例からは見て取れます。
 
 [^mozilla-rejected-gpki]: https://it.srad.jp/story/18/03/01/072235/
-[^anonoymous-apca]: ユーザー名は「apca」で、これは「Application Certification Authority」の略と思われます。メールアドレスは「apca@gpki.go.jp」で、セカンドレベルドメイン「go」が「government（政府系）」であることから、政府で働く職員が複数人で共用する「代表者アカウント」だと思われます。
+[^anonymous-apca]: ユーザー名は「apca」で、これは「Application Certification Authority」の略と思われます。メールアドレスは「apca@gpki.go.jp」で、セカンドレベルドメイン「go」が「government（政府系）」であることから、政府で働く職員が複数人で共用する「代表者アカウント」だと思われます。
 
 ![一人の開発者として信頼を得る必要がある](images/business-personaility.png)
 
