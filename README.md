@@ -60,6 +60,7 @@ $ sudo npm install -g easybooks
 ```bash
 $ git clone https://github.com/piroor/easybooks.git
 $ cd easybooks
+$ git checkout enhanced
 $ npm install
 $ npm run build
 $ npm install -g .
