@@ -182,42 +182,40 @@ module ReVIEW
     CR = '' # 送り出し文字。LaTeXコードも可
     ZWSCALE = 0.875 # 和文・欧文の比率。\setlength{\xkanjiskip}{\z@} しておいたほうがよさそう
 
-    def split_line(s, n)
-      # 文字列を幅nで分割
-      a = []
-      l = ''
-      w = 0
-      s.each_char do |c|
-        cw = c.display_width(2) # Ambiguousを全角扱い
-        cw *= ZWSCALE if cw == 2
-        
-        if w + cw > n
-          a.push(l)
-          l = c
-          w = cw
+    def split_line(string, max_chars)
+      lines = []
+      line  = ''
+      width = 0
+      string.each_char do |char|
+        char_width = char.display_width(2) # Ambiguousを全角扱い
+        char_width *= ZWSCALE if char_width == 2
+        if width + char_width > max_chars
+          lines << line
+          line  = char
+          width = char_width
         else
-          l << c
-          w += cw
+          line << char
+          width += char_width
         end
       end
-      a.push(l)
-      a
+      lines << line
+      lines
     end
 
     def code_line(type, line, idx, id, caption, lang)
       # _typeには'emlist'などが入ってくるので、環境に応じて分岐は可能
-      n = 78
-      n = 70 if @doc_status[:column]
-      a = split_line(unescape(detab(line)), n)
+      max_chars = 78
+      max_chars = 70 if @doc_status[:column]
+      lines = split_line(unescape(detab(line)), max_chars)
       # インラインopはこの時点でもう展開されたものが入ってしまっているので、escapeでエスケープされてしまう…
-      escape(a.join("\x01\n")).gsub("\x01", CR) + "\n"
+      escape(lines.join("\x01\n")).gsub("\x01", CR) + "\n"
     end
 
     def code_line_num(type, line, first_line_num, idx, id, caption, lang)
-      n = 78
-      n = 70 if @doc_status[:column]
-      a = split_line(unescape(detab(line)), n)
-      (idx + first_line_num).to_s.rjust(2) + ': ' + escape(a.join("\x01\n    ")).gsub("\x01", CR) + "\n"
+      max_chars = 78
+      max_chars = 70 if @doc_status[:column]
+      lines = split_line(unescape(detab(line)), max_chars)
+      (idx + first_line_num).to_s.rjust(2) + ': ' + escape(lines.join("\x01\n    ")).gsub("\x01", CR) + "\n"
     end
   end
 
