@@ -69,9 +69,7 @@
 
 　
 
-例として、筆者が実際に行ったFirefoxのウィンドウの不具合の報告[^bug1521692]の場合を考えてみます。出発点は、以下のようなメモでした。
-
-[^bug1521692]: https://bugzilla.mozilla.org/show_bug.cgi?id=
+例として、筆者が実際に行った[Firefoxのウィンドウの不具合の報告](https://bugzilla.mozilla.org/show_bug.cgi?id=1521692)の場合を考えてみます。出発点は、以下のようなメモでした。
 
 * 開かれたポップアップウィンドウが閉じられなくなった。
 * OSはWindows Server 2008。
@@ -122,10 +120,7 @@
 
 なぜそのような環境を用意するかというと、この章の冒頭で述べたとおり、報告に含める再現手順は*「開発者の環境でその通りに操作して現象を再現できる」手順*にする必要があるからです。まっさらな環境での再現手順を伝えることにより、開発者の側で現象を再現できる可能性、ひいては、問題が修正される可能性が高まります。
 
-まっさらな環境は、Microsoft AzureやAmazon EC2のようなクラウドサービスでインスタンスを新規に作成したり、なるべく追加の出費を避けたい場合はVirtualBox[^virtualbox]やVMware Workstation Player[^vmware-workstation-player]などを使って自分で仮想マシンを構築したりして用意できます。問題の原因がハードウェアやそれに近い部分にあるような場合は、仮想環境ではなく物理的なハードウェアから用意しないといけない場合もあります。
-
-[^virtualbox]: https://www.virtualbox.org/
-[^vmware-workstation-player]: https://www.vmware.com/jp/products/workstation-player.html
+まっさらな環境は、Microsoft AzureやAmazon EC2のようなクラウドサービスでインスタンスを新規に作成したり、なるべく追加の出費を避けたい場合は[VirtualBox](https://www.virtualbox.org/)や[VMware Workstation Player](https://www.vmware.com/jp/products/workstation-player.html)などを使って自分で仮想マシンを構築したりして用意できます。問題の原因がハードウェアやそれに近い部分にあるような場合は、仮想環境ではなく物理的なハードウェアから用意しないといけない場合もあります。
 
 そこまでの手間をかけられない場合でも、最低限、*そのソフトウェアのユーザー設定を削除（または退避）したり、現在の環境で新規にユーザーを作ってそちらでログインし直したり*して、普段自分が使っている状態よりはまっさらな状態に近い環境を用意するようにしましょう。この詳細についてはコラムを参照してください。
 
@@ -179,9 +174,7 @@
 
 この例ではFirefoxというGUIアプリケーションを扱っていますが、コマンドラインインターフェース（CLI）のツールの場合でも要領は同じです。
 
-たとえば筆者が作成したBashスクリプト製Twitterクライアント[^tweet-sh]での「複数行の発言を投稿できない」という問題であれば、最初の状況のメモは以下のような粒度の物です。
-
-[^tweet-sh]: https://github.com/piroor/tweet.sh
+たとえば筆者が作成した[Bashスクリプト製Twitterクライアント](https://github.com/piroor/tweet.sh)での「複数行の発言を投稿できない」という問題であれば、最初の状況のメモは以下のような粒度の物です。
 
 * 複数行の内容を含むファイルを作成して `./tweet.sh post $(cat file.txt)` と実行したが、投稿できなかった。
 
@@ -393,9 +386,8 @@ Yes              ↓
 
 [^git-bisect]: 具体的には、`git bisect start （壊れていることに気付いたリビジョン） （正常に動作していたリビジョン）`と実行するとその間のリビジョンがチェックアウトされます。動作確認の結果が正常なら`git bisect good`を、壊れていれば`git bisect bad`を実行すると、さらに別のリビジョンがチェックアウトされます。
 
-また、Mozillaはmozregression[^mozregression]というツールを公開しており、これを使うと`git bisect`と同様のことをFirefoxやThunderbirdの自動ビルドされたバイナリを対象に行えます[^mozregression-usage]。
+また、Mozillaは[mozregression](https://mozilla.github.io/mozregression/)というツールを公開しており、これを使うと`git bisect`と同様のことをFirefoxやThunderbirdの自動ビルドされたバイナリを対象に行えます[^mozregression-usage]。
 
-[^mozregression]: https://mozilla.github.io/mozregression/
 [^mozregression-usage]: mozregressionのWindows用GUI版の使い方については、https://www.clear-code.com/blog/2018/7/18.html に筆者による日本語での解説があります。
 
 自動テストによるCI（継続的インテグレーションテスト）が運用されており、テストが失敗するコミットに対しては自動的にエラーが通知されるというような仕組みがあれば、理想的には後退バグが見過ごされたままにならないはずです。が、実際には規模の大きなソフトウェアや複雑なソフトウェアでは、後退バグがCIをすり抜けてしまうことが度々あります。

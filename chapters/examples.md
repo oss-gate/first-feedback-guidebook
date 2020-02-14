@@ -7,14 +7,9 @@
 
 ## 初回使用時のつまずきを減らす提案
 
-1つ目は、株式会社アカツキさんの社内で実施したOSS Gateワークショップ[^oss-gate-workshop-in-akatsuki]の中で実際に行われた、Webページ上でマウスカーソル（ポインタ）をかざした位置の語句を辞書で引いて結果をポップアップ表示する「Mouse Dictionary」[^mouse-dictionary-extension]というGoogle Chrome/Firefox用の拡張機能での、「初回使用時にポップアップが真っ白になってしまう」という現象に対するフィードバックです。
+1つ目は、[株式会社アカツキさんの社内で実施したOSS Gateワークショップ](https://www.clear-code.com/blog/2019/5/29.html)の中で実際に行われた、Webページ上でマウスカーソル（ポインタ）をかざした位置の語句を辞書で引いて結果をポップアップ表示する[「Mouse Dictionary」というGoogle Chrome/Firefox用の拡張機能](https://mouse-dictionary.netlify.com/en/)での、「初回使用時にポップアップが真っ白になってしまう」という現象に対するフィードバックです。
 
-[^oss-gate-workshop-in-akatsuki]: https://www.clear-code.com/blog/2019/5/29.html
-[^mouse-dictionary-extension]: https://mouse-dictionary.netlify.com/en/
-
-　
-
-https://github.com/wtetsu/mouse-dictionary/issues/19
+* https://github.com/wtetsu/mouse-dictionary/issues/19
 
 ```plain
 ■タイトル
@@ -88,9 +83,7 @@ OSS Gateワークショップの中で行ったフィードバックなので、
 
 2つ目は、筆者が開発・公開しているFirefox用のアドオン「Tree Style Tab」に寄せられたフィードバックです。このアドオンはFirefoxに「縦長のツリー表示のタブバーとして動作するサイドバー」を提供するというものです。
 
-　
-
-https://github.com/piroor/treestyletab/issues/1539
+* https://github.com/piroor/treestyletab/issues/1539
 
 ```plain
 ■タイトル
@@ -157,9 +150,7 @@ GUIを提供するソフトウェアでは、画面上の表示に関する問�
 
 3つ目は、筆者の同僚の足永さんがcollectdというソフトウェアに対して行った、リリースマネジメントに関するフィードバックです。
 
-　
-
-https://github.com/collectd/collectd/issues/3293
+* https://github.com/collectd/collectd/issues/3293
 
 ```plain
 ■タイトル
@@ -226,9 +217,7 @@ version-gen.sh script should generate "5.9.2" on collectd-5.9.2 tag.
 
 4つ目は、筆者がチャットツールのZulipに対して行ったフィードバックです。
 
-　
-
-https://github.com/zulip/zulip/issues/9396
+* https://github.com/zulip/zulip/issues/9396
 
 ```plain
 ■タイトル
@@ -324,9 +313,7 @@ In CJK language regions, people use some software named "IM" (input method) to i
 
 5つ目は、筆者の同僚の畑ケさんがmeta-clangというプロジェクトに対して行ったフィードバックです。
 
-　
-
-https://github.com/kraj/meta-clang/issues/247
+* https://github.com/kraj/meta-clang/issues/247
 
 ```plain
 ■タイトル
@@ -443,9 +430,7 @@ We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX
 
 6つ目は、ここまでの「模範的な例」とは少し趣向の違う「上級編の例」です。先に登場したMouse Dictionaryに対して筆者が行った連続した一連のフィードバックですが、ここまでに解説した報告の形式から外れた流れとなっています。皆さんもいずれこういうことができるようになる、という参考事例として見て頂けると幸いです。
 
-　
-
-https://github.com/wtetsu/mouse-dictionary/issues/32
+* https://github.com/wtetsu/mouse-dictionary/issues/32
 
 ```plain
 ■タイトル
@@ -469,9 +454,7 @@ https://github.com/wtetsu/mouse-dictionary/issues/32
 
 このイシューに対応するプルリクエストとして作成した物が、こちらです。
 
-　
-
-https://github.com/wtetsu/mouse-dictionary/pull/33
+* https://github.com/wtetsu/mouse-dictionary/pull/33
 
 ```plain
 ■タイトル
@@ -491,13 +474,9 @@ Show initial setup guide for Firefox
 メッセージの定義部にFirefox用のメッセージを追加し、実行環境によってメッセージを切り替えるようにした。
 ```
 
-そのレビューの中で「コーディングスタイルをprettier[^prettier]準拠に揃えて欲しい」という指摘を受けたのですが、それをきっかけに作成した別のプルリクエストが、次の物です。
+そのレビューの中で「コーディングスタイルを[prettier](https://prettier.io/)準拠に揃えて欲しい」という指摘を受けたのですが、それをきっかけに作成した別のプルリクエストが、次の物です。
 
-[^prettier]: https://prettier.io/
-
-　
-
-https://github.com/wtetsu/mouse-dictionary/pull/37
+* https://github.com/wtetsu/mouse-dictionary/pull/37
 
 ```plain
 ■タイトル

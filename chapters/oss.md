@@ -17,7 +17,7 @@ OSS Gateワークショップに来られた方に「フィードバックした
 
 * インターネット上の情報を調べるためにChromeを起動した。
   - ChromeのベースとなっているChromiumはOSSです。
-  - Chromiumが依存しているcrc32c[^crc32c]、dom-distiller-js[^dom-distiller-js]、enum34[^enum34]などの多数のライブラリ（ `chrome://credits/` で確認できます）もOSSです。
+  - Chromiumが依存している[crc32c](https://github.com/google/crc32c)、[dom-distiller-js](https://github.com/chromium/dom-distiller)、[enum34](https://bitbucket.org/stoneleaf/enum34/src/default/)などの多数のライブラリ（ `chrome://credits/` で確認できます）もOSSです。
   - Chromiumで使える拡張機能にもOSSが多くあります。
 * 作業を始めるために、ターミナルを起動して、Bashの上で`git clone`を実行した。
   - GitはOSSです。
@@ -42,9 +42,6 @@ OSS Gateワークショップに来られた方に「フィードバックした
   - VimもOSSです。
   - VimのプラグインにもOSSが多くあります。
 
-[^crc32c]: https://github.com/google/crc32c
-[^dom-distiller-js]: https://github.com/chromium/dom-distiller
-[^enum34]: https://bitbucket.org/stoneleaf/enum34/src/default/
 [^is-vscode-oss]: 身近な例として挙げましたが、実際には、配布されているVSCodeのバイナリには公開されているソースコードには含まれていないモジュールが含まれているらしく、「VSCodeはOSSだ」とは厳密には言えないようです。そのため、公開されているVSCodeのソースのみに基づいてビルドしたバイナリを提供する「VSCodium」（ https://github.com/VSCodium/vscodium ）というプロジェクトが有志の手により運営されています。
 
 こうして見てみると、*開発に使用しているフレームワーク自体*や*ツール*がOSSであったり、また、有名なOSSも*名前を聞いた事のないような無数のOSSを利用*して作られていたり、という状況である事が分かります。現代のソフトウェア開発の現場では、OSSを全く使わずにいるということはあまりないでしょう。
@@ -102,12 +99,10 @@ CLIがあるか？→はい→「--version」オプションや「--help」オ�
 
 GUIを持つソフトウェアだと、「ファイル」や「ヘルプ」メニュー配下の「（ソフトウェア名）について」「ライセンス」のような項目からライセンスを情報を確認できる場合が多いです。いくつか例を示しましょう。
 
-* テキストエディターのMicrosoft Visual Studio Codeでは、「Help」→「View License」で開かれるページ[^vscode-license-info]の冒頭に「Source Code for Visual Studio Code is available at https://github.com/Microsoft/vscode under the MIT license agreement at https://github.com/Microsoft/vscode/blob/master/LICENSE.txt.（VSCodeのソースコードはMITライセンスの元で入手可能です）」と書かれています。MITライセンスは前述したOSIのオープンソースライセンス一覧に記載されているので、VSCodeはOSSだと言えます。
+* テキストエディターのMicrosoft Visual Studio Codeでは、[「Help」→「View License」で開かれるページ](https://code.visualstudio.com/license)の冒頭に「Source Code for Visual Studio Code is available at https://github.com/Microsoft/vscode under the MIT license agreement at https://github.com/Microsoft/vscode/blob/master/LICENSE.txt.（VSCodeのソースコードはMITライセンスの元で入手可能です）」と書かれています。MITライセンスは前述したOSIのオープンソースライセンス一覧に記載されているので、VSCodeはOSSだと言えます。
   ![VSCodeのライセンスを確認する様子](images/oss-vscode.png)
 * WebブラウザのMozilla Firefoxでは、「ヘルプ」→「Firefoxについて」を選択して開かれるバージョン情報のダイアログに含まれている「ライセンス情報」というリンクをクリックすると、`about:license` というFirefoxに内蔵されたページが開かれます。この冒頭には「Binaries of this product have been made available to you by the Mozilla Project under the Mozilla Public License 2.0 (MPL).（この製品のバイナリはMozillaプロジェクトによってMozilla Public License 2.0で利用可能とされています）」と書かれています。MPL2.0もOSIのオープンソースライセンス一覧に記載されているので、FirefoxもOSSだと言えます。
   ![Firefoxのライセンスを確認する様子](images/oss-firefox.png)
-
-[^vscode-license-info]: https://code.visualstudio.com/license
 
 CLI（コマンドラインインターフェース）のソフトウェアだと、必要な引数を何も指定しなかったり、`--version` オプションを指定したり、あるいは `--help` オプションを指定して起動したりすると、バージョン情報の一環としてライセンスに関する記述が出力される場合があります。たとえばUbuntu 18.04LTSの端末上で`bash --version`を実行すると、以下のように出力されます。
 
@@ -171,19 +166,15 @@ LinuxやBSDなどのOSディストリビューションのパッケージ管理�
 
 信頼できる情報ソースという意味では、各ソフトウェアの開発プロジェクトの公式サイトを参照するのも良い方法に思えます……が、実はこれは筆者としてはあまりお勧めできません。何故かというと、*調べるのが大変なわりに不正確な情報である場合があるから*です。
 
-たとえばMariaDBの公式サイト[^mariadb]では「About」配下にライセンスの情報があり「MariaDB Server is open source software and free to use as stated in the General Public License.（MariaDBサーバーはオープンソースソフトウェアで、GPLの条件下で無償/自由に利用できます。）」と書かれています。
-
-[^mariadb]: https://mariadb.org/
+たとえば[MariaDBの公式サイト](https://mariadb.org/)では「About」配下にライセンスの情報があり「MariaDB Server is open source software and free to use as stated in the General Public License.（MariaDBサーバーはオープンソースソフトウェアで、GPLの条件下で無償/自由に利用できます。）」と書かれています。
 
 しかし、GPLのバージョンがいくつであるか記載されていません。GPLはバージョンによって条件が異なるため、バージョンを誤認して使うとトラブルの元になり得ます。
 
 ![MariaDBのWebサイトにあるライセンス情報](images/oss-mariadb.png)
 
-別の例として、Apache HTTP Serverの公式サイト[^apache-http-server]を見てみましょう。こちらは左側のメニューに「License」という項目があり、ここからライセンスの情報を確認できそうに見えます。
+別の例として、[Apache HTTP Serverの公式サイト](https://httpd.apache.org/)を見てみましょう。こちらは左側のメニューに「License」という項目があり、ここからライセンスの情報を確認できそうに見えます。
 
 が、実際にはこのリンク先はApacheライセンスというオープンソースライセンスそのものの説明になっています。ここからは、Apache HTTP Serverというソフトウェア自体がApacheライセンスのバージョンいくつに該当するかは読み取れません。
-
-[^apache-http-server]: https://httpd.apache.org/
 
 ![Apache HTTP ServerのWebサイトにあるライセンス情報](images/oss-apache.png)
 

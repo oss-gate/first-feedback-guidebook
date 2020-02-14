@@ -11,17 +11,11 @@
 
 フィードバック先の窓口が分からない場合は、まずそのOSSのプロジェクト公式Webサイトを確認してみましょう。OSSによっては、*要望や不具合のフィードバック方法を説明している*場合があります。「コントリビュート（Contribution）」や「開発に参加するには（Get Involved）」といったメニューがサイト上にあれば、まずはそこから見てみるとよいでしょう。
 
-たとえば、筆者も開発に関わっている全文検索エンジンのGroonga[^groonga]では、公式サイト上の「開発者向け情報」というリンクを辿った先にバグレポートの送り方の説明ページ[^groonga-bug-report-info]があり、GitHubのイシュートラッカーかメーリングリストで報告する旨の案内が書かれています。
-
-[^groonga]: https://groonga.org/ja/
-[^groonga-bug-report-info]: https://groonga.org/ja/docs/contribution/report.html
+たとえば、筆者も開発に関わっている全文検索エンジンの[Groonga](https://groonga.org/ja/)では、公式サイト上の「開発者向け情報」というリンクを辿った先に[バグレポートの送り方の説明ページ](https://groonga.org/ja/docs/contribution/report.html)があり、GitHubのイシュートラッカーかメーリングリストで報告する旨の案内が書かれています。
 
 ![GroongaのWebサイトでは「開発者向け情報」から辿れる](images/where-groonga.png)
 
-また、テキストエディターのEmacs[^emacs]では、公式サイト上の「Documents & Support」というリンクをたどると「Reporting bugs（バグの報告）」という見出しの下に説明があり[^emacs-support-info]、メーリングリストで報告するように案内されています。
-
-[^emacs]: https://www.gnu.org/software/emacs/
-[^emacs-support-info]: https://www.gnu.org/software/emacs/documentation.html
+また、テキストエディターの[Emacs](https://www.gnu.org/software/emacs/)では、公式サイト上の「Documents & Support」というリンクをたどると[「Reporting bugs（バグの報告）」という見出しの下に説明があり](https://www.gnu.org/software/emacs/documentation.html)、メーリングリストで報告するように案内されています。
 
 ![EmacsのWebサイトではサポート情報の一環として扱われている](images/where-emacs.png)
 
@@ -114,21 +108,16 @@ OSS Gateワークショップでも、初めてフィードバックをしよう
 
 [^feedback-from-client]: 元々は、筆者の所属会社で提供している有償のサポートにおいてお客さまから頂いた問い合わせを発端とした物でした。
 
-この現象から思いつくキーワードでWebを検索してみると、この時点ですでに、Firefoxのユーザーコミュニティが運営している「MozillaZine」というサイトのフォーラムに同様の事例の投稿がありました[^mozillazine-topic-17326]。見てみると、スレッドの大まかな流れは以下のようになっていました。
-
-[^mozillazine-topic-17326]: https://forums.mozillazine.jp/viewtopic.php?f=3&t=17326
+この現象から思いつくキーワードでWebを検索してみると、この時点ですでに、Firefoxのユーザーコミュニティが運営している「MozillaZine」というサイトのフォーラムに[同様の事例の投稿がありました](https://forums.mozillazine.jp/viewtopic.php?f=3&t=17326)。見てみると、スレッドの大まかな流れは以下のようになっていました。
 
 1. このような現象が起こっている、既知の解決策はどれも有効でなかった、という情報が投稿される。（2018年12月末）
 2. 現象の再現条件の特定が複数人によって進められる。（2018年12月末～1月頭）
 3. Thunderbirdに対して行われた変更のうち、どの変更以降からこの現象が起こるようになったのかが特定される。(2019年1月）
 4. 暫定的な回避作として、とあるアドオンをインストールすると現象が起こらなくなる、という情報が寄せられる。(2019年1月末～2月）
 
-次に、Mozillaが製品開発のために運用しているイシュートラッカーであるBugzilla[^bmo]にすでに報告されている問題かどうかを調べました。しかしながら、思いつく限りのキーワードで検索しても該当するBugを見つけられませんでしたので、新しいBugとして報告することにしました[^bug1550670]。前章で述べたような「傍観者心理」によって誰も報告しないままになるといけないので、筆者はこういう場合は重複を恐れずに報告することにしています。もし既に報告されている問題でも、そちらを参照するように誘導してもらえるはずと考えたからです。
+次に、Mozillaが製品開発のために運用しているイシュートラッカーである[Bugzilla](https://bugzilla.mozilla.org)にすでに報告されている問題かどうかを調べました。しかしながら、思いつく限りのキーワードで検索しても該当するBugを見つけられませんでしたので、[新しいBugとして報告することにしました](https://bugzilla.mozilla.org/show_bug.cgi?id=1550670)。前章で述べたような「傍観者心理」によって誰も報告しないままになるといけないので、筆者はこういう場合は重複を恐れずに報告することにしています。もし既に報告されている問題でも、そちらを参照するように誘導してもらえるはずと考えたからです。
 
 ただ、実際にはこれが最初の報告だったようで、技術的な知識のある方の目に留めてもらえた結果、FirefoxとThunderbirdの共通基盤である「Geckoエンジン」の日本語入力部分の担当者の方に作業を引き取ってもらえることになりました。
-
-[^bmo]: https://bugzilla.mozilla.org
-[^bug1550670]: https://bugzilla.mozilla.org/show_bug.cgi?id=1550670
 
 　
 
@@ -278,9 +267,8 @@ OSS Gateワークショップでも、初めてフィードバックをしよう
 * プロジェクトに関わる人がするべき行動・慎むべき行動
 * Code of Conductに反した行動に対するペナルティ
 
-開発者が一人で運営しているような小規模のプロジェクトではCode of Conductは特に定められていない場合が多いですが、その場合は元GitHubのエンジニアの方がContributor Covenant（コントリビューターの盟約）というサイト[^contributor-covenant]で公開している一般的なCode of Conductの例を参照するとよいでしょう。2020年1月現在、バージョン2.0とされている物は以下のような内容[^code-of-conduct-example]となっています。
+開発者が一人で運営しているような小規模のプロジェクトではCode of Conductは特に定められていない場合が多いですが、その場合は元GitHubのエンジニアの方が[Contributor Covenant（コントリビューターの盟約）](https://www.contributor-covenant.org/)で公開している一般的なCode of Conductの例を参照するとよいでしょう。2020年1月現在、バージョン2.0とされている物は以下のような内容[^code-of-conduct-example]となっています。
 
-[^contributor-covenant]: https://www.contributor-covenant.org/
 [^code-of-conduct-example]: ここに記載しているのは筆者による要約です。公式の翻訳ではありません。また、原文ではこの後に「このような不適切な行動を取った人には、このようなペナルティを課す」という運用のガイドラインが続いています。
 
 * プロジェクトの参加者全員が、コミュニティに関わるすべての人に対し、年齢、体格、目に見える・あるいは目に見えない障碍、民族、性徴、性自認とその表現の仕方、技術経験の程度、教育程度、社会的・経済的地位、国籍、外見、人種、宗教、性同一性と性的指向を問わず、嫌がらせに遭うことがないようにするよう協力しあうことの誓約。

@@ -38,7 +38,7 @@ OSSプロジェクトに寄附をしたり、技術イベントにスポンサ�
 
 実際に2018年の半ば頃、大手クラウドベンダーに対してRedis、MongoDB、KafkaなどのOSSの開発元が、これらのOSSをクラウド事業の基盤に利用して得た利益を技術コミュニティに十分に還元していないと批判して、一部のソフトウェアについてクラウドビジネスでの商用利用を禁止する形にライセンスを変更した、ということが話題になっていました[^change-to-non-open-license]。
 
-[^change-to-non-open-license]: https://www.sbbit.jp/article/cont1/36018
+[^change-to-non-open-license]: AWSなどの「オープンソースのいいとこ取り」に開発元が猛反発、続々とライセンス変更 https://www.sbbit.jp/article/cont1/36018
 
 このような点を意識してフィードバックを行うことを、「売名行為だ」と非難する向きもあるかもしれません。しかし、無意味なフィードバックでかえって開発コミュニティに負担をかけてしまっている、ということでもない限り、良質で有用なフィードバックが多くもたらされることは、OSSプロジェクトにとってはありがたいものです。
 
@@ -60,7 +60,7 @@ OSSプロジェクトに寄附をしたり、技術イベントにスポンサ�
 
 *修正や必要な変更をフィードバックしてOSS本体に取り込んでもらっておけば、そのようなリスクを減じられます*。そうしておけば、新しいバージョンがリリースされた際も、スムーズにそのOSSの更新を自社製品に反映できます。2019年に行われた、GitHubでのRails 6.0への移行[^github-moves-to-rails-6]は、この話の非常に分かりやすい例です。
 
-[^github-moves-to-rails-6]: https://news.mynavi.jp/article/20190910-891948/
+[^github-moves-to-rails-6]: GitHub、Rails 6.0へのアップグレードを完了 https://news.mynavi.jp/article/20190910-891948/
 
 GitHubのサービスはRuby on Railsの上に構築されていますが、多くの人が利用するサービスなので、GitHub社としてはいつまでも古いRailsを使い続けるわけにはいきません。しかし、Railsの新バージョンが公開されてから移行作業を始めたのでは、まず単純に作業に時間がかかりますし、それだけでなく、*移行を始めてから発覚したRails自体の不具合や非互換の問題への対処*によっても、作業期間はどんどん延びていってしまいます。
 
@@ -68,8 +68,8 @@ GitHubのサービスはRuby on Railsの上に構築されていますが、多�
 
 GitHubのようなWebサービス企業だけでなく、サーバー向け製品やソリューションビジネスの開発・販売を手がける企業でも、同様のことが言えます。実際に、NEC・日立・富士通・日本IBMといった大企業はLinuxカーネルにコントリビュートしていることで知られています[^kernel-contribution-by-japanese-big-companies]し、組み込み分野ではルネサスからのコントリビュートも有名です[^kernel-contribution-by-renesas]。彼らも自社製品やサービスにLinuxを組み込む都合上そうしているのであって、その目的は基本的に「自社の利益のため」なのです。
 
-[^kernel-contribution-by-japanese-big-companies]: https://xtech.nikkei.com/it/article/Interview/20090107/322420/
-[^kernel-contribution-by-renesas]: https://cloud.watch.impress.co.jp/docs/event/649881.html
+[^kernel-contribution-by-japanese-big-companies]: 富士通には約250人のLinuxカーネル開発者がいる https://xtech.nikkei.com/it/article/Interview/20090107/322420/
+[^kernel-contribution-by-renesas]: LinuxCon最終日レポート、大物カーネル開発者がアドバイスする「Kernel Developer Panel」など https://cloud.watch.impress.co.jp/docs/event/649881.html
 
 ## さらに先のことを見据えたフィードバック
 
@@ -89,7 +89,7 @@ GitHubのようなWebサービス企業だけでなく、サーバー向け製�
 
 そのFirefoxについて、「カスタマイズの自由度を下げて、『ポリシー設定』としてある程度決まった項目のカスタマイズだけを行えるようにし[^firefox-policy-engine]、速度や安定性を向上させる」という方針での改革が進められることが決定したという報せは、クリアコードのビジネスにとっては見過ごせない情報でした。顧客企業の望むカスタマイズができないと、顧客満足度が低下し、顧客離れにつながって、ひいては会社の収益源につながるからです。
 
-[^firefox-policy-engine]: https://www.clear-code.com/blog/2018/5/12.html
+[^firefox-policy-engine]: Mozilla Firefox ESR60でのPolicy Engineによるポリシー設定の方法と設定項目のまとめ https://www.clear-code.com/blog/2018/5/12.html
 
 そのため、筆者は自社のビジネス上で頻出のカスタマイズ項目を「ポリシー設定」のリストの中に入れてもらうよう、イシューを立てて積極的に提案していきました。また、そのうちいくつかはパッチの提供もしました。提案のすべてが採用されたわけではありませんが、重要なものは採用してもらえたため、クリアコードは今も安心して「Firefoxを顧客企業のニーズに合わせてカスタマイズする」というサービスを提供できています。
 
@@ -113,7 +113,7 @@ GitHubのようなWebサービス企業だけでなく、サーバー向け製�
 
 この事例では、日本政府を代表する立場と思しきユーザー[^anonymous-apca]が、Mozillaの求めるセキュリティ水準を満たさない状態であるにも関わらず、その状態を解消するための行動はしないで、ただ「日本政府」の権威のもとに要求だけを繰り返す、ということが行われていました。それに対するMozillaの対応は、「ルールに従ってくれない以上、証明書は入れない」というものでした。一国の政府だからといって、OSSの世界では特別扱いはされない、ということがこの例からは見て取れます。
 
-[^mozilla-rejected-gpki]: https://it.srad.jp/story/18/03/01/072235/
+[^mozilla-rejected-gpki]: Mozilla、日本政府の公開鍵基盤（GPKI）について「対応予定なし」というステータスに https://it.srad.jp/story/18/03/01/072235/
 [^anonymous-apca]: ユーザー名は「apca」で、これは「Application Certification Authority」の略と思われます。メールアドレスは「apca@gpki.go.jp」で、セカンドレベルドメイン「go」が「government（政府系）」であることから、政府で働く職員が複数人で共用する「代表者アカウント」だと思われます。
 
 ![一人の開発者として信頼を得る必要がある](images/business-personaility.png)
@@ -203,19 +203,13 @@ OSSの中には、多くのプロジェクトから利用され非常に重要�
 
 本文で触れた「大手クラウドベンダーが得た利益をコミュニティに十分に還元していない」という批判は、実際には、主にAWSを擁するAmazonに対して向けられたもののようです。では、Amazonはこれらのプロジェクトに実際にはどのくらいフィードバックをしていたのでしょうか？
 
-この点でわかりやすい指標としては、プルリクエストを通じてマージされた変更の数や、それに関わった人の数が挙げられます。筆者が簡単に調べてみたところ[^contribution-from-amazon]、各プロジェクトのコントリビューターの中でコントリビュート数が多い上位100人の中で、プロフィールにはっきりと「AWS」または「Amazon」と所属を書いている人の状況は、以下のようになっていました。
-
-[^contribution-from-amazon]: https://twitter.com/piro_or/status/1225229158818533377
+この点でわかりやすい指標としては、プルリクエストを通じてマージされた変更の数や、それに関わった人の数が挙げられます。[筆者が簡単に調べてみたところ](https://twitter.com/piro_or/status/1225229158818533377)、各プロジェクトのコントリビューターの中でコントリビュート数が多い上位100人の中で、プロフィールにはっきりと「AWS」または「Amazon」と所属を書いている人の状況は、以下のようになっていました。
 
 | プロジェクト | 全体のコントリビューター数 | 全体のコミット数 | Amazonからのコントリビューター数 | Amazonからのコントリビューターによるコミット数 |
 | ------------ | -------------------------- | ---------------- | --------------------------------- | ---------------------------------------------- |
-| Redis[^redis] | 328人 | 8788コミット | 2人 | 33コミット |
-| MongoDB[^mongodb] | 397人 | 50094コミット | 0人 | 0コミット |
-| Kafka[^kafka] | 623人 | 7067コミット | 1人 | 84コミット |
-
-[^redis]: https://github.com/antirez/redis
-[^mongodb]: https://github.com/mongodb/mongo
-[^kafka]: https://github.com/apache/kafka
+| [Redis](https://github.com/antirez/redis) | 328人 | 8788コミット | 2人 | 33コミット |
+| [MongoDB](https://github.com/mongodb/mongo) | 397人 | 50094コミット | 0人 | 0コミット |
+| [Kafka](https://github.com/apache/kafka) | 623人 | 7067コミット | 1人 | 84コミット |
 
 未調査の部分も多いため、この数字がすべてというわけではありませんが、RedisとKafkaに関しては、まったくフィードバックしていないわけでもないようです。少なくとも、筆者がFirefoxやThunderbirdにフィードバックした回数よりは多い気がします。
 

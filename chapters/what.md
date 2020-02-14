@@ -66,9 +66,7 @@ ocaml --version
 
 堀本さんはこれを受けて、誤記を訂正するプルリクエストとして以下のようなフィードバックを行いました。
 
-　
-
-https://github.com/ocaml/ocaml.org/pull/1065
+* https://github.com/ocaml/ocaml.org/pull/1065
 
 ```plain
 ■タイトル
