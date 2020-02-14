@@ -5,7 +5,7 @@ blankline='<div class="flushright">　</div>'
 build_pdf() {
   echo "Building PDF..."
 
-  local DIR=chapters-pdf
+  local DIR=.chapters-pdf
 
   rm -rf $DIR
   cp -r chapters $DIR
@@ -27,7 +27,7 @@ build_pdf() {
 build_epub() {
   echo "Building EPUB..."
 
-  local DIR=chapters-epub
+  local DIR=.chapters-epub
 
   rm -rf $DIR
   cp -r chapters $DIR
