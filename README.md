@@ -32,6 +32,7 @@ Re:VIEWの依存パッケージをインストールする。
 
 ```bash
 $ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
+$ gem install unicode-display_width
 ```
 
 Re:VIEWをインストールする。リリース版（4.0.0）ではビルドに失敗したため、masterを使う。
