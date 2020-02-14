@@ -1,6 +1,7 @@
 *.pdf
 *.epub
 .chapters-pdf
+.chapters-pdf-print
 .chapters-epub
 
 node_modules

@@ -16,7 +16,7 @@
   "texstyle": ["reviewmacro"],
   "texdocumentclass": [
     "review-jsbook",
-    "media=ebook,paper=b5,serial_pagination=true,openany,fontsize=10pt,baselineskip=15.4pt,line_length=40zw,number_of_lines=35,head_space=30mm,headsep=10mm,headheight=5mm,footskip=10mm"
+    "%TEXT_DOCUMENT_CLASS%"
   ],
   "sty_templates": {
     "url": "https://github.com/TechBooster/ReVIEW-Template/archive/2cde584d33e8a6f5e6cf647e62fb6b3123ce4dfa.zip",
