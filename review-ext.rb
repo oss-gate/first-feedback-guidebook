@@ -179,7 +179,7 @@ module ReVIEW
     require 'unicode/display_width'
     require 'unicode/display_width/string_ext'
 
-    CR = '　' # 送り出し文字。LaTeXコードも可
+    CR = '' # 送り出し文字。LaTeXコードも可
     ZWSCALE = 0.875 # 和文・欧文の比率。\setlength{\xkanjiskip}{\z@} しておいたほうがよさそう
 
     def split_line(s, n)
@@ -206,16 +206,16 @@ module ReVIEW
 
     def code_line(type, line, idx, id, caption, lang)
       # _typeには'emlist'などが入ってくるので、環境に応じて分岐は可能
-      n = 80
-      n = 72 if @doc_status[:column]
+      n = 78
+      n = 70 if @doc_status[:column]
       a = split_line(unescape(detab(line)), n)
       # インラインopはこの時点でもう展開されたものが入ってしまっているので、escapeでエスケープされてしまう…
       escape(a.join("\x01\n")).gsub("\x01", CR) + "\n"
     end
 
     def code_line_num(type, line, first_line_num, idx, id, caption, lang)
-      n = 80
-      n = 72 if @doc_status[:column]
+      n = 78
+      n = 70 if @doc_status[:column]
       a = split_line(unescape(detab(line)), n)
       (idx + first_line_num).to_s.rjust(2) + ': ' + escape(a.join("\x01\n    ")).gsub("\x01", CR) + "\n"
     end
