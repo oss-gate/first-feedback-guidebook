@@ -142,17 +142,18 @@ Firefoxの法人向けポリシー設定で、検索候補の表示を無効化�
 
 
 * 「設定の値が`false`である状態」を擬人化して主語にする：
-   
-   ```text {num=false}
-   `SearchSuggestEnabled`=`false` does not hide search suggestions on the search bar.
-   ≪`SearchSuggestEnabled`=`false`という状態が、検索バーの検索候補を隠してくれない≫
-   ```
+
+```text {num=false}
+`SearchSuggestEnabled`=`false` does not hide search suggestions on the search bar.
+≪`SearchSuggestEnabled`=`false`という状態が、検索バーの検索候補を隠してくれない≫
+```
+
 * 「検索候補」を擬人化して主語にする：
-   
-   ```text {num=false}
-   Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`false`.
-   ≪`SearchSuggestEnabled`=`false`という設定の時に、検索バーで検索候補が見える≫
-   ```
+
+```text {num=false}
+Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`false`.
+≪`SearchSuggestEnabled`=`false`という設定の時に、検索バーで検索候補が見える≫
+```
 
 どうでしょう。このくらいの英文なら、自分にも書けるような気がしてきませんか？　これに
 
