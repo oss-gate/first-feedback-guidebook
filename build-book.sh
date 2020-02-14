@@ -18,6 +18,8 @@ build_pdf() {
   cp style.css $DIR/.review/
 
   cd $DIR
+  # convert for printing
+  mogrify -type Grayscale images/*.png
   easybooks first-feedback-guidebook.json
   cp -f .review/*.pdf ../
 

@@ -31,7 +31,7 @@ WSL on Windows 10のUbuntuで動作を確認した。
 Re:VIEWの依存パッケージをインストールする。
 
 ```bash
-$ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra
+$ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra imagemagick
 $ gem install unicode-display_width
 ```
 
