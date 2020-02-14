@@ -38,7 +38,7 @@ OSSプロジェクトに寄附をしたり、技術イベントにスポンサ�
 
 実際に2018年の半ば頃、大手クラウドベンダーに対してRedis、MongoDB、KafkaなどのOSSの開発元が、これらのOSSをクラウド事業の基盤に利用して得た利益を技術コミュニティに十分に還元していないと批判して、一部のソフトウェアについてクラウドビジネスでの商用利用を禁止する形にライセンスを変更した、ということが話題になっていました[^change-to-non-open-license]。
 
-[^change-to-non-open-license]: AWSなどの「オープンソースのいいとこ取り」に開発元が猛反発、続々とライセンス変更 https://www.sbbit.jp/article/cont1/36018
+[^change-to-non-open-license]: AWSなどの「オープンソースのいいとこ取り」に開発元が猛反発、続々とライセンス変更 ｜ビジネス+IT https://www.sbbit.jp/article/cont1/36018
 
 このような点を意識してフィードバックを行うことを、「売名行為だ」と非難する向きもあるかもしれません。しかし、無意味なフィードバックでかえって開発コミュニティに負担をかけてしまっている、ということでもない限り、良質で有用なフィードバックが多くもたらされることは、OSSプロジェクトにとってはありがたいものです。
 
@@ -60,7 +60,7 @@ OSSプロジェクトに寄附をしたり、技術イベントにスポンサ�
 
 *修正や必要な変更をフィードバックしてOSS本体に取り込んでもらっておけば、そのようなリスクを減じられます*。そうしておけば、新しいバージョンがリリースされた際も、スムーズにそのOSSの更新を自社製品に反映できます。2019年に行われた、GitHubでのRails 6.0への移行[^github-moves-to-rails-6]は、この話の非常に分かりやすい例です。
 
-[^github-moves-to-rails-6]: GitHub、Rails 6.0へのアップグレードを完了 https://news.mynavi.jp/article/20190910-891948/
+[^github-moves-to-rails-6]: GitHub、Rails 6.0へのアップグレードを完了 | マイナビニュース https://news.mynavi.jp/article/20190910-891948/
 
 GitHubのサービスはRuby on Railsの上に構築されていますが、多くの人が利用するサービスなので、GitHub社としてはいつまでも古いRailsを使い続けるわけにはいきません。しかし、Railsの新バージョンが公開されてから移行作業を始めたのでは、まず単純に作業に時間がかかりますし、それだけでなく、*移行を始めてから発覚したRails自体の不具合や非互換の問題への対処*によっても、作業期間はどんどん延びていってしまいます。
 
@@ -68,8 +68,8 @@ GitHubのサービスはRuby on Railsの上に構築されていますが、多�
 
 GitHubのようなWebサービス企業だけでなく、サーバー向け製品やソリューションビジネスの開発・販売を手がける企業でも、同様のことが言えます。実際に、NEC・日立・富士通・日本IBMといった大企業はLinuxカーネルにコントリビュートしていることで知られています[^kernel-contribution-by-japanese-big-companies]し、組み込み分野ではルネサスからのコントリビュートも有名です[^kernel-contribution-by-renesas]。彼らも自社製品やサービスにLinuxを組み込む都合上そうしているのであって、その目的は基本的に「自社の利益のため」なのです。
 
-[^kernel-contribution-by-japanese-big-companies]: 富士通には約250人のLinuxカーネル開発者がいる https://xtech.nikkei.com/it/article/Interview/20090107/322420/
-[^kernel-contribution-by-renesas]: LinuxCon最終日レポート、大物カーネル開発者がアドバイスする「Kernel Developer Panel」など https://cloud.watch.impress.co.jp/docs/event/649881.html
+[^kernel-contribution-by-japanese-big-companies]: 富士通には約250人のLinuxカーネル開発者がいる | 日経クロステック（xTECH） https://xtech.nikkei.com/it/article/Interview/20090107/322420/
+[^kernel-contribution-by-renesas]: LinuxCon最終日レポート、大物カーネル開発者がアドバイスする「Kernel Developer Panel」など - クラウド Watch https://cloud.watch.impress.co.jp/docs/event/649881.html
 
 ## さらに先のことを見据えたフィードバック
 
