@@ -181,8 +181,12 @@ module ReVIEW
 
     CR = '' # 送り出し文字。LaTeXコードも可
     ZWSCALE = 0.875 # 和文・欧文の比率。\setlength{\xkanjiskip}{\z@} しておいたほうがよさそう
+    JAPANESE_CHAR_ONLY_LINE_MATCHER = /\A(\p{Hiragana}|\p{Katakana}|[ー－、。≪≫「」『』（）]|[一-龠々])\z/
 
     def split_line(string, max_chars)
+      # 日本語の文字を含む行の改行は、自動折り返しに任せる
+      return [string] if JAPANESE_CHAR_ONLY_LINE_MATCHER =~ string
+
       lines = []
       line  = ''
       width = 0
