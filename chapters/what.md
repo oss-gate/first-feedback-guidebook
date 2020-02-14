@@ -70,7 +70,7 @@ ocaml --version
 
 * https://github.com/ocaml/ocaml.org/pull/1065
 
-```plain
+```text {num=false}
 ■タイトル
 
 install: fix a typo 

@@ -73,7 +73,7 @@
 
 たったこれだけの、シンプルなメモです。これに対して、最終的に報告した内容は以下のようなものでした。
 
-```plain
+```text {num=false}
 再現手順：
 
 1. Windows 7が動作する環境を用意する。Windowsのデスクトップテーマは「クラシック」を選択する。
@@ -191,7 +191,7 @@
 9. `vim ~/.tweet.client.key`を実行する。（設定ファイルの作成）
 10. 先ほど発行したAPIキーを使って、以下の内容でファイルを上書き保存する。
 
-    ```plain
+    ```text {num=false}
     MY_SCREEN_NAME=（アカウント名）
     MY_LANGUAGE=ja
     CONSUMER_KEY=（発行したコンシューマーキー）
@@ -202,7 +202,7 @@
 11. `vim file.txt`を実行する。（データファイルの作成）
 12. 以下の内容でファイルを上書き保存する。
 
-    ```plain
+    ```text {num=false}
     line 1
     line 2
     ```

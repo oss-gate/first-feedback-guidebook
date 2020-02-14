@@ -80,7 +80,7 @@ ITエンジニア向けに「こういう英語表現を覚えよう」という
 
 「やさしい日本語」を書くためには、*同じ物事をより平易な表現で言い換える*必要があります。たとえば、
 
-```plain
+```text {num=false}
 訪日観光客で洛中・洛外は連日溢れかえっており、史跡や寺社仏閣が観光資源として有効に機能していて、誇らしい。
 ```
 
@@ -98,7 +98,7 @@ ITエンジニア向けに「こういう英語表現を覚えよう」という
 
 といった加工をすることで、
 
-```plain
+```text {num=false}
 京都の町には毎日、たくさんの人達が他の国から来る。
 古い建物、お寺、神社などが見どころになっている。
 私はとてもうれしい。
@@ -130,7 +130,7 @@ ITエンジニア向けに「こういう英語表現を覚えよう」という
 
 たとえば、
 
-```plain
+```text {num=false}
 Firefoxの法人向けポリシー設定で、検索候補の表示を無効化する`SearchSuggestEnabled`を`false`に設定しても、単独のWeb検索バーでは検索候補が表示され続けてしまう。
 ```
 
@@ -143,20 +143,20 @@ Firefoxの法人向けポリシー設定で、検索候補の表示を無効化�
 
 * 「設定の値が`false`である状態」を擬人化して主語にする：
    
-   ```plain
+   ```text {num=false}
    `SearchSuggestEnabled`=`false` does not hide search suggestions on the search bar.
    ≪`SearchSuggestEnabled`=`false`という状態が、検索バーの検索候補を隠してくれない≫
    ```
 * 「検索候補」を擬人化して主語にする：
    
-   ```plain
+   ```text {num=false}
    Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`false`.
    ≪`SearchSuggestEnabled`=`false`という設定の時に、検索バーで検索候補が見える≫
    ```
 
 どうでしょう。このくらいの英文なら、自分にも書けるような気がしてきませんか？　これに
 
-```plain
+```text {num=false}
 There is an enterprise policy `SearchSuggestEnabled`.
 ≪～という法人向けポリシー設定があります。≫
 
@@ -217,7 +217,7 @@ The location bar shows search suggestions. The web search bar also.
 
 たとえば対等な物を並べるなら、前述の英単語の例を列挙したような*序列無しの箇条書き*にすればいいですし、順番や優先順位に意味がある場面では、項目の頭に数字を付けた*序列付きの箇条書き*にすればいいです。この考えに則ると、「再現手順」は以下の要領で書けるでしょう。
 
-```plain
+```text {num=false}
 1. ◯◯をする。
 2. ××をする。
 3. △△が◇◇になる。
@@ -227,7 +227,7 @@ The location bar shows search suggestions. The web search bar also.
 
 また、箇条書きを階層化すると、
 
-```plain
+```text {num=false}
 1. ◯◯をする。
    * ◎◎が出る。
 2. ××をする。
