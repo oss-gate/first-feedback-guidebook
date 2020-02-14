@@ -23,6 +23,7 @@
     "dir": "ReVIEW-Template-2cde584d33e8a6f5e6cf647e62fb6b3123ce4dfa/articles/sty/"
   },
   "templates": ["images"],
+  "stylesheet": ["style.css"],
   "catalog": {
     "PREDEF": [
       "introduction.md"

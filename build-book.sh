@@ -15,6 +15,7 @@ build_pdf() {
 
   mkdir -p $DIR/.review
   cp review-ext.rb $DIR/.review/
+  cp style.css $DIR/.review/
 
   cd $DIR
   easybooks first-feedback-guidebook.json
@@ -36,6 +37,7 @@ build_epub() {
 
   mkdir -p $DIR/.review
   cp review-ext.rb $DIR/.review/
+  cp style.css $DIR/.review/
 
   cd $DIR
   easybooks first-feedback-guidebook.json
