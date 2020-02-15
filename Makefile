@@ -1,5 +1,5 @@
 
-.PHONY: pdf epub
+.PHONY: book
 
 all: book
 

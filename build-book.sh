@@ -81,4 +81,5 @@ trap "kill 0" EXIT
 build_pdf &
 build_pdf_print &
 build_epub &
-wait
+wait >/dev/null 2>&1
+exit 0
