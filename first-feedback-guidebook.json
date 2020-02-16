@@ -38,7 +38,6 @@
          "what.md",
          "where.md"
        ]},
-      "blank-before-section2.re",
       {"最初のフィードバック": [
          "how.md",
          "english.md",
@@ -53,8 +52,7 @@
          "business.md",
          "support.md",
          "licenses.md"
-       ]},
-      "blank-after-section3.re"
+       ]}
     ],
     "POSTDEF": [
       "outroduction.md"
