@@ -28,33 +28,33 @@
   "stylesheet": ["style.css"],
   "catalog": {
     "PREDEF": [
-      "introduction.md",
-      "blank-before-section1.re"
+      "introduction.md"
     ],
     "CHAPS": [
+      "blank-before-section1.re",
       {"フィードバックするための準備": [
          "motivation.md",
          "oss.md",
          "what.md",
-         "where.md",
-         "blank-before-section2.re"
+         "where.md"
        ]},
+     "blank-before-section2.re",
       {"最初のフィードバック": [
          "how.md",
          "english.md",
          "hesitation.md",
          "pullrequest.md",
-         "examples.md",
-         "blank-before-section3.re"
+         "examples.md"
        ]},
+     "blank-before-section3.re",
       {"フィードバックした後のこと": [
          "do-not-intimidate.md",
          "merge.md",
          "business.md",
          "support.md",
-         "licenses.md",
-         "blank-after-section3.re"
-       ]}
+         "licenses.md"
+       ]},
+     "blank-after-section3.re"
     ],
     "POSTDEF": [
       "outroduction.md"
