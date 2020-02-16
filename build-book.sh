@@ -97,7 +97,7 @@ build_pdf_print() {
   then
     #echo "$taskname: Extracting page info..."
     #pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
-    cp ../.tmp-print-ebook/.review/pdf_info .review/
+    cp ../.tmp-pdf-ebook/.review/pdf_info .review/
     local pages_count=$(cat .review/pdf_info | grep NumberOfPages | cut -d ' ' -f 2)
     local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
