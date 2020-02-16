@@ -26,13 +26,21 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ### ビルド手順
 
-WSL on Windows 10のUbuntuで動作を確認した。
+Ubuntu 18.04LTS on WSL on Windows 10で動作を確認した。
 
-Re:VIEWの依存パッケージをインストールする。
+Re:VIEWに必要なパッケージをインストールする。
 
 ```bash
 $ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra imagemagick
 $ gem install unicode-display_width
+```
+
+PDFtkをインストールする。
+
+```bash
+$ sudo add-apt-repository ppa:malteworld/ppa
+& sudo apt update
+$ sudo apt install pdftk
 ```
 
 Re:VIEWをインストールする。リリース版（4.0.0）ではビルドに失敗したため、masterを使う。

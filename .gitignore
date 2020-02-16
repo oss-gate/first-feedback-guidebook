@@ -1,5 +1,5 @@
-*.pdf
-*.epub
+./*.pdf
+./*.epub
 .chapters-pdf
 .chapters-pdf-print
 .chapters-epub
