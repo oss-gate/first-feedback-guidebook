@@ -8,7 +8,7 @@ texdocumentclass_common=serial_pagination=true,openany,fontsize=10pt,baselineski
 texdocumentclass_ebook=media=ebook,paperwidth=152mm,paperheight=227mm,head_space=20mm
 texdocumentclass_print=media=print,paper=b5,head_space=30mm
 
-pages_count=194
+pages_count=196
 tobira1=10
 tobira2=58
 tobira3=127
