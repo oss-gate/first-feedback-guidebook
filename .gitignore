@@ -1,8 +1,8 @@
 ./*.pdf
 ./*.epub
-.chapters-pdf
-.chapters-pdf-print
-.chapters-epub
+.tmp-pdf-ebook
+.tmp-pdf-print
+.tmp-epub
 
 node_modules
 package.json
