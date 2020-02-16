@@ -3,6 +3,7 @@
 .tmp-pdf-ebook
 .tmp-pdf-print
 .tmp-epub
+dist
 
 node_modules
 package.json
