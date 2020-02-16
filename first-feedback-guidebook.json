@@ -52,7 +52,8 @@
          "business.md",
          "support.md",
          "licenses.md"
-       ]}
+       ]},
+      "blank-after-section3.re"
     ],
     "POSTDEF": [
       "outroduction.md"
