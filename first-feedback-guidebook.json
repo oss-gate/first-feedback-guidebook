@@ -8,6 +8,8 @@
   "colophon": true,
   "history": [["2020-02-29"]],
   "prt": "印刷所未定",
+  "hiddenfolio": "nikko-pc",
+  "serial_pagination": true,
   "pbl": "OSS Gate",
   "edt": "OSS Gate",
   "secnolevel": 3,
@@ -26,28 +28,32 @@
   "stylesheet": ["style.css"],
   "catalog": {
     "PREDEF": [
-      "introduction.md"
+      "introduction.md",
+      "blank-before-section1.re"
     ],
     "CHAPS": [
       {"フィードバックするための準備": [
          "motivation.md",
          "oss.md",
          "what.md",
-         "where.md"
+         "where.md",
+         "blank-before-section2.re"
        ]},
       {"最初のフィードバック": [
          "how.md",
          "english.md",
          "hesitation.md",
          "pullrequest.md",
-         "examples.md"
+         "examples.md",
+         "blank-before-section3.re"
        ]},
       {"フィードバックした後のこと": [
          "do-not-intimidate.md",
          "merge.md",
          "business.md",
          "support.md",
-         "licenses.md"
+         "licenses.md",
+         "blank-after-section3.re"
        ]}
     ],
     "POSTDEF": [
