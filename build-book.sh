@@ -41,7 +41,8 @@ build_pdf_ebook() {
   clear_duplicated_blanklines "$DIR"
 
   cd $DIR
-  easybooks $bookname.json
+  time easybooks $bookname.json &&
+    echo "$taskname: Base PDF is successfully generated."
   if command -v pdftk > /dev/null
   then
     echo "$taskname: Extracting page info..."
@@ -92,7 +93,8 @@ build_pdf_print() {
   local DIR=.tmp-pdf-print
 
   cd $DIR
-  easybooks $bookname.json
+  time easybooks $bookname.json &&
+    echo "$taskname: Base PDF is successfully generated."
   if command -v pdftk > /dev/null
   then
     #echo "$taskname: Extracting page info..."
