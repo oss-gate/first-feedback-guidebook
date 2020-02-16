@@ -48,7 +48,7 @@ build_pdf_ebook() {
       output .review/$bookname.rearranged.pdf
     echo "$taskname: Embedding bookmarks..."
     pdftk .review/$bookname.rearranged.pdf update_info_utf8 .review/pdf_info output .review/$bookname-ebook.pdf
-    cp -f .review/$bookname-ebook.pdf ../../
+    cp -f .review/$bookname-ebook.pdf ../
   else
     cp -f .review/$bookname.pdf ../$bookname-ebook.pdf
   fi
@@ -96,7 +96,7 @@ build_pdf_print() {
       $(($pages_count + 4)) \
       $(($tobira3 + 1))-$pages_count \
       output .review/$bookname-print.pdf
-    cp -f .review/$bookname-print.pdf ../../
+    cp -f .review/$bookname-print.pdf ../
   else
     cp -f .review/$bookname.pdf ../$bookname-print.pdf
   fi
