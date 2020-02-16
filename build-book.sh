@@ -9,21 +9,36 @@ texdocumentclass_common=serial_pagination=true,openany,fontsize=10pt,baselineski
 texdocumentclass_ebook=media=ebook,paperwidth=152mm,paperheight=227mm,head_space=20mm
 texdocumentclass_print=media=print,paper=b5,head_space=30mm
 
+clear_duplicated_blanklines() {
+  local DIR=$1
+  find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
+}
+
+prepare_workdir() {
+  local DIR=$1
+  local TEXT_DOCUMENT_CLASS=$2
+
+  rm -rf $DIR || return 1
+  cp -r chapters $DIR
+  cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$TEXT_DOCUMENT_CLASS,$texdocumentclass_common/" > $DIR/$bookname.json
+  find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
+  clear_duplicated_blanklines "$DIR"
+
+  mkdir -p $DIR/.review
+  cp review-ext.rb $DIR/.review/
+  cp style.css $DIR/.review/
+}
+
 build_pdf_ebook() {
   local taskname="PDF for ebook"
   local DIR=.tmp-pdf-ebook
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR || return 1
-  cp -r chapters $DIR
-  cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_ebook,$texdocumentclass_common/" > $DIR/$bookname.json
-  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
-  find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" || return 1
 
-  mkdir -p $DIR/.review
-  cp review-ext.rb $DIR/.review/
-  cp style.css $DIR/.review/
+  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
+  clear_duplicated_blanklines "$DIR"
 
   cd $DIR
   easybooks $bookname.json
@@ -57,31 +72,32 @@ build_pdf_ebook() {
   echo "$taskname: Done."
 }
 
-build_pdf_print() {
+build_pdf_print_pre() {
   local taskname="PDF for printing"
   local DIR=.tmp-pdf-print
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR || return 1
-  cp -r chapters $DIR
-  cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_print,$texdocumentclass_common/" > $DIR/$bookname.json
-  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
-  find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
+  prepare_workdir "$DIR" "$texdocumentclass_print" || return 1
 
-  mkdir -p $DIR/.review
-  cp review-ext.rb $DIR/.review/
-  cp style.css $DIR/.review/
+  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
+  clear_duplicated_blanklines "$DIR"
+
+  echo "$taskname: Converting images..."
+  mogrify -type Grayscale $DIR/images/*.png
+}
+
+build_pdf_print() {
+  local taskname="PDF for printing"
+  local DIR=.tmp-pdf-print
 
   cd $DIR
-  echo "$taskname: Converting images..."
-  mogrify -type Grayscale images/*.png
   easybooks $bookname.json
   if command -v pdftk > /dev/null
   then
     #echo "$taskname: Extracting page info..."
     #pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
-    cp ../.tmp-print-ebook/pdf_info .review/
+    cp ../.tmp-print-ebook/.review/pdf_info .review/
     local pages_count=$(cat .review/pdf_info | grep NumberOfPages | cut -d ' ' -f 2)
     local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
@@ -106,17 +122,29 @@ build_pdf_print() {
   echo "$taskname: Done."
 }
 
+build_pdf() {
+  trap "kill 0" EXIT
+
+  if command -v pdftk > /dev/null
+  then
+    build_pdf_ebook &
+    build_pdf_print_pre &
+    wait >/dev/null 2>&1
+    build_pdf_print
+  else
+    build_pdf_ebook &
+    build_pdf_print_pre && build_pdf_print &
+    wait
+  fi
+}
+
 build_epub() {
   local taskname="EPUB"
   local DIR=.tmp-epub
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR || return 1
-  cp -r chapters $DIR
-  cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_ebook,$texdocumentclass_common/" > $DIR/$bookname.json
-  find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
-  find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" || return 1
 
   mkdir -p $DIR/.review
   cp review-ext.rb $DIR/.review/
@@ -135,8 +163,8 @@ build_epub() {
 mkdir -p $distdir
 
 trap "kill 0" EXIT
-build_pdf_ebook &&
-  build_pdf_print &
+
+build_pdf &
 build_epub &
 wait >/dev/null 2>&1
 exit 0
