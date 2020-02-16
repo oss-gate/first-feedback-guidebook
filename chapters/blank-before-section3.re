@@ -1,1 +1,4 @@
+=[notoc]
+//embed[latex]{
 \cleardoublepage
+//}

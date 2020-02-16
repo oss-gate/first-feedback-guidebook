@@ -1,3 +1,4 @@
+=[notoc]
 //embed[latex]{
 \clearoddpage
 //}
