@@ -1,1 +1,3 @@
-\clearoddpage
+//embed[latex]{
+\cleardoublepage
+//}
