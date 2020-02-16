@@ -34,24 +34,35 @@
       "blank-before-section1.re",
       {"フィードバックするための準備": [
          "motivation.md",
+         "blank-after-motivation.re",
          "oss.md",
+         "blank-after-oss.re",
          "what.md",
+         "blank-after-what.re",
          "where.md"
        ]},
      "blank-before-section2.re",
       {"最初のフィードバック": [
          "how.md",
+         "blank-after-how.re",
          "english.md",
+         "blank-after-english.re",
          "hesitation.md",
+         "blank-after-hesitation.re",
          "pullrequest.md",
+         "blank-after-pullrequest.re",
          "examples.md"
        ]},
      "blank-before-section3.re",
       {"フィードバックした後のこと": [
          "do-not-intimidate.md",
+         "blank-after-do-not-intimidate.re",
          "merge.md",
+         "blank-after-merge.re",
          "business.md",
+         "blank-after-business.re",
          "support.md",
+         "blank-after-support.re",
          "licenses.md"
        ]},
      "blank-after-section3.re"
