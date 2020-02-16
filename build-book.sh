@@ -1,6 +1,7 @@
 #!/bin/bash
 
 bookname=first-feedback-guidebook
+distdir=dist
 
 blankline='<div class="flushright">　</div>'
 
@@ -48,9 +49,9 @@ build_pdf_ebook() {
       output .review/$bookname.rearranged.pdf
     echo "$taskname: Embedding bookmarks..."
     pdftk .review/$bookname.rearranged.pdf update_info_utf8 .review/pdf_info output .review/$bookname-ebook.pdf
-    cp -f .review/$bookname-ebook.pdf ../
+    cp -f .review/$bookname-ebook.pdf ../$distdir/
   else
-    cp -f .review/$bookname.pdf ../$bookname-ebook.pdf
+    cp -f .review/$bookname.pdf ../$distdir/$bookname-ebook.pdf
   fi
 
   echo "$taskname: Done."
@@ -96,9 +97,9 @@ build_pdf_print() {
       $(($pages_count + 4)) \
       $(($tobira3 + 1))-$pages_count \
       output .review/$bookname-print.pdf
-    cp -f .review/$bookname-print.pdf ../
+    cp -f .review/$bookname-print.pdf ../$distdir/
   else
-    cp -f .review/$bookname.pdf ../$bookname-print.pdf
+    cp -f .review/$bookname.pdf ../$distdir/$bookname-print.pdf
   fi
 
   echo "$taskname: Done."
@@ -125,10 +126,12 @@ build_epub() {
 
   cd .review
   review-epubmaker config.yml
-  cp -f *.epub ../../
+  cp -f *.epub ../../$distdir/
 
   echo "$taskname: Done."
 }
+
+mkdir -f $distdir
 
 trap "kill 0" EXIT
 build_pdf_ebook &
