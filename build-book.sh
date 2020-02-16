@@ -31,8 +31,11 @@ build_pdf_ebook() {
 
   cd $DIR
   easybooks $bookname.json
-  if command -v pdftk > /dev/null && false
+  if command -v pdftk > /dev/null
   then
+    echo "$taskname: Extracting bookmarks..."
+    pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
+    echo "$taskname: Replacing pages..."
     pdftk .review/$bookname.pdf ../images/tobira-ebook.pdf cat output .review/$bookname.combined.pdf
     pdftk .review/$bookname.combined.pdf cat \
       $(($pages_count + 1)) \
@@ -43,7 +46,9 @@ build_pdf_ebook() {
       $(($tobira2 + 1))-$(($tobira3 - 1)) \
       $(($pages_count + 4)) \
       $(($tobira3 + 1))-$pages_count \
-      output .review/$bookname-ebook.pdf
+      output .review/$bookname.rearranged.pdf
+    echo "$taskname: Embedding bookmarks..."
+    pdftk .review/$bookname.rearranged.pdf update_info_utf8 .review/pdf_info output .review/$bookname-ebook.pdf
     cp -f .review/$bookname-ebook.pdf ../../
   else
     cp -f .review/$bookname.pdf ../$bookname-ebook.pdf
