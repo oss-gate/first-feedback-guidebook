@@ -14,9 +14,10 @@ tobira2=58
 tobira3=127
 
 build_pdf_ebook() {
-  echo "Building PDF for ebook..."
+  local taskname="PDF for ebook"
+  local DIR=.tmp-pdf-ebook
 
-  local DIR=.chapters-pdf-ebook
+  echo "$taskname: Building..."
 
   rm -rf $DIR
   cp -r chapters $DIR
@@ -48,13 +49,14 @@ build_pdf_ebook() {
     cp -f .review/$bookname.pdf ../$bookname-ebook.pdf
   fi
 
-  echo "PDF for ebook: Done."
+  echo "$taskname: Done."
 }
 
 build_pdf_print() {
-  echo "Building PDF for printing..."
+  local taskname="PDF for printing"
+  local DIR=.tmp-pdf-print
 
-  local DIR=.chapters-pdf-print
+  echo "$taskname: Building..."
 
   rm -rf $DIR
   cp -r chapters $DIR
@@ -67,11 +69,12 @@ build_pdf_print() {
   cp style.css $DIR/.review/
 
   cd $DIR
-  # convert for printing
+  echo "$taskname: Converting images..."
   mogrify -type Grayscale images/*.png
   easybooks $bookname.json
   if command -v pdftk > /dev/null
   then
+    echo "$taskname: Replacing pages..."
     pdftk .review/$bookname.pdf ../images/tobira-print.pdf cat output .review/$bookname.combined.pdf
     pdftk .review/$bookname.combined.pdf cat \
       $(($pages_count + 1)) \
@@ -88,13 +91,14 @@ build_pdf_print() {
     cp -f .review/$bookname.pdf ../$bookname-print.pdf
   fi
 
-  echo "PDF for printing: Done."
+  echo "$taskname: Done."
 }
 
 build_epub() {
-  echo "Building EPUB..."
+  local taskname="EPUB"
+  local DIR=.tmp-epub
 
-  local DIR=.chapters-epub
+  echo "$taskname: Building..."
 
   rm -rf $DIR
   cp -r chapters $DIR
@@ -113,7 +117,7 @@ build_epub() {
   review-epubmaker config.yml
   cp -f *.epub ../../
 
-  echo "EPUB: Done."
+  echo "$taskname: Done."
 }
 
 trap "kill 0" EXIT
