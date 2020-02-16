@@ -8,11 +8,6 @@ texdocumentclass_common=serial_pagination=true,openany,fontsize=10pt,baselineski
 texdocumentclass_ebook=media=ebook,paperwidth=152mm,paperheight=227mm,head_space=20mm
 texdocumentclass_print=media=print,paper=b5,head_space=30mm
 
-pages_count=196
-tobira1=10
-tobira2=58
-tobira3=127
-
 build_pdf_ebook() {
   local taskname="PDF for ebook"
   local DIR=.tmp-pdf-ebook
@@ -33,8 +28,12 @@ build_pdf_ebook() {
   easybooks $bookname.json
   if command -v pdftk > /dev/null
   then
-    echo "$taskname: Extracting bookmarks..."
+    echo "$taskname: Extracting page info..."
     pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
+    local pages_count=$(cat .review/pdf_info | grep PageMediaNumber | tail -n 1 | cut -d ' ' -f 2)
+    local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
+    local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
+    local tobira3=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第III部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     echo "$taskname: Replacing pages..."
     pdftk .review/$bookname.pdf ../images/tobira-ebook.pdf cat output .review/$bookname.combined.pdf
     pdftk .review/$bookname.combined.pdf cat \
@@ -79,6 +78,12 @@ build_pdf_print() {
   easybooks $bookname.json
   if command -v pdftk > /dev/null
   then
+    echo "$taskname: Extracting page info..."
+    pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
+    local pages_count=$(cat .review/pdf_info | grep PageMediaNumber | tail -n 1 | cut -d ' ' -f 2)
+    local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
+    local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
+    local tobira3=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第III部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     echo "$taskname: Replacing pages..."
     pdftk .review/$bookname.pdf ../images/tobira-print.pdf cat output .review/$bookname.combined.pdf
     pdftk .review/$bookname.combined.pdf cat \
