@@ -127,13 +127,14 @@ build_pdf() {
 
   if command -v pdftk > /dev/null
   then
-    build_pdf_ebook &
-    build_pdf_print_pre &
+    time build_pdf_ebook &
+    time build_pdf_print_pre &
     wait >/dev/null 2>&1
-    build_pdf_print
+    time build_pdf_print
   else
-    build_pdf_ebook &
-    build_pdf_print_pre && build_pdf_print &
+    time build_pdf_ebook &
+    time build_pdf_print_pre &&
+      time build_pdf_print &
     wait
   fi
 }
@@ -165,6 +166,6 @@ mkdir -p $distdir
 trap "kill 0" EXIT
 
 build_pdf &
-build_epub &
+time build_epub &
 wait >/dev/null 2>&1
 exit 0
