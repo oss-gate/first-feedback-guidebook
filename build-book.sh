@@ -31,7 +31,7 @@ build_pdf_ebook() {
   then
     echo "$taskname: Extracting page info..."
     pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
-    local pages_count=$(cat .review/pdf_info | grep PageMediaNumber | tail -n 1 | cut -d ' ' -f 2)
+    local pages_count=$(cat .review/pdf_info | grep NumberOfPages | cut -d ' ' -f 2)
     local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira3=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第III部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
@@ -81,7 +81,7 @@ build_pdf_print() {
   then
     echo "$taskname: Extracting page info..."
     pdftk .review/$bookname.pdf dump_data_utf8 output .review/pdf_info
-    local pages_count=$(cat .review/pdf_info | grep PageMediaNumber | tail -n 1 | cut -d ' ' -f 2)
+    local pages_count=$(cat .review/pdf_info | grep NumberOfPages | cut -d ' ' -f 2)
     local tobira1=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第I部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira2=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第II部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
     local tobira3=$(cat .review/pdf_info | grep -A 2 'BookmarkTitle: 第III部' | grep BookmarkPageNumber | cut -d ' ' -f 2)
