@@ -15,7 +15,7 @@ build_pdf_ebook() {
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR
+  rm -rf $DIR || return 1
   cp -r chapters $DIR
   cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_ebook,$texdocumentclass_common/" > $DIR/$bookname.json
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
@@ -63,7 +63,7 @@ build_pdf_print() {
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR
+  rm -rf $DIR || return 1
   cp -r chapters $DIR
   cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_print,$texdocumentclass_common/" > $DIR/$bookname.json
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
@@ -111,7 +111,7 @@ build_epub() {
 
   echo "$taskname: Building..."
 
-  rm -rf $DIR
+  rm -rf $DIR || return 1
   cp -r chapters $DIR
   cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$texdocumentclass_ebook,$texdocumentclass_common/" > $DIR/$bookname.json
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
