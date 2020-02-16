@@ -131,7 +131,7 @@ build_epub() {
   echo "$taskname: Done."
 }
 
-mkdir -f $distdir
+mkdir -p $distdir
 
 trap "kill 0" EXIT
 build_pdf_ebook &
