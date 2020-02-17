@@ -32,7 +32,6 @@
       "introduction.md"
     ],
     "CHAPS": [
-      "blank-before-section1.re",
       {"section1.re": [
          "motivation.md",
          "oss.md",
@@ -46,7 +45,6 @@
          "pullrequest.md",
          "examples.md"
        ]},
-      "blank-before-section3.re",
       {"section3.re": [
          "do-not-intimidate.md",
          "merge.md",
@@ -54,7 +52,7 @@
          "support.md",
          "licenses.md"
        ]},
-      "blank-after-section3.re"
+      "blank-before-outroduction.re"
     ],
     "POSTDEF": [
       "outroduction.md"
