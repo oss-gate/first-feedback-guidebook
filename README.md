@@ -39,7 +39,7 @@ PDFtkをインストールする。
 
 ```bash
 $ sudo add-apt-repository ppa:malteworld/ppa
-& sudo apt update
+$ sudo apt update
 $ sudo apt install pdftk
 ```
 
