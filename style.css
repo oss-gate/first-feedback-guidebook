@@ -1,3 +1,5 @@
+/* table */
+
 table {
   border-collapse: collapse;
 }
@@ -8,6 +10,8 @@ table td {
   padding: 0.5em;
 }
 
+/* code block */
+
 pre {
   border: 1px solid;
   padding: 0.5em;
@@ -17,6 +21,41 @@ pre {
 .caption-code .caption {
   display: none;
 }
+
+/* footnote */
+
+div.footnote {
+  border: 1px dotted;
+  padding: 0.5em;
+}
+
+div.footnote + div.footnote {
+  border-top: 1px solid white;
+  margin-top: -1px !important;
+}
+
+p.footnote {
+  margin: 0;
+}
+
+/* column */
+
+div.column {
+  border: 1px solid;
+  padding: 0.5em;
+}
+
+div.column > h1,
+div.column > h2,
+div.column > h3 {
+  margin-top: 0.5em;
+}
+
+div.column > *:last-child {
+  margin-bottom: 0;
+}
+
+/* inline */
 
 em {
   font-style: normal;
