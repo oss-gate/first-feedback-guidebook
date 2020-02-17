@@ -9,6 +9,9 @@ texdocumentclass_common=serial_pagination=true,openany,fontsize=10pt,baselineski
 texdocumentclass_ebook=media=ebook,paperwidth=152mm,paperheight=227mm,head_space=20mm
 texdocumentclass_print=media=print,paper=b5,head_space=30mm
 
+cover_pdf=''
+cover_epub='"coverimage":"images/tobira-ebook-01.png",'
+
 clear_duplicated_blanklines() {
   local DIR=$1
   find $DIR -name '*.md' | xargs sed -i -r -z -e "s;$blankline(\n+$blankline)+;$blankline;g"
@@ -17,10 +20,14 @@ clear_duplicated_blanklines() {
 prepare_workdir() {
   local DIR=$1
   local TEXT_DOCUMENT_CLASS=$2
+  local COVER=$3
 
   rm -rf $DIR || return 1
   cp -r chapters $DIR
-  cat $bookname.json | sed "s/%TEXT_DOCUMENT_CLASS%/$TEXT_DOCUMENT_CLASS,$texdocumentclass_common/" > $DIR/$bookname.json
+  cat $bookname.json |
+    sed -e "s/%TEXT_DOCUMENT_CLASS%/$TEXT_DOCUMENT_CLASS,$texdocumentclass_common/" \
+        -e "s/%COVER%/$COVER/" \
+    > $DIR/$bookname.json
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
 
@@ -35,7 +42,7 @@ build_pdf_ebook() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_ebook" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_pdf" || return 1
 
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
@@ -79,7 +86,7 @@ build_pdf_print_pre() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_print" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_print" "$cover_pdf" || return 1
 
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
@@ -147,7 +154,9 @@ build_epub() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_ebook" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_epub" || return 1
+
+  cp images/tobira-*.png $DIR/images/
 
   mkdir -p $DIR/.review
   cp review-ext.rb $DIR/.review/

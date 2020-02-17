@@ -26,6 +26,7 @@
   },
   "templates": ["images"],
   "stylesheet": ["style.css"],
+  %COVER%
   "catalog": {
     "PREDEF": [
       "introduction.md"
