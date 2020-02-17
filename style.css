@@ -56,6 +56,10 @@ div.column > *:last-child {
   margin-bottom: 0;
 }
 
+div.footnote + div.column {
+  margin-top: 1em;
+}
+
 /* inline */
 
 em {
