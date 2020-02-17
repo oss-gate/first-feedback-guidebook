@@ -123,7 +123,7 @@ GPLバージョン3もOSIのオープンソースライセンス一覧に記載�
 ### パッケージの詳細ページでライセンス情報を見る
 
 Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によっては*パッケージ管理システムのリポジトリ*が存在します。そこに掲載されているソフトウェアは、*パッケージの詳細情報*にライセンスの情報が標示されている場合があります。たとえば、Node.jsのnpmでは、パッケージの詳細ページの右側にライセンスが標示されます。
-![Mochaの場合](images/oss-npm.png) 
+![npmのMochaパッケージの場合](images/oss-npm.png)
 <!-- https://www.npmjs.com/package/mocha -->
 
 <!--
