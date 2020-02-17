@@ -34,13 +34,13 @@
     ],
     "CHAPS": [
       "blank-before-section1.re",
-      {"フィードバックするための準備": [
+      {"section1.re": [
          "motivation.md",
          "oss.md",
          "what.md",
          "where.md"
        ]},
-      {"最初のフィードバック": [
+      {"section2.re": [
          "how.md",
          "english.md",
          "hesitation.md",
@@ -48,7 +48,7 @@
          "examples.md"
        ]},
       "blank-before-section3.re",
-      {"フィードバックした後のこと": [
+      {"section3.re": [
          "do-not-intimidate.md",
          "merge.md",
          "business.md",
