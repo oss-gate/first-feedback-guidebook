@@ -18,6 +18,7 @@ pre {
   white-space: pre-wrap;
 }
 
+.code .caption,
 .caption-code .caption {
   display: none;
 }
