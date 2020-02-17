@@ -7,11 +7,10 @@
   "rights": "©2020 OSS Gate",
   "colophon": true,
   "history": [["2020-02-29"]],
-  "prt": "日光企画",
+  %PRINTING%
   "hiddenfolio": "nikko-pc",
   "serial_pagination": true,
   "pbl": "OSS Gate",
-  "edt": "OSS Gate",
   "contact": "OSS Gate (https://oss-gate.github.io/)",
   "secnolevel": 3,
   "review_version": 4.0,
