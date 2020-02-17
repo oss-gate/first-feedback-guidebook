@@ -42,9 +42,12 @@ build_pdf_ebook() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_pdf" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_pdf" ||
+    return 1
 
-  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
+  find $DIR -name '*.md' |
+    xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" \
+                    -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
 
   cd $DIR
@@ -86,9 +89,12 @@ build_pdf_print_pre() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_print" "$cover_pdf" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_print" "$cover_pdf" ||
+    return 1
 
-  find $DIR -name '*.md' | xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" -e "s;^　$;$blankline;g"
+  find $DIR -name '*.md' |
+    xargs sed -i -r -e "s;^\[([^\(]+)\]\(([^\)]+)\)$;$blankline\n\n**\1**\n\n\2\n\n$blankline;g" \
+                    -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
 
   echo "$taskname: Converting images..."
@@ -154,7 +160,8 @@ build_epub() {
 
   echo "$taskname: Building..."
 
-  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_epub" || return 1
+  prepare_workdir "$DIR" "$texdocumentclass_ebook" "$cover_epub" ||
+    return 1
 
   cp images/tobira-*.png $DIR/images/
 
