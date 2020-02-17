@@ -25,8 +25,8 @@ prepare_workdir() {
   rm -rf $DIR || return 1
   cp -r chapters $DIR
   cat $bookname.json |
-    sed -e "s/%TEXT_DOCUMENT_CLASS%/$TEXT_DOCUMENT_CLASS,$texdocumentclass_common/" \
-        -e "s/%COVER%/$COVER/" \
+    sed -e "s;%TEXT_DOCUMENT_CLASS%;$TEXT_DOCUMENT_CLASS,$texdocumentclass_common;" \
+        -e "s;%COVER%;$COVER;" \
     > $DIR/$bookname.json
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
