@@ -12,7 +12,8 @@
   "serial_pagination": true,
   "pbl": "OSS Gate",
   "contact": "OSS Gate (https://oss-gate.github.io/)",
-  "secnolevel": 3,
+  "toclevel": 2,
+  "secnolevel": 2,
   "review_version": 4.0,
   "texstyle": ["reviewmacro"],
   "texdocumentclass": [
