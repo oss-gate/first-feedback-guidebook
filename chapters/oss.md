@@ -144,7 +144,7 @@ Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によって
   https://metacpan.org/pod/MongoDB
 -->
 
-PythonのPyPI、RubyのRubyGems、PHPのPackagist、Rustのcrates.io、PerlのCPANなども同様です。
+PythonのPyPI、PHPのPackagist、Rustのcrates.io、PerlのCPANなども同様です。
 
 これらのライセンス情報は、作者によってパッケージ自体に記載されたメタ情報に基づいて標示されています。ライセンス情報はパッケージ登録時の必須項目になっていない場合があるため、パッケージによってはライセンス標示が無いこともあり、この方法も万全とは言えません。
 
