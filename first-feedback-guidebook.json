@@ -51,8 +51,7 @@
          "business.md",
          "support.md",
          "licenses.md"
-       ]},
-      "blank-before-outroduction.re"
+       ]}
     ],
     "POSTDEF": [
       "outroduction.md"
