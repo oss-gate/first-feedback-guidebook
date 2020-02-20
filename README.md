@@ -2,9 +2,39 @@
 
 OSS Gateワークショップ参加者の方からよく寄せられる疑問への回答を元にした、初めてのフィードバックの手引き。
 
-2020年2月29日 池袋サンシャインシティ2F 展示ホールD にて開催の[技術書典8](https://techbookfest.org/event/tbf08)、Day1 お09「OSS Gate」にて刊行の予定。
+## 頒布予定
 
-[目次](./index.md)
+2020年2月29日 池袋サンシャインシティ2F 展示ホールD にて開催の[技術書典8](https://techbookfest.org/event/tbf08)、Day1 お09「OSS Gate」にて刊行の予定……でしたが、イベント中止のため予定変更になりました。
+頒布予定は以下の通りです。
+
+* [書いた人のBOOTH](https://sysadgirl.booth.pm/)で電子書籍版のダウンロード販売（2020年2月29日～）
+* とらのあな委託通販等何らかの手段で紙版＋電子書籍ダウンロードカードの通販（2020年3月～？）
+* [第3回 技術書同人誌博覧会](https://gishohaku.dev/)の「OSS Gate」スペースで紙版＋電子書籍ダウンロードカード（2020年6月27日）
+
+頒布物は、このリポジトリの内容を後述の手順でビルドした物と変わりありません。
+値段が付いている物については、「ビルド環境を整える時間と手間をお金で買う」「書いた人にお布施する」というつもりでご購入頂ければ幸いです。
+
+## 目次
+
+* [はじめに](./chapters/introduction.md)
+* 第1部 フィードバックするための準備
+  - [本当に「誰でもできる」の？](./chapters/motivation.md)
+  - [OSSを探そう](./chapters/oss.md)
+  - [何をフィードバックしたらいいのか分からない](./chapters/what.md)
+  - [どこにフィードバックしたらいいか分からない](./chapters/where.md)
+* 第2部 最初のフィードバック
+  - [どう報告すればいいのか分からない](./chapters/how.md)
+  - [英語での報告の仕方が分からない](./chapters/english.md)
+  - [それでもためらってしまうあなたへ](./chapters/hesitation.md)
+  - [プルリクエストしてみたい](./chapters/pullrequest.md)
+  - [他の人のフィードバックから学ぼう](./chapters/examples.md)
+* 第3部 フィードバックした後のこと
+  - [要望が通らない！](./chapters/do-not-intimidate.md)
+  - [プルリクエストをマージしてもらえない！](./chapters/merge.md)
+  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)
+  - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)
+  - [ライセンスについてより正確に知る](./chapters/licenses.md)
+* [おわりに](./chapters/outroduction.md)
 
 
 ## 対象読者
@@ -15,7 +45,6 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 * 作った物をOSSとして公開してみたい人→ライブラリなどのバグを踏む事があるので
 
 
-
 ## 執筆者向け情報
 
 ### ページ数の概算
@@ -24,14 +53,16 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 `echo "scale=2; $(cat chapters/*.md | wc -m) / 1400" | bc`
 
-### ビルド手順
+### 電子書籍用データ・印刷用データのビルド手順
 
 Ubuntu 18.04LTS on WSL on Windows 10で動作を確認した。
 
 Re:VIEWに必要なパッケージをインストールする。
 
 ```bash
-$ sudo apt install texlive-binaries texlive-lang-japanese texlive-latex-recommended texlive-latex-extra imagemagick
+$ sudo apt install texlive-binaries texlive-lang-japanese \
+                   texlive-latex-recommended texlive-latex-extra \
+                   imagemagick
 $ gem install unicode-display_width
 ```
 
@@ -94,6 +125,7 @@ $ make
 
 著作者のクレジットは以下のいずれかとします。
 
+* OSS Gate
 * 結城洋志（YUKI "Piro" Hiroshi）
 * YUKI Hiroshi
 * Piro
