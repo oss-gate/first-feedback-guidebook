@@ -2,8 +2,6 @@
 
 OSS Gateワークショップ参加者の方からよく寄せられる疑問への回答を元にした、初めてのフィードバックの手引き。
 
-[目次](./index.md)
-
 ## 頒布予定
 
 2020年2月29日 池袋サンシャインシティ2F 展示ホールD にて開催の[技術書典8](https://techbookfest.org/event/tbf08)、Day1 お09「OSS Gate」にて刊行の予定……でしたが、イベント中止のため予定変更になりました。
@@ -15,6 +13,29 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 頒布物は、このリポジトリの内容を後述の手順でビルドした物と変わりありません。
 値段が付いている物については、「ビルド環境を整える時間と手間をお金で買う」「書いた人にお布施する」というつもりでご購入頂ければ幸いです。
+
+## 目次
+
+* [はじめに](./chapters/introduction.md)
+* 第1部 フィードバックするための準備
+  - [本当に「誰でもできる」の？](./chapters/motivation.md)
+  - [OSSを探そう](./chapters/oss.md)
+  - [何をフィードバックしたらいいのか分からない](./chapters/what.md)
+  - [どこにフィードバックしたらいいか分からない](./chapters/where.md)
+* 第2部 最初のフィードバック
+  - [どう報告すればいいのか分からない](./chapters/how.md)
+  - [英語での報告の仕方が分からない](./chapters/english.md)
+  - [それでもためらってしまうあなたへ](./chapters/hesitation.md)
+  - [プルリクエストしてみたい](./chapters/pullrequest.md)
+  - [他の人のフィードバックから学ぼう](./chapters/examples.md)
+* 第3部 フィードバックした後のこと
+  - [要望が通らない！](./chapters/do-not-intimidate.md)
+  - [プルリクエストをマージしてもらえない！](./chapters/merge.md)
+  - [仕事が忙しくてOSS活動に時間を割けない！](./chapters/business.md)
+  - [バグ報告やパッチ提供以外のコントリビュート](./chapters/support.md)
+  - [ライセンスについてより正確に知る](./chapters/licenses.md)
+* [おわりに](./chapters/outroduction.md)
+
 
 ## 対象読者
 
