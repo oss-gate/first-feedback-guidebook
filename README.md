@@ -123,15 +123,15 @@ $ make
 * [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)
 * [GFDL](https://www.gnu.org/licenses/fdl-1.3.html)
 
-著作者のクレジットは以下のいずれかとします。
+著作者のクレジットは以下のいずれか、またはその併記とします。
 
 * OSS Gate
-* 結城洋志（YUKI "Piro" Hiroshi）
-* YUKI Hiroshi
-* Piro
-* Piro / YUKI Hiroshi
-* YUKI Hiroshi / Piro
-* Piro / 結城洋志
-* 結城洋志 / Piro
+* 結城洋志（YUKI "Piro" Hiroshi）：以下のバリエーションも可
+  * YUKI Hiroshi
+  * Piro
+  * Piro / YUKI Hiroshi
+  * YUKI Hiroshi / Piro
+  * Piro / 結城洋志
+  * 結城洋志 / Piro
 
 ただし、寄稿頂いた部分などは別のライセンスが設定される場合があります。
