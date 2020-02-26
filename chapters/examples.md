@@ -118,7 +118,7 @@ Close button is of the same shape and size in all the opened tabs
 Actual result
 ≪実際の結果≫
 Screenshots 1 and 4 seem to have normal shaped and sized close buttons but screenshots 2, 3 have small button with different shapes.
-≪スクリーンショットの1番と4番は通常の形とサイズでクローズボタンが表示されているようですが、スクリーンショットの2番と3晩ではボタンが異なる形になっています。≫
+≪スクリーンショットの1番と4番は通常の形とサイズでクローズボタンが表示されているようですが、スクリーンショットの2番と3番ではボタンが異なる形になっています。≫
 
 Environment
 ≪環境≫
