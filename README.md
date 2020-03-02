@@ -72,7 +72,7 @@ $ sudo apt install texlive-binaries texlive-lang-japanese \
                    texlive-latex-recommended texlive-latex-extra \
                    imagemagick \
                    ruby-dev build-essential
-$ sudo gem install unicode-display_width
+$ sudo gem install bundler unicode-display_width
 ```
 
 npmのインストールも必要。
