@@ -117,7 +117,7 @@ $ cd easybooks
 $ git checkout enhanced
 $ npm install
 $ npm run build
-$ npm install -g .
+$ sudo npm install -g .
 $ cd ..
 ```
 
