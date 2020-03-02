@@ -71,7 +71,7 @@ Re:VIEWに必要なパッケージをインストールする。
 $ sudo apt install texlive-binaries texlive-lang-japanese \
                    texlive-latex-recommended texlive-latex-extra \
                    imagemagick
-$ gem install unicode-display_width
+$ sudo gem install unicode-display_width
 ```
 
 PDFtkをインストールする。
