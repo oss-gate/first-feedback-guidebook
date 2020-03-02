@@ -76,7 +76,7 @@ $ sudo gem install bundler unicode-display_width
 ```
 
 npmのインストールも必要。
-aptで入るバージョンは古いので、 https://qiita.com/bigplants/items/2d75bf552e0da4a7e822 などで紹介されているように、`n`を使って最新安定版のnpmを使える状態にする。
+aptで入るバージョンは古いので、[Ubuntuに最新のNode.jsを難なくインストールする - Qiita](https://qiita.com/seibe/items/36cef7df85fe2cefa3ea)などで紹介されているように、`n`を使って最新安定版のnpmを使える状態にする。
 
 PDFtkをインストールする。
 
