@@ -124,6 +124,8 @@ $ cd ..
 以上で準備完了。makeするとPDFとEPUBの両方が作られ、distディレクトリ配下に出力される。
 
 ```bash
+$ git clone https://github.com/oss-gate/first-feedback-guidebook.git
+$ cd first-feedback-guidebook
 $ make
 ```
 
