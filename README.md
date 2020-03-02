@@ -65,7 +65,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 Ubuntu 18.04LTS on WSL on Windows 10で動作を確認した。
 
-Re:VIEWに必要なパッケージをインストールする。
+必要なパッケージをインストールする。
 
 ```bash
 $ sudo apt install texlive-binaries texlive-lang-japanese \
@@ -74,6 +74,9 @@ $ sudo apt install texlive-binaries texlive-lang-japanese \
                    ruby-dev build-essential
 $ sudo gem install unicode-display_width
 ```
+
+npmのインストールも必要。
+aptで入るバージョンは古いので、 https://qiita.com/bigplants/items/2d75bf552e0da4a7e822 などで紹介されているように、`n`を使って最新安定版のnpmを使える状態にする。
 
 PDFtkをインストールする。
 
