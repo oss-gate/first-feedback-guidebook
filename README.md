@@ -20,9 +20,11 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ## 訂正情報
 
+上にある物ほど新しい情報となっています。
+
 * [紙媒体 初刷分（2020年2月29日付）から最新版までの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..master)
-* [紙媒体 初刷分（2020年2月29日付）から電子書籍初版（2020年2月29日付）の変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..v1.1)
 * [電子書籍初版（2020年2月29日付）から最新版までの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.1..master)
+* [紙媒体 初刷分（2020年2月29日付）から電子書籍初版（2020年2月29日付）の変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..v1.1)
 
 ## 目次
 
