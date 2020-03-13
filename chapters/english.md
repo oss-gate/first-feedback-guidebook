@@ -23,7 +23,7 @@ ITエンジニア向けに「こういう英語表現を覚えよう」という
 
 実際の所、前章で述べた
 
-* 再現手順（steps to reproduce)
+* 再現手順（steps to reproduce）
 * 実際に得られた結果（actual result）
 * 期待される結果（expected result）
 
