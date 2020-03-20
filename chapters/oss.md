@@ -22,7 +22,7 @@ OSS Gateワークショップに来られた方に「フィードバックした
 * 作業を始めるために、ターミナルを起動して、Bashの上で`git clone`を実行した。
   - GitはOSSです。
   - BashもOSSです。
-* Ruby on Railsで構築されたサービスのユニットテストを走らせるために、`bundle instalL`して`rake test`した。
+* Ruby on Railsで構築されたサービスのユニットテストを走らせるために、`bundle install`して`rake test`した。
   - Ruby on RailsはOSSです。
   - RubyもOSSです。
   - RailsやRailsアプリケーションの`Gemfile`に従って`bundle install`でインストールされた多くのGemもOSSです。
