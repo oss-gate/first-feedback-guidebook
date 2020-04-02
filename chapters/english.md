@@ -276,4 +276,4 @@ The location bar shows search suggestions. The web search bar also.
 
 このあたりのことについて、英語話者の視点から書かれた[「酷い英語をもっとお願いします」](https://gihyo.jp/lifestyle/column/01/language/2010/0419)という記事があります。英語話者の人にとっても、英語が壁となって有用な意見やフィードバックを得られないことは損失なので、英語の上手い下手なんて気にしないでガンガン伝えて欲しい、という感覚があるようです[^bad-english-feedback]。ですから皆さんも、どうか物怖じしないで英語での報告に挑戦してみてください。
 
-[^bad-english-feedback]: この対極の話として、努力で英語を身に付けられた人が「みんな英語にすればいいじゃん」とローカル言語への翻訳を否定する発言をした事例がありました（ https://twitter.com/piro_or/status/1095592188438667265 ）が、その発言には多くの批判が寄せられ、プロジェクト運営者サイドからも改めて、「英語だけが全てではない」ということが述べられていました（ https://github.com/parcel-bundler/website/issues/94#issuecomment-462719132 ）。
+[^bad-english-feedback]: この対極の話として、努力で英語を身に付けられた人が「みんな英語にすればいいじゃん」とローカル言語への翻訳を否定する発言をした事例もありました（ https://twitter.com/piro_or/status/1095592188438667265 ）。しかし、この発言には多くの批判が寄せられ、プロジェクト運営者サイドから改めて、「英語だけが全てではない」という旨のフォローが入れられる結果になりました（ https://github.com/parcel-bundler/website/issues/94 ）。
