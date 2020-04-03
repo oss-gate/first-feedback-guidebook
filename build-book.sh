@@ -35,10 +35,11 @@ prepare_workdir() {
   find $DIR -name '*.md' | xargs sed -i -r -e "s;^　$;$blankline;g"
   clear_duplicated_blanklines "$DIR"
 
-  mkdir -p $DIR/.review
+  mkdir -p $DIR/.review/sty
   cp review-ext.rb $DIR/.review/
   cp style.css $DIR/.review/
   cp locale.yml $DIR/.review/
+  cp em-bold.sty $DIR/.review/sty/
 }
 
 build_pdf_ebook() {

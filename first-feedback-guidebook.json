@@ -15,7 +15,10 @@
   "toclevel": 2,
   "secnolevel": 2,
   "review_version": 4.0,
-  "texstyle": ["reviewmacro"],
+  "texstyle": [
+    "reviewmacro",
+    "em-bold"
+  ],
   "texdocumentclass": [
     "review-jsbook",
     "%TEXT_DOCUMENT_CLASS%"
