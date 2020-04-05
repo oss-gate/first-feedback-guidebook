@@ -145,7 +145,7 @@
 
 [Node.jsへのコントリビュート解説、そしてOSSへ貢献するということ](https://shisama.hatenablog.com/entry/2019/12/04/204400)
 
-Node.js Core Collaboratorで関西Node学園主宰のMasashi Hirano（shisama）氏による、Node.js Advent Calendar 2019内の記事です。本書ではあまり詳しく述べていない、*プルリクエストの具体的な手順やベストプラクティス*に多くの分量が割かれていて、本書だけではまだピンと来ないという方が参照するのにうってつけの内容です。
+Node.js Core Collaboratorで関西Node学園主宰のMasashi Hirano（shisama）氏による、Node.js Advent Calendar 2019内の記事です。「Node.jsプロジェクトではこうなっている」という文脈で、本書ではあまり詳しく述べていない、*プルリクエストの具体的な手順やベストプラクティス*に多くの分量が割かれていて、本書だけではまだピンと来なかった方が参照するのにうってつけの内容です。
 
 [OSSで結果を出す方法](https://speakerdeck.com/knu/ossdejie-guo-wochu-sufang-fa)
 
