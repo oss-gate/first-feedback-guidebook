@@ -28,7 +28,6 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 * リリース間の比較
   * [電子書籍初版（2020年2月29日付）から電子書籍2刷（2020年4月6日付）の変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.1..v1.2)
   * [紙媒体 初刷分（2020年2月29日付）から電子書籍2刷（2020年4月6日付）の変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..v1.2)
-com/oss-gate/first-feedback-guidebook/compare/v1.1..master)
   * [紙媒体 初刷分（2020年2月29日付）から電子書籍初版（2020年2月29日付）の変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..v1.1)
 
 ## 目次
