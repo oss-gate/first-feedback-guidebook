@@ -22,9 +22,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 ## 訂正情報・変更点
 
 * 最新の原稿との比較
-  * [電子書籍2刷（2020年4月6日付）からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.2..master)
-  * [電子書籍初版（2020年2月29日付）からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.1..master)
-  * [紙媒体 初刷分（2020年2月29日付）からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.0..master)
+  * [v1.2からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.2..master)
 * v1.2：電子書籍2刷（2020年4月6日付）
   * 「はじめに」「おわりに」の内容を、最新のOSS Gateワークショップ開催状況に合わせて更新した。
   * 「第4章 どこにフィードバックしたらいいか分からない」内コラム「イシュートラッカーとは？」について、バグトラッキングシステムからイシュートラッキングシステムが生まれたという書き方になっていたのを、イシュートラッキングシステムの一形態がバグトラッキングシステムであるという書き方に改めた。
