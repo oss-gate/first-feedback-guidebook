@@ -53,7 +53,7 @@
 [^following-if]: Rubyなどの一部の言語で可能な、`object.method() if expression`のような書き方。`if`以下の条件が満たされている場合に、それより左に書かれた文が実行される。
 [^hard-tab]: いわゆるタブ文字。
 [^soft-tab]: いわゆる半角スペースを何個も書く方法。
-[^newer-environment]: たとえば、JavaScriptの関数の引数での分割代入を伴った既定値の定義 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters は古いバージョンのブラウザーでは動作しない。
+[^newer-environment]: たとえば、JavaScriptの関数の引数での分割代入を伴った既定値の定義（ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters ）は古いバージョンのブラウザーでは動作しない。
 
 コーディングスタイルをソフトウェアで自動的に揃える運用をまだ取っていないプロジェクトでは、現在のコーディングスタイルを強制するルールをまとめた上で、自動化の仕組みを導入する提案をしてみてもよいでしょう。実際に[第N章「他の人のフィードバックから学ぼう」](examples.md)では、筆者が行ったそのようなフィードバックの事例を紹介しています。
 
