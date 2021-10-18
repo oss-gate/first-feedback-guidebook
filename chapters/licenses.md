@@ -224,7 +224,7 @@ https://medium.com/swlh/understanding-the-agpl-the-most-misunderstood-license-86
 
 ですがGPLv3では、*この場合にはAシステム社にはライブラリZのB工業社へのソースコード開示義務は無い*とされています[^gplv3-exception-for-contracted-development]。
 B工業社はAシステム社に対して、B工業社専用の変更または実行を依頼し、且つ、その成果物を外部に漏らさないことを条件とする場合に限り、GPLの許諾条件に囚われずソフトウェアYを引き渡す[^convey]ことができます。
-そのため端的に言えば、これは「B工業社がソフトウェアYの開発版を私的に改造して、社内でだけ使っているだけ」というのと同じ扱いになるわけです。
+端的に言えば、これは「B工業社がAシステム社の助けを借りて、ソフトウェアYを私的に改造し、私的に社内で使っているだけ」というのと同じ扱いになるわけです。
 
 [^gplv3-exception-for-contracted-development]: IPAによるGPLv3逐条解説 4.2.2.（42ページ） https://www.ipa.go.jp/files/000028320.pdf
 [^convey]: このようなケースをGPLv3の条文では「convey」と呼び、「頒布（distribute）」と区別しています。
@@ -233,7 +233,7 @@ GPLv2においては、そのような例外規定がありません[^gplv2-exce
 そのため、Aシステム社はB工業社に対して、「ソフトウェアYの改造版のソースコード」と「ライブラリZのバイナリ」を別々に納品し、ユーザーであるB工業社がそれらを組み合わせてビルドして使う[^internal-use]、という形を取る必要があるでしょう。
 
 [^gplv2-exception-for-contracted-development]: IPAによるGPLv3逐条解説には「GPLに関するFAQにおいて、上記のような（略）納品行為は配付（略）に当たらないとの解釈を公開することで対処していた」と記載されていますが、筆者が当該文書（日本語訳 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.ja.html 、原文 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.en.html ）を確認した限りでは、2021年10月現在、そのように読める記述は見つけられませんでした。
-[^internal-use]: この場合も、B工業社はあくまで「ソフトウェアYの私的な改造版（ライブラリZを含む）を社内で使っている」だけなので、ソースコードの開示義務が生じる「頒布」にはあたらないことがFAQで明記されています。（日本語訳 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.ja.html#InternalDistribution 、原文 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.en.html#InternalDistribution ）
+[^internal-use]: この場合も、B工業社はあくまで「ソフトウェアYの私的な改造版（ライブラリZを含む）を、社内で私的に使っている」だけなので、ソースコードの開示義務が生じる「頒布」にはあたらないことがFAQで明記されています。（日本語訳 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.ja.html#InternalDistribution 、原文 https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.en.html#InternalDistribution ）
 
 　
 
