@@ -76,7 +76,7 @@ OSS Gateワークショップの中で行ったフィードバックなので、
 
 開発者側で気を回して「こうなっているといいのでは」と推測して実装した結果が、実際のユーザーのニーズに合致していなかった、ということは度々あります。*ユーザー自身が「どうなっていると嬉しい」という内容を詳しく伝える*ことで、そのような無駄足を踏まずに済むと言えます[^opinion-from-user]。
 
-[^opinion-from-user]: ただ、開発者側の視点では、ユーザーから寄せられた提案にそのまま従うことが必ずしも正解とは限りません。というのも、ユーザー自身の発想が特定の場面やそれまでの経験に囚われている場合、言葉として表現された物が本来のユーザー自身のニーズからかけ離れてしまっていることがあるからです。開発者はユーザーからの提案を判断材料の一つとしつつ、その提案が発せられた背景をきちんと分析し、常に最適な解決策を考えるよう努める必要があります。
+[^opinion-from-user]: ただ、開発者側の視点では、ユーザーから寄せられた提案にそのまま従うことが必ずしも正解とは限りません。というのも、ユーザー自身の発想が特定の場面やそれまでの経験に囚われている場合、言葉として表現された物が本来のユーザー自身のニーズからかけ離れてしまっていることがあるからです。開発者はユーザーからの提案を判断材料の1つとしつつ、その提案が発せられた背景をきちんと分析し、常に最適な解決策を考えるよう努める必要があります。
 
 
 ## 画面上の表示に関わる問題の、より分かりやすい説明
@@ -271,7 +271,7 @@ While the composition session, "keydown" events for special keys (Enter and Arro
 ≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするために使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
 
 And, there is one problem on lately development build of Firefox.
-≪そして、最近のFirefoxの開発者向けビルドでは一つ問題があります。≫
+≪そして、最近のFirefoxの開発者向けビルドでは1つ問題があります。≫
 
 * 1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta  
   https://bugzilla.mozilla.org/show_bug.cgi?id=1446401
@@ -343,7 +343,7 @@ meta-clang's llvm-config is not compatible with MULTILIBS
 
 ≪不具合の説明≫
 One of the our target boards(RZ/G2E)'s Yocto default conf/local.conf specifies MULTILIBS = "multilib:lib32" and   DEFAULTTUNE_virtclass  -multilib-lib32 = "armv7vethf-neon" to be able to run 32bit ARMv7 binaries.
-≪私達が開発している対象のボード（RZ/G2E）の一つのYoctoレシピの既定のconf/local.confには、32bit ARMv7バイナリを動かすために、  「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」という設定が含まれています。≫
+≪私達が開発している対象のボード（RZ/G2E）の1つのYoctoレシピの既定のconf/local.confには、32bit ARMv7バイナリを動かすために、  「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」という設定が含まれています。≫
 So, built binaries will be installed in /usr/lib64/ instead of /usr/lib.
 ≪そのため、ビルドされたバイナリは/usr/libではなく/usr/lib64/の中にインストールされます。≫
 
@@ -524,7 +524,7 @@ package.jsonの文法チェック用の指定に変更を加え、コーディ�
 
 そのような取捨選択の感覚は、恐らく、報告をする立場だけだとあまり身に付きません。というのも、フィードバックは*「フィードバックを受ける側（開発者）にとって助けとなる内容」であること*が望ましく、「どういう報告なら開発者は嬉しいか」は、突き詰めると開発者でなければ分からないからです。筆者の場合は、*自分自身が開発者としてフィードバックを受ける機会が重なる中で、「こういう場面では、この情報をもらっても開発者の自分はあまり嬉しくない」という経験*を得ており、それが取捨選択の判断基準になっています。
 
-また、もう一つ注目して欲しいのは、「プルリクエストに対するレビューを受けたときに気が付いたことを、別のプルリクエストで即座に（カジュアルに）フィードバックしている」という点です。*1つフィードバックをすると、それがまた次のフィードバックにつながる*ことは、非常によくあります。
+また、もう1つ注目して欲しいのは、「プルリクエストに対するレビューを受けたときに気が付いたことを、別のプルリクエストで即座に（カジュアルに）フィードバックしている」という点です。*1つフィードバックをすると、それがまた次のフィードバックにつながる*ことは、非常によくあります。
 
 　
 
