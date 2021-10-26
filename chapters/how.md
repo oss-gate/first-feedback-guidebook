@@ -231,7 +231,8 @@ CLIのソフトウェアの場合、*端末のシェル上で実行したコマ�
    以下はコマンド列での実行内容とその出力。
    -----
    $ git clone https://github.com/piroor/tweet.sh.git
-   （※註：コマンドの出力はここでは省略しているが、実際の報告時にはすべてそのまま貼り付ける）
+   （※註：コマンドの出力はここでは省略しているが、
+     実際の報告時にはすべてそのまま貼り付ける）
    $ cd tweet.sh
    $ vim ~/.tweet.client.key
    $ cat /.tweet.client.key（※註：ファイルの編集結果を示すために実行している）
@@ -248,7 +249,8 @@ CLIのソフトウェアの場合、*端末のシェル上で実行したコマ�
    $ ./tweet.sh post $(cat file.txt)
    {"errors":[{"code":32,"message":"Could not authenticate you."}]}
    -----
-6. Webブラウザで確認用に https://twitter.com/piro_or を開くと、先ほどの内容は投稿されていない。
+6. Webブラウザで確認用に https://twitter.com/piro_or を開くと、
+   先ほどの内容は投稿されていない。
 ```
 
 このように*手順に漏れが無い報告をしやすい*のは、CLIの利点の1つです。
