@@ -196,8 +196,7 @@ OSSではない物をOSSと誤認して二次利用すると、もしかした�
 * 一般消費者向けに販売する製品にGPLのコードが含まれる場合、開示されたソースコードを公開しないように消費者に求めることは、*GPLの条文により禁止されています*。この場合は、公開されると製品をメンテナンスしたり次の製品を作ったりするのが困難になるので公開しないで欲しい、と「お願い」することしかできません。
 
 [^not-distribution]: GNUライセンスに関してよく聞かれる質問 https://www.gnu.org/licenses/gpl-faq.html#InternalDistribution
-[^agpl-internal-use]: Understanding the AGPL: The Most Misunderstood License | by Sayan | The Startup | Medium
-https://medium.com/swlh/understanding-the-agpl-the-most-misunderstood-license-86fd1fe91275
+[^agpl-internal-use]: Understanding the AGPL: The Most Misunderstood License https://medium.com/swlh/understanding-the-agpl-the-most-misunderstood-license-86fd1fe91275
 
 やろうとしていることに対して、本来避けなくてもよいGPLやAGPLのソフトウェアの利用を避けてしまうと、余計な遠回りになります。*どういう場合には安全と言えるか*を見極めて、適切に接することが大事です。
 
