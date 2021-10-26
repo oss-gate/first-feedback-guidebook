@@ -103,7 +103,7 @@ GUIを持つソフトウェアだと、*「ファイル」や「ヘルプ」メ�
 
 ![VSCodeのライセンスを確認する様子](images/oss-vscode.png)
 
-WebブラウザーのMozilla Firefoxでは、「ヘルプ」→「Firefoxについて」を選択して開かれるバージョン情報のダイアログに含まれている「ライセンス情報」のリンクをクリックすると、`about:license` というFirefoxに内蔵されたページが開かれます。この冒頭には「Binaries of this product have been made available to you by the Mozilla Project under the Mozilla Public License 2.0 (MPL).（この製品のバイナリはMozillaプロジェクトによってMozilla Public License 2.0で利用可能とされています）」と書かれています。MPL2.0もOSIのオープンソースライセンス一覧に記載されているので、FirefoxもOSSだと言えます。
+WebブラウザーのMozilla Firefoxでは、「ヘルプ」→「Firefoxについて」で開かれるバージョン情報のダイアログに含まれている「ライセンス情報」のリンクをクリックすると、`about:license` というFirefoxに内蔵されたページが開かれます。この冒頭には「Binaries of this product have been made available to you by the Mozilla Project under the Mozilla Public License 2.0 (MPL).（この製品のバイナリはMozillaプロジェクトによってMPLで利用可能とされています）」と書かれています。MPL2.0もOSIのオープンソースライセンス一覧に記載されているので、FirefoxもOSSだと言えます。
 
 ![Firefoxのライセンスを確認する様子](images/oss-firefox.png)
 
@@ -119,15 +119,15 @@ This is free software; you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 ```
 
-GPLバージョン3もOSIのオープンソースライセンス一覧に記載されているので、GNU bashもOSSと言えます。
+GPL3も先の一覧に記載されているので、GNU bashはOSSと言えます。
 
-ただし、デーモンのような常駐型の物やライブラリなどのように、直接操作するためのインターフェースを持たないソフトウェアでは、残念ながらこの方法は使えません。そういったケースでは、別の方法でライセンスを確認する必要があります。
+CLIを持たないデーモンのような常駐型の物やライブラリなどでは、これらの方法は使えませんので、別の確認方法を使う必要があります。
 
 ### パッケージの詳細ページでライセンス情報を見る
 
-Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によっては*パッケージ管理システムのリポジトリ*が存在します。そこに掲載されているソフトウェアは、*パッケージの詳細情報*にライセンスの情報が標示されている場合があります。
+Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によっては*パッケージ管理システムのリポジトリ*が存在します。そこに掲載されているソフトウェアは、*パッケージの詳細情報*にライセンス情報が標示されている場合があります。
 
-たとえば、Node.jsのnpmでは、パッケージの詳細ページの右側にライセンスが標示されます。PythonのPyPI、PHPのPackagist、Rustのcrates.io、PerlのCPANなども同様です。
+たとえば、Node.jsのnpmでは、パッケージの詳細ページの右側にライセンスが標示されます。
 
 ![npmのMochaパッケージの場合](images/oss-npm.png)
 
@@ -150,10 +150,11 @@ Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によって
   https://metacpan.org/pod/MongoDB
 -->
 
+PythonのPyPI、PHPのPackagist、Rustのcrates.io、PerlのCPANなどでも同様の標示があります。
 
-これらのライセンス情報は、開発者の自己申告でパッケージ自体に記載されたメタ情報に基づいて標示されています。開発言語ごとのパッケージのリポジトリは、開発者自身による「投稿サイト」のような性質を持つため、再配布の条件が不明瞭な物も許容されている場合があり、パッケージによってはライセンス標示自体が無いこともあります。
+これらのライセンス情報は、開発者の自己申告でパッケージ自体に記載されたメタ情報に基づいて標示されています。開発言語ごとのパッケージのリポジトリは、開発者自身による「投稿サイト」のような性質を持つため、再配布の条件が不明瞭な場合や、パッケージによってはライセンス標示自体が無い場合もあります。
 
-LinuxやBSDなどの*OSディストリビューションのパッケージリポジトリ*でも、同様に各ソフトウェアのライセンス情報が標示されている場合があります。たとえば、Debianパッケージの個別ページでは、右側にある「著作権ファイル」というリンクの遷移先でライセンスを確認できます。
+LinuxやBSDなどの*OSディストリビューションのパッケージリポジトリ*でも、同様にライセンス情報が標示されている場合があります。たとえば、Debianパッケージの個別ページでは、右側にある「著作権ファイル」のリンクの遷移先でライセンスを確認できます。
 
 ![Debianのrsyncパッケージの場合](images/oss-debian.png)
 
