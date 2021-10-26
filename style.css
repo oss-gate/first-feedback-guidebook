@@ -35,6 +35,10 @@ div.footnote + div.footnote {
   margin-top: -3px !important;
 }
 
+div.footnote + div.table {
+  margin-top: 0.5em;
+}
+
 p.footnote {
   margin: 0;
 }
