@@ -21,7 +21,8 @@ White screen shown in the first boot
 
 Steps to Reproduce
 
-1. Install Chrome (ver. 72.0.3626.109 Official Build 64bit) into MacOSX 10.14.3 .
+1. Install Chrome (ver. 72.0.3626.109 Official Build 64bit) into
+   MacOSX 10.14.3 .
 2. Install Mouse Dictionary (ver. 1.1.9) from Chrome Web Store.
 3. Click extension icon of Mouse Dictionary, and open the popup window.
 4. Point any English term.
@@ -36,17 +37,23 @@ Actual Result
 
 Suggestion
 
-* Add how to installation (ex. "Open option menu on the first boot.") in the store page.
-* Or, add description (ex. "Not initialized. Please open option menu.") in the not initialized popup window.
+* Add how to installation (ex. "Open option menu on the first boot.") in the
+  store page.
+* Or, add description (ex. "Not initialized. Please open option menu.") in the
+  not initialized popup window.
 
 ----
 
 再現手順
 
-1. MacOSX 10.14.3 に、Chromeのバージョン：72.0.3626.109（Official Build）（64 ビット）をインストールする
-2. chromeウェブストアから Mouse Dictionary （バージョン：1.1.9） を拡張機能としてインストールする
-3. 拡張機能一覧から Mouse Dictionary のアイコンをクリックして、ポップアップウィンドウを立ち上げる
-4. ポップアップウィンドウが立ち上がった状態でウェブページ内の任意の英単語にマウスカーソルを合わせる
+1. MacOSX 10.14.3 に、Chromeのバージョン：72.0.3626.109（Official Build）
+   （64 ビット）をインストールする
+2. chromeウェブストアから Mouse Dictionary （バージョン：1.1.9） を拡張機能として
+   インストールする
+3. 拡張機能一覧から Mouse Dictionary のアイコンをクリックして、
+   ポップアップウィンドウを立ち上げる
+4. ポップアップウィンドウが立ち上がった状態でウェブページ内の任意の英単語に
+   マウスカーソルを合わせる
 
 期待する結果
 
@@ -58,8 +65,10 @@ Suggestion
 
 提案
 
-* 最初にオプションメニューを開くことが必須ということを、ストアページの説明文に記載してはどうでしょうか
-* もしくは、辞書情報が登録されていないのでオプションメニューを開かなければならない旨を、ポップアップウィンドウに表示してはどうでしょうか
+* 最初にオプションメニューを開くことが必須ということを、ストアページの説明文に
+  記載してはどうでしょうか
+* もしくは、辞書情報が登録されていないのでオプションメニューを開かなければならない旨を、
+  ポップアップウィンドウに表示してはどうでしょうか
 ```
 
 ### 注目したい点
@@ -182,7 +191,8 @@ Expected behavior≪期待される結果≫:
 
 Actual behavior≪実際の結果≫:
   version-gen.sh script generates "5.9.1.7.gdfb9dd0 on collectd-5.9.2 tag.
-  ≪version-gen.shスクリプトがcollectd-5.9.2タグに基づいて「5.9.1.7.gdfb9dd0」を生成する。≫
+  ≪version-gen.shスクリプトがcollectd-5.9.2タグに基づいて「5.9.1.7.gdfb9dd0」を
+    生成する。≫
 
 Steps to reproduce≪再現手順≫:
   $ git clone https://github.com/collectd/collectd.git
@@ -252,33 +262,43 @@ In CJK language regions, people use some software named "IM" (input method) to i
    ≪IMを有効化する。「コンポジション」のセッションが始まる。≫
 3. Type keys: `n`, `i`, `h`, `o`, and `n`. (in a composition session)
    ≪（コンポジションのセッションの中で）n, i, h, o, nとキーを入力する。≫
-4. Hit the Space key to convert the text to Japanese term. "日本" is suggested. (in a composition session)
-   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「日本」が提案される。≫
+4. Hit the Space key to convert the text to Japanese term. "日本" is
+   suggested. (in a composition session)
+   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、
+     スペースキーを押す。「日本」が提案される。≫
 5. Hit the Enter key to determine the text "日本". (in a composition session)
-   ≪（コンポジションのセッションの中で）「日本語」というテキストを確定するために、Enterキーを押す。≫
+   ≪（コンポジションのセッションの中で）「日本語」というテキストを確定するために、
+     Enterキーを押す。≫
 6. Type keys: `g`, and `o`. (in a composition session)
    ≪（コンポジションのセッションの中で）g, oとキーを入力する。≫
-7. Hit the Space key to convert the text to Japanese term. "語" is suggested. (in a composition session)
-   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、スペースキーを押す。「語」が提案される。≫
+7. Hit the Space key to convert the text to Japanese term. "語" is suggested.
+   (in a composition session)
+   ≪（コンポジションのセッションの中で）テキストを日本語の単語に変換するために、
+     スペースキーを押す。「語」が提案される。≫
 8. Hit the Enter key to determine the text "語". (in a composition session)
-   ≪（コンポジションのセッションの中で）「語」というテキストを確定するために、Enterキーを押す。≫
+   ≪（コンポジションのセッションの中で）「語」というテキストを確定するために、
+     Enterキーを押す。≫
 9. Deactivate the IM. The "composition" session ends.
    ≪IMを無効化する。「コンポジション」のセッションが終了する。≫
 10. Hit the Enter key again to search "日本語" on Zulip.
     ≪「日本語」をZulipで検索するために、Enterキーをもう1度押す。≫
 
 While the composition session, "keydown" events for special keys (Enter and Arrow) are handled by the IM to choose a term from variations >or determine the choice. Thus I hit the Enter key three times in this case. The first time and the second are notified only to IM, so Zulip receives only the third time.
-≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするために使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
+≪コンポジションのセッション中は、（Enterや矢印などの）特別なキーに対するkeydownイベントは、IMによって、複数の候補の中から単語を選択したり選択を確定したりするのに使われます。そのため、私はEnterキーをこの例では3回押しています。1回目と2回目はIMに対してのみ通知されるため、Zulipは3回目のみを受け取ります。≫
 
 And, there is one problem on lately development build of Firefox.
 ≪そして、最近のFirefoxの開発者向けビルドでは1つ問題があります。≫
 
-* 1446401 - Start to dispatch keydown/keyup events even during composition in Nightly and early Beta  
+* 1446401 - Start to dispatch keydown/keyup events even during composition
+  in Nightly and early Beta  
   https://bugzilla.mozilla.org/show_bug.cgi?id=1446401
-  ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを通知するようにする≫
-* Intent to ship: Start to dispatch "keydown" and "keyup" events even if composing (only in Nightly and early Beta) - Google Group  
+  ≪1446401 - Nightlyと初期ベータ版で、コンポジション中のkeydownとkeyupイベントを
+  通知するようにする≫
+* Intent to ship: Start to dispatch "keydown" and "keyup" events even if
+  composing (only in Nightly and early Beta) - Google Group  
   https://groups.google.com/forum/#!topic/mozilla.dev.platform/oZEz5JH9ZK8/discussion
-  ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中にkeydownとkeyupイベントが通知されるようになります≫
+  ≪リリースしようとしているもの: Nightlyと初期ベータ版のみにおいて、コンポジション中に
+    keydownとkeyupイベントが通知されるようになります≫
 
 Due to the change, now development build of Firefox (aka Nightly) notifies "keydown" events to the webpage, for all keyboard operations while "composition" sessions. As the result, the search field shows suggested results while I'm typing alphabet keys. This is good improvement, but there is one new problem: when I hit the Enter key to determine a chosen term, it is also notified to Zulip. Thus, when I just determine the first part term "日本" of the joined term "日本語", Zulip unexpectedly handles the Enter key to search the part "日本" and I cannot input following part "語" anymroe.
 ≪この変更のため、Firefoxの開発版ビルド（別名Nightly）は「コンポジション」セッション中の物も含めすべてのキーボード操作に対し、keydownイベントをWebページに通知します。その結果、検索欄は私がアルファベットのキーを入力している最中に候補を表示します。これは良い改善ですが、しかし新たに1つの問題が発生しています:選択を確定するために私がEnterキーを押したとき、それがZulipにも通知されます。そのため、私が「日本語」という複合語の一部として「日本」を確定しようとしたときにまで、Zulipは意図せずそのEnterキーの操作を「日本」という単語を検索するための物として取り扱い、続く「語」という単語を私は入力することができません。≫
@@ -361,8 +381,10 @@ To Reproduce
 Steps to reproduce the behavior:
 ≪この動作を再現するための手順：≫
 
-1. Specify MULTILIBS = "multilib:lib32" and DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon" in local.conf
-   ≪「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon"」をlocal.confの中で設定する≫
+1. Specify MULTILIBS = "multilib:lib32" and
+   DEFAULTTUNE_virtclass-multilib-lib32 = "armv7vethf-neon" in local.conf
+   ≪「MULTILIBS = "multilib:lib32"」と「DEFAULTTUNE_virtclass-multilib-lib32 =
+     "armv7vethf-neon"」をlocal.confの中で設定する≫
 2. Add meta-clang layer
    ≪meta-clangレイヤを追加する≫
 3. bitbake clang-cross-aarch64
@@ -460,7 +482,8 @@ We should handle library directory glitch it llvm-config with LLVM_LIBDIR_SUFFIX
 初回使用時に辞書が未設定だと、ページ内に開いたポップアップの中に「初めに辞書データをロードしてください(拡張のアイコンを右クリック→「オプション」)」という案内のメッセージが表示されます。
 しかしながら、Firefoxにはこのメニュー項目がありません。実際には、
 
-* アイコンを右クリック→「拡張機能を管理」を選択→「...」をクリック→「オプション」を選択
+* アイコンを右クリック→「拡張機能を管理」を選択→「...」をクリック
+  →「オプション」を選択
 
 とする必要があります。
 
