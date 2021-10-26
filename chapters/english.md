@@ -171,8 +171,8 @@ Search suggestions on the search bar are visible with `SearchSuggestEnabled`=`fa
 There is an enterprise policy `SearchSuggestEnabled`.
 ≪～という法人向けポリシー設定があります。≫
 
-The location bar shows search suggestions. The web search bar also.
-≪ロケーションバーは検索候補を表示します。Web検索バーも同様。≫
+The address bar shows search suggestions. The web search bar also.
+≪アドレスバーは検索候補を表示します。Web検索バーも同様。≫
 ```
 
 などの文を添えれば、上述の例で報告したかった内容は言い表せたと言っていいでしょう。
