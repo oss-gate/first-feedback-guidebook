@@ -139,7 +139,7 @@ Node.js（JavaScript）のnpm、RubyのRubyGemsなど、開発言語によって
 * RubyのRubyGemsでは、パッケージの詳細ページの右側にライセンスが標示されます。
   ![Railsの場合](images/oss-gem.png)
   https://rubygems.org/gems/rails
-* PHPのPackagistでは、パッケージの詳細ページの下の方にライセンスが標示されます。
+* PHPのPackagistでは、パッケージの詳細ページの下のほうにライセンスが標示されます。
   ![Composerの場合](images/oss-packagist.png)
   https://packagist.org/packages/composer/composer
 * Rustのcrates.ioでは、パッケージの詳細ページの右側にライセンスが標示されます。
