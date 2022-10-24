@@ -23,7 +23,7 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 ## 訂正情報・変更点
 
 * 最新の原稿との比較
-  * [v1.3からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.4...master)
+  * [v1.4からの全変更点](https://github.com/oss-gate/first-feedback-guidebook/compare/v1.4...master)
 * v1.4：電子書籍4刷（2021年11月9日付）
   * 「はじめに」に「OSS」という語への注釈を追加した。
   * 「第12章 仕事が忙しくてOSS活動に時間を割けない！」内の「12.2 フィードバックしないと損をする！」において、MongoDB、Redis、Kafkaなどが採用したライセンスの補足説明を追加。
