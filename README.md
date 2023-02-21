@@ -114,7 +114,30 @@ $ sudo gem install unicode-display_width
 ```
 
 npmのインストールも必要。
-aptで入るバージョンは古いので、[Ubuntuに最新のNode.jsを難なくインストールする - Qiita](https://qiita.com/seibe/items/36cef7df85fe2cefa3ea)などで紹介されているように、`n`を使って最新安定版のnpmを使える状態にする。
+aptで入るバージョンは古いので、[Ubuntuに最新のNode.jsを難なくインストールする - Qiita](https://qiita.com/seibe/items/36cef7df85fe2cefa3ea)などで紹介されているように、`n`を使ってnpmを使える状態にする。
+最新安定版（Node.js 18 LTS）では実行時にエラーとなるため、安定版（Node.js 16 LTS）を使う。
+
+<!--
+```bash
+$ sudo apt install -y nodejs npm
+$ sudo npm install n -g
+$ sudo n stable
+$ sudo apt purge -y nodejs npm
+$ exec $SHELL -l
+$ node -v
+node: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.28' not found (required by node)
+```
+-->
+
+```bash
+$ sudo apt install -y nodejs npm
+$ sudo npm install n -g
+$ sudo n 16
+$ sudo apt purge -y nodejs npm
+$ exec $SHELL -l
+$ node -v
+v16.19.1
+```
 
 PDFtkをインストールする。
 
