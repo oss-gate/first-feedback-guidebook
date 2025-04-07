@@ -15,6 +15,9 @@
   "toclevel": 2,
   "secnolevel": 2,
   "review_version": 4.0,
+  "epubmaker": {
+    "image_maxpixels": 30000000
+  },
   "texstyle": [
     "reviewmacro",
     "em-bold"

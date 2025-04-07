@@ -100,31 +100,31 @@ OSS Gateワークショップ参加者の方からよく寄せられる疑問へ
 
 ### 電子書籍用データ・印刷用データのビルド手順
 
-Ubuntu 18.04LTS on WSL on Windows 10で動作を確認した。
+Ubuntu 20.04LTS on WSL on Windows 11で動作を確認した。
 
-必要なパッケージをインストールする。
+必要なパッケージをインストールする。PDFtk、npmも必要。
 
 ```bash
-$ sudo apt install texlive-binaries texlive-lang-japanese \
-                   texlive-latex-recommended texlive-latex-extra \
-                   imagemagick \
-                   ruby-dev build-essential
+$ sudo apt -y install texlive-binaries texlive-lang-japanese \
+                      texlive-latex-recommended texlive-latex-extra \
+                      imagemagick \
+                      ruby-dev build-essential pdftk-java nodejs npm
 $ sudo gem install bundler -v 2.3.26
 $ sudo gem install unicode-display_width
+$ sudo npm install n -g
+$ sudo n stable
+$ sudo apt purge -y nodejs npm
+$ sudo apt -y autoremove
+$ exec $SHELL -l
 ```
 
-npmのインストールも必要。
-aptで入るバージョンは古いので、[Ubuntuに最新のNode.jsを難なくインストールする - Qiita](https://qiita.com/seibe/items/36cef7df85fe2cefa3ea)などで紹介されているように、`n`を使って最新安定版のnpmを使える状態にする。
-
-PDFtkをインストールする。
+ソースをクローンする。この後の手順で必要になるパッチが含まれている。
 
 ```bash
-$ sudo add-apt-repository ppa:malteworld/ppa
-$ sudo apt update
-$ sudo apt install pdftk
+$ git clone https://github.com/oss-gate/first-feedback-guidebooks.git
 ```
 
-Re:VIEWをインストールする。リリース版（4.0.0）ではビルドに失敗したため、masterを使う。
+Re:VIEWをインストールする。v4.0.0にパッチを当て使う。
 
 <!--
 ```bash
@@ -135,13 +135,15 @@ $ sudo gem install review
 ```bash
 $ git clone https://github.com/kmuto/review.git
 $ cd review
+$ git checkout v4.0.0 -b v4.0.0
+$ cat ../first-feedback-guidebook/patches/review.patch | patch -p1
 $ bundle install --path vendor/bundle
 $ rake build
 $ sudo gem install pkg/review-*.gem
 $ cd ..
 ```
 
-easybooksをインストールする。リリース版ではビルドに失敗し、且つ、要件を満たさないため、改造版を使う。
+easybooksをインストールする。リリース版ではビルドに失敗し、且つ、要件を満たさないため、改造版にパッチを当て使う。
 
 <!--
 ```bash
@@ -153,6 +155,7 @@ $ sudo npm install -g easybooks
 $ git clone https://github.com/piroor/easybooks.git
 $ cd easybooks
 $ git checkout enhanced
+$ cat ../first-feedback-guidebook/patches/easybooks.patch | patch -p1
 $ npm install
 $ npm run build
 $ sudo npm install -g .
@@ -162,7 +165,6 @@ $ cd ..
 以上で準備完了。makeするとPDFとEPUBの両方が作られ、distディレクトリ配下に出力される。
 
 ```bash
-$ git clone https://github.com/oss-gate/first-feedback-guidebook.git
 $ cd first-feedback-guidebook
 $ make
 ```
