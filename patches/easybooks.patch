@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 0854214..317560d 100644
+--- a/package.json
++++ b/package.json
+@@ -41,6 +41,7 @@
+     "@babel/core": "^7.7.7",
+     "@babel/preset-env": "^7.7.7",
+     "@babel/preset-typescript": "^7.7.7",
++    "@types/babel__traverse": "7.14.2",
+     "@types/jest": "^24.0.25",
+     "@types/js-yaml": "3.12.1",
+     "@types/jszip": "^3.1.6",

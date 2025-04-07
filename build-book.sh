@@ -10,7 +10,7 @@ texdocumentclass_ebook=media=ebook,paperwidth=152mm,paperheight=227mm,head_space
 texdocumentclass_print=media=print,paper=b5,head_space=30mm
 
 cover_pdf='"titlepage": true,'
-cover_epub='"coverimage":"images/tobira-ebook-01.png", "titlepage": false,'
+cover_epub='"coverimage":"tobira-ebook-01.png", "titlepage": false,'
 
 printing='"prt": "日光企画",'
 

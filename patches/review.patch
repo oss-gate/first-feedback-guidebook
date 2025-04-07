@@ -1,0 +1,12 @@
+diff --git a/lib/review/epubmaker.rb b/lib/review/epubmaker.rb
+index e6b55149..0f08ee70 100644
+--- a/lib/review/epubmaker.rb
++++ b/lib/review/epubmaker.rb
+@@ -429,6 +429,7 @@ module ReVIEW
+     def detect_properties(path)
+       properties = []
+       File.open(path) do |f|
++        REXML::Document.entity_expansion_text_limit=3276800
+         doc = REXML::Document.new(f)
+         if REXML::XPath.first(doc, '//m:math', 'm' => 'http://www.w3.org/1998/Math/MathML')
+           properties << 'mathml'
